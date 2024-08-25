@@ -2,6 +2,7 @@ baseURL = "https://doit.tellm.eu.org"
 # [en, zh-cn, fr, pl, ...] determines default content language
 # [en, zh-cn, fr, pl, ...] 设置默认的语言
 defaultContentLanguage = "zh"
+defaultContentLanguageInSubdir = true
 # website title
 # 网站标题
 title = "zwyyy456's blog"
