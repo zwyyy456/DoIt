@@ -1,6 +1,6 @@
 # site description
 # 网站描述
-description = "zwyyy456's blog"
+description = "翼仔的博客"
 # site keywords
 # 网站关键词
 keywords = ["CS", "OS", "cpp"]
@@ -9,7 +9,7 @@ keywords = ["CS", "OS", "cpp"]
 [app]
 # optional site title override for the app when added to an iOS home screen or Android launcher
 # 当添加到 iOS 主屏幕或者 Android 启动器时的标题，覆盖默认标题
-title = "DoIt"
+title = "Blog"
 # whether to omit favicon resource links
 # 是否隐藏网站图标资源链接
 noFavicon = false
@@ -40,7 +40,7 @@ placeholder = ""
 maxResultLength = 10
 # snippet length of the result
 # 结果内容片段长度
-snippetLength = 300
+snippetLength = 50
 # HTML tag name of the highlight part in results
 # 搜索结果中高亮部分的 HTML 标签
 highlightTag = "em"
@@ -48,7 +48,7 @@ highlightTag = "em"
 # 是否在搜索索引中使用基于 baseURL 的绝对路径
 absoluteURL = false
 [search.algolia]
-index = "en_index"
+index = "zh_cn_index"
 appID = "5YGRNRQK1G"
 searchKey = "0ff6874805de24b84aa1d5ebccad56cd"
 [search.fuse]
@@ -86,7 +86,7 @@ avatarLinkURL = ""
 title = ""
 # subtitle shown in home page
 # 主页显示的网站副标题
-subtitle = "zwyyy456's blog"
+subtitle = "翼仔的博客"
 # whether to use typeit animation for subtitle
 # 是否为副标题显示打字机动画
 typeit = false
@@ -109,16 +109,16 @@ paginate = 7
 Angellist = ""
 Bandcamp = ""
 Behance = ""
-Bilibili = ""
+Bilibili = "xxxx"
 Bitbucket = ""
 BuyMeACoffee = ""
 Codepen = ""
 Deviantart = ""
-Devto = ""
-Douban = ""
+Devto = "xxxx"
+Douban = "xxxx"
 Dribbble = ""
 Email = "xxxx@xxxx.com"
-Facebook = "xxxx"
+Facebook = ""
 Fivehundredpx = ""
 Flickr = ""
 Foursquare = ""
@@ -133,11 +133,12 @@ Instagram = ""
 Jsfiddle = ""
 Keybase = ""
 Kickstarter = ""
-Ko-Fi = "xxx"
+Ko-Fi = ""
 Lastfm = ""
-Liberapay = "xxx"
+Liberapay = ""
 Linkedin = ""
 Linktree = ""
+Mastodon = ""
 Matrix = ""
 Medium = ""
 Mix = ""
@@ -158,34 +159,31 @@ Snapchat = ""
 Soundcloud = ""
 Spotify = ""
 Stackoverflow = ""
-Steam = ""
+Steam = "xxxx"
 Strava = ""
-Telegram = "xxxx"
+Telegram = ""
 Thingiverse = ""
 Tumblr = ""
 Twitch = ""
-Twitter = "xxxx"
+Twitter = ""
 Vine = ""
 VK = ""
-Weibo = ""
+Weibo = "xxxx"
 Whatsapp = ""
 Wordpress = ""
 Xing = ""
 XMPP = ""
 Youtubechannel = ""
 Youtubecustom = ""
-Youtubelegacy = "xxxx"
-Zhihu = ""
-[social.Mastodon]
-id = "@xxxx"
-prefix = "https://mastodon.technology/"
+Youtubelegacy = ""
+Zhihu = "xxxx"
 [social.Diaspora]
 id = "@xxxx"
 prefix = "https://yyyy/"
 # Sponsor config
 # 赞助设置
 [sponsor]
-enable = true
-bio = "If you find this post helpful, please consider sponsoring."
-link = "https://github.com/sponsors/HEIGE-PCloud"
+enable = false
+bio = "如果你觉得这篇文章对你有所帮助，欢迎赞赏~"
+link = "https://github.com/sponsors/zwyyy456"
 # custom = "<a href=\"https://www.buymeacoffee.com/PCloud\" target=\"_blank\"><img src=\"https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png\" alt=\"Buy Me A Coffee\" style=\"height: 40px !important;width: 145 !important;\" ></a>"
