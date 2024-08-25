@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cpp on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/cpp/</link>
+    <description>Recent content in Cpp on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 19 Nov 2023 13:00:39 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/cpp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Web Day12：实现主从 Reactor 多线程模式</title>
+      <link>http://localhost:1313/posts/tech/web-day12.zh/</link>
+      <pubDate>Sun, 19 Nov 2023 13:00:39 +0800</pubDate>
+      <guid>http://localhost:1313/posts/tech/web-day12.zh/</guid>
+      <description>前言 在 Day11 中，我们实现了一种最容易想到的 Reactor 多线程模式，即将每个 Channel 的任务分配给一个线程执行。&#xA;这个模式逻辑上有不少问题，例如线程池由 EventLoop 来持有，按理来说应该由 Server 类来管理，这是受到了 Channel 类的限制，Channel 类仅有 EventLoop 成员。&#xA;主从 Reactor 模式 主从 Reactor 模式有以下几个特点：&#xA;服务器一般只有一个 main reactor，可以有很多个 sub reactor； 服务器管理一个线程池，每个线程对应一个 sub reactor，每个 sub reactor 负责一部分 Connections 的事件循环，事件执行也在这个线程完成； main reactor 只负责 Acceptor 建立新连接，然后将这个连接分配给一个 sub Reactor。 Server 成员 /todo，测试 accept 和 connect 的时候区分非阻塞与阻塞&#xA;Server 的成员包括一个 main_reactor 和 多个 sub_reactors，每个 sub_reactor 对应一个独有的 EventLoop，每个 sub_reactor 由一个线程负责。这就是所谓的 One Loop per Thread。&#xA;class Server { private: EventLoop *main_reactor_; Acceptor *acceptor_; std::map&amp;lt;int, Connection *&amp;gt; connections_; std::vector&amp;lt;EventLoop *&amp;gt; sub_reactors_; ThreadPool *thpool_; public: Server(EventLoop *evl); ~Server(); void HandleReadEvent(int fd); void NewConn(Socket *serv_sock); void DeleteConn(int sockfd); }; main reactor 的工作流程 Server 创建的时候，会利用 main 函数的 loop 来初始化 Server，并利用 loop 来初始化 main_reactor_，和 acceptor_。 acceptor_ 会有绑定了服务器 ip 和端口的 socket。初始化 acceptor_ 的时候，会将 acceptor_-&amp;gt;new_conn_callback_ 注册为 Server::NewConn(Socket *clnt_sock)，当有连接时，acceptor_ 调用 Acceptor::AcceptConn()，该函数会调用 Socket::Accept(InetAddress *) 来接受连接，以及调用 new_conn_callback_(clnt_sock)，实际上就是调用 Server::NewConn(Socket *clnt_sock)。</description>
+    </item>
+    <item>
+      <title>Web Day11：完成线程池以及加入一个简单的测试程序</title>
+      <link>http://localhost:1313/posts/tech/web-day11.zh/</link>
+      <pubDate>Sat, 18 Nov 2023 19:40:26 +0800</pubDate>
+      <guid>http://localhost:1313/posts/tech/web-day11.zh/</guid>
+      <description>需要完善的地方 Day10 中，我们添加了一个简单的线程池，一个完整的 Reactor 模型已经成型。但这个线程池存在的问题还比较多，例如任务队列的取出、添加都存在拷贝，性能较差，只能用于学习。&#xA;正确操作应该使用右值移动、完美转发等来阻止拷贝。&#xA;另外，线程池只能接受 std::function&amp;lt;void()&amp;gt; 类型的函数，所以函数需要使用 Lambda 表达式来创建，或者 std::bind()，且无法得到返回值。&#xA;利用模板 class ThreadPool { private: std::vector&amp;lt;std::thread&amp;gt; threads_; std::queue&amp;lt;std::function&amp;lt;void()&amp;gt;&amp;gt; tasks_; std::mutex tasks_mtx_; std::condition_variable cv_; bool stop_; public: explicit ThreadPool(int size = 8); ~ThreadPool(); template &amp;lt;class F, class... Args&amp;gt; auto add_task(F &amp;amp;&amp;amp;f, Args &amp;amp;&amp;amp;...args) -&amp;gt; std::future&amp;lt;typename std::result_of&amp;lt;F(Args...)&amp;gt;::type&amp;gt;; }; template &amp;lt;class F, class... Args&amp;gt; auto ThreadPool::add_task(F &amp;amp;&amp;amp;f, Args &amp;amp;&amp;amp;...args) -&amp;gt; std::future&amp;lt;typename std::result_of&amp;lt;F(Args...)&amp;gt;::type&amp;gt; { using return_type = typename std::result_of&amp;lt;F(Args...)&amp;gt;::type; auto ptask = std::make_shared&amp;lt;std::packaged_task&amp;lt;return_type()&amp;gt;&amp;gt;( std::bind(std::forward&amp;lt;F&amp;gt;(f), std::forward&amp;lt;Args&amp;gt;(args).</description>
+    </item>
+    <item>
+      <title>Web Day10：加入线程池到服务器</title>
+      <link>http://localhost:1313/posts/tech/web-day10.zh/</link>
+      <pubDate>Sat, 18 Nov 2023 15:19:11 +0800</pubDate>
+      <guid>http://localhost:1313/posts/tech/web-day10.zh/</guid>
+      <description>前言 到 day9 的时候，一个单线程的服务器已经算写好了。Reactor 驱动大致成型。&#xA;服务器的启动流程大致如下，先创建 EventLoop 对象 loop（里面包含了 Epoll 对象），然后 Server 会利用 loop 实例化对象 server，Server 对象实例化时，Acceptor 类型的 acceptor_ 对象会被初始化, Acceptor 对象用于建立连接，会在 Server 的构造函数里回调函数 acceptor_-&amp;gt;new_conn_callback_ 会被注册为 server-&amp;gt;NewConn(Socket *clnt_sock) ，由 acceptor_-&amp;gt;AcceptConn() 来调用。而 Acceptor 的构造函数中 Channel 类的实例 accept_ch_ 会被初始化，而回调函数 acceptr_ch-&amp;gt;callback_ 会被注册为 acceptor_-&amp;gt;AcceptConn()，最终还是调用的 server-&amp;gt;NewConn(Socket *clnt_sock)。&#xA;Server::Server(EventLoop *loop) : loop_(loop), acceptor_(nullptr) { acceptor_ = new Acceptor(loop); std::function&amp;lt;void(Socket *)&amp;gt; callback = [this](auto &amp;amp;&amp;amp;PH1) { NewConn(std::forward&amp;lt;decltype(PH1)&amp;gt;(PH1)); }; acceptor_-&amp;gt;set_new_conn_callback(callback); } void Server::NewConn(Socket *sock) { auto *conn = new Connection(loop_, sock); // 这里应该是 clnt_sock std::function&amp;lt;void(Socket *)&amp;gt; callback = [this](auto &amp;amp;&amp;amp;PH1) { DeleteConn(std::forward&amp;lt;decltype(PH1)&amp;gt;(PH1)); }; conn-&amp;gt;set_delete_conn_callback(callback); connections_[sock-&amp;gt;getfd()] = conn; } void Acceptor::AcceptConn() { auto *clnt_addr = new InetAddress(); auto *clnt_sock = new Socket(sock_-&amp;gt;Accpet(clnt_addr)); printf(&amp;#34;new client fd %d!</description>
+    </item>
+    <item>
+      <title>Web Day9：建立读写缓冲类</title>
+      <link>http://localhost:1313/posts/tech/web-day9.zh/</link>
+      <pubDate>Sat, 18 Nov 2023 14:53:43 +0800</pubDate>
+      <guid>http://localhost:1313/posts/tech/web-day9.zh/</guid>
+      <description>概述 本节只是额外添加了一个读写的缓冲区，意义不甚明了。暂定。</description>
+    </item>
+    <item>
+      <title>Web Day8：抽象出 Connection 类</title>
+      <link>http://localhost:1313/posts/tech/web-day8.zh/</link>
+      <pubDate>Thu, 16 Nov 2023 15:25:27 +0800</pubDate>
+      <guid>http://localhost:1313/posts/tech/web-day8.zh/</guid>
+      <description>Acceptor 类 一言以蔽之，Acceptor 类负责接受连接，调用 AcceptConn，到这里，接受连接已经完全由 Acceptor 类来负责。Acceptconn 会调用被注册的回调函数 new_conn_callback_(clnt_sock)，实际上就是调用 Server::NewConn(clnt_sock)，该函数会将 {clnt_fd, conn} 的键值对添加到 Server 类的 map 中去。&#xA;此外，还会为 Connection 类注册删除 Connection 的回调函数；&#xA;void Acceptor::AcceptConn() { auto *clnt_addr = new InetAddress(); auto *clnt_sock = new Socket(sock_-&amp;gt;Accpet(clnt_addr)); printf(&amp;#34;new client fd %d! IP: %s Port: %d\n&amp;#34;, clnt_sock-&amp;gt;getfd(), inet_ntoa(clnt_addr-&amp;gt;get_addr().sin_addr), ntohs(clnt_addr-&amp;gt;get_addr().sin_port)); clnt_sock-&amp;gt;Setnonblocking(); new_conn_callback_(clnt_sock); delete clnt_addr; } void Server::NewConn(Socket *sock) { auto *conn = new Connection(loop_, sock); // 这里应该是 clnt_sock std::function&amp;lt;void(Socket *)&amp;gt; callback = [this](auto &amp;amp;&amp;amp;PH1) { DeleteConn(std::forward&amp;lt;decltype(PH1)&amp;gt;(PH1)); }; conn-&amp;gt;set_delete_conn_callback(callback); connections_[sock-&amp;gt;getfd()] = conn; Acceptor 的回调函数的注册过程发生在 Server 类的创建过程中。</description>
+    </item>
+    <item>
+      <title>Web Day6：EventLoop 类与事件驱动</title>
+      <link>http://localhost:1313/posts/tech/web-day6.zh/</link>
+      <pubDate>Wed, 15 Nov 2023 20:09:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/tech/web-day6.zh/</guid>
+      <description>事件驱动 原先的代码中，不管是接受客户端连接还是处理客户端事件，都是围绕epoll来编程，可以说epoll是整个程序的核心，服务器做的事情就是监听epoll上的事件，然后对不同事件类型进行不同的处理。这种以事件为核心的模式又叫事件驱动，事实上几乎所有的现代服务器都是事件驱动的。和传统的请求驱动模型有很大不同，事件的捕获、通信、处理和持久保留是解决方案的核心结构。&#xA;将服务器改造成 Reactor 模式 我们将服务器抽象成一个 Server 类，类中有一个 main-reactor，main-reactor 的核心是一个 EventLoop，即不断循环，一旦有事件发生，我们就会通过 ep-&amp;gt;Poll 知晓，然后作出对应的处理。&#xA;Channel 的修改 day5 中，每个 channel 里面都含有一个 Epoll * 指针，表示它在哪个 epoll 实例中被关注，这里我们把 Epoll * 替换成了 EventLoop *，表示该 channel 处于哪个事件循环中，事实上 EventLoop 的关键成员就是 Epoll *。&#xA;初始化流程 首先创建 EventLoop 对象 loop，它会创建一个 Epoll 实例，核心就是 epfd，然后利用 loop 初始化 Server 对象，在这个过程中，会完成服务器的 serv_fd 的创建以及 bind，listen，同时将对应着 serv_fd 以及新建连接事件的 Channel 创建出来，将 Channel 的处理事件的回调函数设置为 NewConn；调用 serv_ch-&amp;gt;EnableReading 会将关注的事件类型设置为 EPOLLIN | EPOLLET 并调用 loop-&amp;gt;UpdateChannel(this) 最终调用 ep-&amp;gt;UpdateChannel(ch)，从而将 serv_ch 对应的文件描述符添加到 epoll 关注的文件描述符列表或者修改。</description>
+    </item>
+    <item>
+      <title>Web Day 5 添加 Channel 类</title>
+      <link>http://localhost:1313/posts/tech/web-day5.zh/</link>
+      <pubDate>Wed, 15 Nov 2023 15:29:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/tech/web-day5.zh/</guid>
+      <description>Channel 类 Channel 类相当于将 ep-&amp;gt;addFd 这一步拆成了两步，第一步是 ch-&amp;gt;enablereading，它会调用 ep-&amp;gt;UpdateChannel(this)，this 就是调用 enablereading 的那个 ch。&#xA;如何理解 Channel 类？可以认为每一个 ch 的实例，都对应着一个关注的文件描述符 fd 和一个要关注的事件类型 events，当前其实只有两类 Channel，一个是对应的服务器的 fd，另一类对应的是 accept 客户端的连接之后得到的 fd，ch-&amp;gt;events 是 fd 所在的 Channel 实例需要关注的事件类型。&#xA;而 active_events 表示该 Channel 当前发生的事件类型，在 ep-&amp;gt;Poll() 中会被设置。&#xA;auto Epoll::Poll(int timeout) -&amp;gt; std::vector&amp;lt;Channel *&amp;gt; { std::vector&amp;lt;Channel *&amp;gt; active_channels; int nfds = epoll_wait(epfd, events, MAX_EVENTS, timeout); errif(nfds == -1, &amp;#34;epoll wait error\n&amp;#34;); active_channels.reserve(nfds); for (int i = 0; i &amp;lt; nfds; ++i) { Channel *ch = (Channel *)events[i].</description>
+    </item>
+    <item>
+      <title>C&#43;&#43; 面经</title>
+      <link>http://localhost:1313/posts/tech/cpp_interview.zh/</link>
+      <pubDate>Tue, 07 Nov 2023 14:28:37 +0800</pubDate>
+      <guid>http://localhost:1313/posts/tech/cpp_interview.zh/</guid>
+      <description>1. 多态，虚函数 1. 什么是多态，如何实现多态(⭐⭐) 所谓多态，就是同一个函数名具有多种状态，或者说一个接口具有不同的行为；C++的多态分为编译时多态和运行时多态，编译时多态也称为为静态联编，通过重载和模板来实现，运行时多态称为动态联编，通过继承和虚函数来实现&#xA;2. 虚函数的实现机制(⭐⭐⭐) 虚函数是通过虚函数表来实现的，虚函数表包含了一个类(所有)的虚函数的地址，在有虚函数的类对象中，它内存空间的头部会有一个虚函数表指针(虚表指针)，用来管理虚函数表。当子类对象对父类虚函数进行重写的时候，虚函数表的相应虚函数地址会发生改变，改写成这个虚函数的地址，当我们用一个父类的指针来操作子类对象的时候，它可以指明实际所调用的函数&#xA;3. 虚函数调用是在编译时确定还是运行时确定的，如何确定调用哪个函数 当使用指针或引用调用虚函数的时候，是运行时确定，通过查找虚函数表中的函数地址确定&#xA;而使用普通变量调用虚函数的时候，是编译器确定的，此时没有多态&#xA;虚函数表是在编译阶段生成的，存放在只读数据段.rodata(和全局常量、字符串常量存放在一起)&#xA;4. 在(基类的)构造函数和析构函数中调用虚函数会怎么样(⭐⭐) 从语法上讲，调用没有问题，但是从效果上看，往往不能达到需要的目的（不能实现多态）；因为调用构造函数的时候，是先进行父类成分的构造，再进行子类的构造。在父类构造期间，子类的特有成分还没有被初始化，此时下降到调用子类的虚函数，使用这些尚未初始化的数据一定会出错；同理，调用析构函数的时候，先对子类的成分进行析构，当进入父类的析构函数的时候，子类的特有成分已经销毁，此时是无法再调用虚函数实现多态的&#xA;5. C 语言可以实现虚函数机制吗，如何实现 需要做的工作：手动构造父子关系、创建虚函数表、设置虚表指针并指向虚函数表、填充虚函数表；当虚函数重写的时候还需要手动修改函数指针等等&#xA;6. 重载、重写和隐藏的区别(⭐⭐) 重载指的是同一个名字的函数，具有不同的参数列表（参数类型、个数），或不同的返回类型，根据参数列表和返回类型决定调用哪一个函数；&#xA;重写（覆盖）指的是，派生类中的函数重写了基类中的虚函数，重写的基类的中函数必须被声明为virtual，并且返回值，参数列表和基类中的函数一致(除非返回类型是基类/派生类的指针/引用)；&#xA;隐藏是指，派生类中的同名函数把基类中的同名函数隐藏了，包括所有的重载版本，不论是不是虚函数都会隐藏&#xA;7. 模板类可以有虚函数吗，模板函数可以是虚函数吗 模板类可以使用虚函数。但使用模板类定义不同的类型则是两个完全不同的类，即使两个泛型参数是父类和子类关系，两个泛型变量也没有任何父子关系&#xA;模板函数不能是虚函数。编译器都期望在处理类的定义的时候就能确定这个类的虚函数表的大小，如果允许有类的虚成员模板函数，那么就必须要求编译器提前知道程序中所有对该类的虚成员模板函数有多少个版本，才能分配虚函数表的大小，而这是不可行的&#xA;8. 内联函数可以是虚函数吗，静态函数可以是虚函数吗(⭐⭐) 内联函数表示在编译阶段进⾏函数体的替换操作(内联函数实际上不是函数)，⽽虚函数意味着在运⾏期间进⾏类型确定，要经过函数调用的过程，所以内联函数不能是虚函数(将函数同时声明inline virtual编译器会直接忽略inline) 静态函数不属于类对象而属于类，静态成员函数没有 this 指针，所以无法找到虚表，也就无法实现虚函数重写的功能，所以不能是虚函数 9. 多个基类的同名虚函数覆写问题(⭐) 假设一个子类继承两个基类，这两个基类都有一个虚函数func，那么直接用子类变量调用func就会出现歧义，因为不知道是哪一个func，其实就是不知道使用哪个虚表的信息&#xA;如果用这两个基类的指针指向这个子类变量，那么用这两个基类指针就能成功调用这个虚函数了，因为两个基类指针确定了是使用自己类的虚表&#xA;若子类又覆写了这个同名的虚函数，此时会将两个虚表中的该函数全部覆写，那直接用子类变量也能直接调用func，此时没有歧义，因为两个虚函数实现是一样的了&#xA;2. 内存与继承 1. C++ 中类对象的内存模型(布局)是怎么样的(⭐⭐⭐) 如果是有虚函数的话，虚函数表的指针始终存放在内存空间的头部&#xA;除了虚函数之外，内存空间会按照类的继承顺序(父类到子类)和字段的声明顺序布局&#xA;如果有多继承，每个包含虚函数的父类都会有自己的虚函数表，并且按照继承顺序布局(虚表指针 + 字段）；如果子类重写父类虚函数，都会在每一个相应的虚函数表中更新相应地址；如果子类有自己的新定义的虚函数或者非虚成员函数，也会加到第一个虚函数表的后面&#xA;如果有菱形继承，并采用了虚继承，则内存空间排列顺序为：各个父类(包含虚表)、子类、公共基类(虚基类，包含虚表)，并且各个父类不再拷贝虚基类中的数据成员&#xA;2. 菱形继承存在什么问题，如何解决 会存在二义性的问题，因为两个父类会对公共基类的数据和方法产生一份拷贝，因此对于子类来说读写一个公共基类的数据或调用一个方法时，不知道是哪一个父类的数据和方法，也会导致编译错误。可以采用虚继承的方法解决这个问题，这样就只会创造一份公共基类的实例，不会造成二义性&#xA;在钻石继承时，使用最高层的公共基类指向最底层的派生类，就会报错，因为编译器不知道是指向哪个派生类的基类区域&#xA;3. C++ 是如何做内存管理的（有哪些内存区域）(⭐⭐⭐) 堆，使用malloc、free动态分配和释放空间，能分配较大的内存 栈，为函数的局部变量分配内存，能分配较小的内存 全局/静态存储区，用于存储全局变量和静态变量 常量存储区，专门用来存放常量 自由存储区：通过new和delete分配和释放空间的内存，具体实现可能是堆或者内存池 4. C++ 内存有哪些段 代码段.text存放函数代码 .bss段存放未初始化的全局变量，未初始化的全局静态变量和局部静态变量 数据段.data存放已经初始化的全局变量，已初始化的全局静态变量和局部静态变量 只读数据段.</description>
+    </item>
+    <item>
+      <title>从汇编的角度理解 C/Cpp 的函数调用过程</title>
+      <link>http://localhost:1313/posts/tech/function_call_stack.zh/</link>
+      <pubDate>Mon, 01 May 2023 17:45:58 +0800</pubDate>
+      <guid>http://localhost:1313/posts/tech/function_call_stack.zh/</guid>
+      <description>代码 测试代码内容如下，定义了一个 add 函数，用来求两个函数的和。&#xA;int add(int a, int b) { return a + b; } int sum(int a, int b) { return 10 + add(a, b); } int main() { int res = sum(10, 20); return 0; } 汇编代码如下:&#xA;.file&#x9;&amp;#34;add.c&amp;#34; .text .globl&#x9;add .type&#x9;add, @function add: .LFB0: .cfi_startproc pushq&#x9;%rbp .cfi_def_cfa_offset 16 .cfi_offset 6, -16 movq&#x9;%rsp, %rbp .cfi_def_cfa_register 6 movl&#x9;%edi, -4(%rbp) movl&#x9;%esi, -8(%rbp) movl&#x9;-4(%rbp), %edx movl&#x9;-8(%rbp), %eax addl&#x9;%edx, %eax popq&#x9;%rbp .</description>
+    </item>
+    <item>
+      <title>C&#43;&#43; 虚函数与动态绑定</title>
+      <link>http://localhost:1313/posts/tech/virtual_func.zh/</link>
+      <pubDate>Sun, 23 Apr 2023 22:59:09 +0800</pubDate>
+      <guid>http://localhost:1313/posts/tech/virtual_func.zh/</guid>
+      <description>多态与动态绑定 为了实现 C++ 的多态，C++ 使用了动态绑定技术，该技术的核心是虚函数表（简称虚表）。&#xA;类的虚函数表 每个包含了虚函数的类都包含一个虚表，一个子类如果继承了包含虚函数的父类，那么这个类也拥有自己的虚表，例如&#xA;class A { public: virtual void vfunc1(); virtual void vfunc2(); void func1(); void func2(); private: int data1_, data2_; }; class B : public A { public: void vfunc1() override; void func1(); }; class C : public B { public: void vfunc2() override; void func2(); private: int data1_, data2_; }; A 包含虚函数 vfunc1() ，B 继承自 A，A 的虚表如图所示 虚表是一个指针数组，其元素是虚函数的指针，数组中的每个元素对应一个虚函数的指针。普通的函数（即非虚函数），其调用并不需要经过虚表，所以虚表的元素并不包括普通函数的函数指针。&#xA;虚函数指针的赋值发生在编译器的编译阶段，也就是在编译阶段，虚表就被构建出来了。&#xA;虚表指针 虚表是属于类的（有点像静态成员变量），而不属于某个具体的对象，一个类只需要一个虚表即可，同一个类的所有对象都使用同一个虚表。&#xA;为了指定对象的虚表，对象内部包含一个虚表的指针，来指向自己所使用的虚表。为了让每个包含虚表的类的对象都拥有一个虚表指针，编译器在类中添加了一个指针，*__vptr，用来指向虚表。这样，当类的对象在创建时便拥有了这个指针，且这个指针的值会自动被设置为指向类的虚表。&#xA;一个子类的父类如果包含虚函数，那么这个子类也拥有自己的虚表，所以这个子类的对象也包含一个虚表指针，用来指向它的虚表。 类 A 包括两个虚函数，故 A 的虚函数表包含两个指针，分别指向 A::vfunc1()和 A::vfunc2()。</description>
+    </item>
+    <item>
+      <title>Cmake 基础教程</title>
+      <link>http://localhost:1313/posts/tech/cmake_tutorial.zh/</link>
+      <pubDate>Thu, 13 Apr 2023 13:42:31 +0800</pubDate>
+      <guid>http://localhost:1313/posts/tech/cmake_tutorial.zh/</guid>
+      <description>介绍 CMake是个一个开源的跨平台自动化建构系统，用来管理软件建置的程序，并不依赖于某特定编译器，并可支持多层目录、多个应用程序与多个库。 它用配置文件控制建构过程（build process）的方式和Unix的make相似，只是CMake的配置文件取名为CMakeLists.txt。CMake并不直接建构出最终的软件，而是产生标准的建构档（如Unix的Makefile或Windows Visual C++的projects/workspaces），然后再依一般的建构方式使用。&#xA;CmakeLists.txt 一个简单的CmakeLists.txt示例如下:&#xA;# 指定最小 CMake 版本要求 cmake_minimum_required(VERSION 3.9) # 设置项目名称 project(answer) #[[ 添加可执行文件 target，类似于原来 Makefile 的： answer: main.o answer.o main.o: main.cpp answer.hpp answer.o: answer.cpp answer.hpp CMake 会自动找到依赖的头文件，因此不需要特别指定， 当头文件修改的时候，会重新编译依赖它的目标文件。 #]] add_executable(answer main.cpp answer.cpp) #[[ 使用如下命令构建本项目： cmake -B build # 生成构建目录 cmake --build build # 执行构建 ./build/answer # 运行 answer 程序 #]] 其中cmake -B build命令中的-B参数是可选的，生成的文件会放到build文件夹中（没有该文件夹则会自动创建，最好原先没有）。&#xA;cmake --build build是执行构建，生成可执行文件，build指的是上一步-B参数指定的文件夹。&#xA;分离库文件情形下的CMakeLists.txt cmake_minimum_required(VERSION 3.9) project(answer) # 添加 libanswer 库目标，STATIC 指定为静态库 add_library(libanswer STATIC answer.</description>
+    </item>
+    <item>
+      <title>C&#43;&#43; 模板类编译过程中出现“undefined reference to”问题</title>
+      <link>http://localhost:1313/posts/tech/cpp_templdate_undefined.zh/</link>
+      <pubDate>Tue, 14 Mar 2023 18:35:39 +0800</pubDate>
+      <guid>http://localhost:1313/posts/tech/cpp_templdate_undefined.zh/</guid>
+      <description>问题描述 C++在使用模板(template)类的时候，如果将类的成员函数的声明和实现分别放在.h头文件和.cpp源文件中，编译时会报错undefined reference xxx，找不到对应成员函数。&#xA;起因 .h文件中类的声明为：&#xA;// 线程池，定义成模板类，为了代码的复用 template &amp;lt;typename T&amp;gt; class ThreadPool { ... public: bool append(T *request); ... }; .cpp文件中成员函数的实现为：&#xA;template &amp;lt;typename T&amp;gt; bool ThreadPool&amp;lt;T&amp;gt;::append(T *request) { // 操作工作队列时一定要加锁，因为它被所有线程共享 queue_locker_.lock(); if (work_queue_.size() &amp;gt; max_requests_) { queue_locker_.unlock(); return false; } work_queue_.push_back(request); queue_locker_.unlock(); queue_sta_.post(); return true; } 直接使用g++编译，会报错： 原因分析 template其实是一种类似语法糖的东西，C++中每一个对象所占用的空间大小，是在编译的时候就确定的，在模板类没有真正的被使用之前，编译器是无法知道，模板类中使用模板类型的对象的所占用的空间的大小的。只有模板被真正使用的时候，编译器才知道，模板套用的是什么类型，应该分配多少空间。这也就是模板类为什么只是称之为模板，而不是泛型的缘故。&#xA;即ThreadPool&amp;lt;int&amp;gt;和Thread&amp;lt;HttpConn&amp;gt;是两个不同的类型，其成员函数也是两个不同的成员函数。&#xA;在编译thread_pool.cpp时，编译器会去查找对类Thread&amp;lt;HttpConn&amp;gt;的声明，如果找不到这个声明，那么就报错了。&#xA;解决方案 在成员函数的实现的代码所在的源文件的开头，声明该类，即添加：&#xA;template class ThreadPool&amp;lt;HttpConn&amp;gt;; 或者将函数的实现也写在头文件中（不推荐）。</description>
+    </item>
+  </channel>
+</rss>

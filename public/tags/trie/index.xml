@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Trie on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/trie/</link>
+    <description>Recent content in Trie on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 May 2023 14:22:11 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/trie/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>421. Maximum XOR of Two Numbers in an Array (Medium)</title>
+      <link>http://localhost:1313/posts/leet/421.maximum-xor-of-two-numbers-in-an-array/</link>
+      <pubDate>Tue, 30 May 2023 14:22:11 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/421.maximum-xor-of-two-numbers-in-an-array/</guid>
+      <description>Description 421. Maximum XOR of Two Numbers in an Array (Medium) Given an integer array nums, return the maximum result of nums[i] XOR nums[j], where 0 &amp;lt;= i &amp;lt;= j &amp;lt; n.&#xA;Example 1:&#xA;Input: nums = [3,10,5,25,2,8] Output: 28 Explanation: The maximum result is 5 XOR 25 = 28. Example 2:&#xA;Input: nums = [14,70,53,83,49,91,36,80,92,51,66,70] Output: 127 Constraints:&#xA;1 &amp;lt;= nums.length &amp;lt;= 2 * 10⁵ 0 &amp;lt;= nums[i] &amp;lt;= 2³¹ - 1 Solution If we directly use a brute-force approach to find the maximum XOR value, the time complexity would be $O(n^2)$, which would inevitably lead to timeout errors.</description>
+    </item>
+    <item>
+      <title>421. 数组中两个数的最大异或值 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/421.maximum-xor-of-two-numbers-in-an-array.zh/</link>
+      <pubDate>Tue, 30 May 2023 14:22:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/421.maximum-xor-of-two-numbers-in-an-array.zh/</guid>
+      <description>问题描述 421. 数组中两个数的最大异或值 (Medium) 给你一个整数数组 nums ，返回 nums[i] XOR nums[j] 的最大 运算结果，其中 0 ≤ i ≤ j &amp;lt; n 。&#xA;示例 1：&#xA;输入：nums = [3,10,5,25,2,8] 输出：28 解释：最大运算结果是 5 XOR 25 = 28. 示例 2：&#xA;输入：nums = [14,70,53,83,49,91,36,80,92,51,66,70] 输出：127 提示：&#xA;1 &amp;lt;= nums.length &amp;lt;= 2 * 10⁵ 0 &amp;lt;= nums[i] &amp;lt;= 2³¹ - 1 解题思路 如果直接暴力，求解最大异或值，时间复杂度为 $O(n^2)$，必定会超时。&#xA;实际上，我们可以把每个数字的二进制表示看成字符串，因此可以使用 字典树 这一数据结构来优化求解异或值的过程。暴力情况下，求解 nums[i] 与其他值的异或值，需要遍历整个数组，时间复杂度为 $O(n)$，而利用字典树，我们可以将这个比较的时间复杂度从 $O(n)$ 优化为 $O(\log_2C)$，其中 $C$ 为数字的大小，$\log_2C$ 即为数字的二进制表示的位数。&#xA;如果我们要找到最大异或值，应该从数字的最高位开始比较，字典树也应该从数字的高位开始构建，由于 0 &amp;lt;= nums[i] &amp;lt;= 2^31 - 1，因此我们可以将 nums[i] 右移 j 位的结果插入字典树，j 从 $31$ 递减到 $0$。</description>
+    </item>
+  </channel>
+</rss>

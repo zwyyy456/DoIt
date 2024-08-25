@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vim on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/vim/</link>
+    <description>Recent content in Vim on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 14 Jun 2024 16:55:19 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>计算机教育缺失的一课：编辑器（Vim）</title>
+      <link>http://localhost:1313/posts/tech/missing-semester-editor-vim.zh/</link>
+      <pubDate>Fri, 14 Jun 2024 16:55:19 +0800</pubDate>
+      <guid>http://localhost:1313/posts/tech/missing-semester-editor-vim.zh/</guid>
+      <description>编辑模式 Vim 的符号说明，对于 Ctlr+v 的组合键，可能有 ^V、Ctrl-v、&amp;lt;C-v&amp;gt; 三种表达方式。&#xA;Vim 的设计以大多数时间都花在阅读、浏览和进行少量编辑改动为基础，因此它具有多种操作模式：&#xA;正常模式：在文件中四处移动光标进行修改 插入模式：插入文本 替换模式：替换文本 可视化模式（一般，行，块）：选中文本块 命令模式：用于执行命令 正常模式即 normal 模式，我更习惯叫 normal 模式。&#xA;Vim 的模式：&#xA;normal &amp;lt;-&amp;gt; insert replace visual command-line 在 normal 模式下，按下 v 可以进入可视（一般）模式，按下 V 则可以进入可视（行）模式，而 &amp;lt;C-v&amp;gt; 则会进入可视（方块）模式。&#xA;buffer，window，tab vim 具有多个 tab（标签），每个 tab 可以包含多个 window，每个 window 对应一个 buffer，而同一个 buffer 可能由多个 window 打开。&#xA;:q 实际上只是关闭当前窗口，假设 vim 已经没有打开的窗口了，那么才会退出 vim。&#xA;命令模式 在 normal 模式下按下 : 可以进入命令模式，这个模式下，可以打开、保存、关闭文件，以及退出 Vim。&#xA;:q 退出（关闭窗口） :w 保存（写） :wq 保存然后退出 :e {文件名} 打开要编辑的文件 :ls 显示打开的缓存 :help {标题} 打开帮助文档 :help :w 打开 :w 命令的帮助文档 :help w 打开 w 移动的帮助文档 移动光标 在 normal 模式下，可以利用移动命令在 buffer 中移动光标，在 Vim 中，移动也被称为“名词”，与编辑命令（i、o）等相对应。</description>
+    </item>
+    <item>
+      <title>Vimium: 让你像使用 Vim 那样控制浏览器</title>
+      <link>http://localhost:1313/posts/blog/vimium.zh/</link>
+      <pubDate>Sun, 05 Nov 2023 17:05:59 +0800</pubDate>
+      <guid>http://localhost:1313/posts/blog/vimium.zh/</guid>
+      <description>简介 Vimium 则继承了 Vim 中的常用键位，让你在使用 Chrome 的过程中，无论是浏览网页、切换标签或是其它任何操作，全都可以只通过键盘完成。&#xA;Vim 快速上手 首先，在浏览器界面中输入 ? 即可唤出 Vimium 的默认快捷键列表。&#xA;常用快捷键 页面滚动与导航 快捷键 操作 j 向下滚动 k 向上滚动 h 向左滚动 l 向右滚动 u 向上滚动半屏 d 向下滚动半屏 r 重新加载当前页面 gg 移动到页面顶部 G 移动到页面底部 打开页面 快捷键 操作 yy 将当前页面的网址拷贝到剪贴板 yf 拷贝一条链接，会让你二次选择 p 在当前 tab 打开剪贴板中的链接 P 新建页面打开剪贴板中的链接 o 在当前 tab 打开特定网址或者书签、历史记录中的网址 O 在新 tab 中打开特定网址或者书签、历史记录中的网址 T 在打开的 tab 中搜索 b 在当前 tab 打开书签中的某网址 B 在新 tab 中打开书签中的某网址 查找 快捷键 操作 / 进入查找模式 n 向下循环查找 N 向上循环查找 历史导航 快捷键 操作 H 后退 L 前进 操作 tab 快捷键 操作 K, gt 移动到下一个 tab J, gt 移动到上一个 tab g0 移动到第一个 tab g$ 移动到最后一个 tab t 创建新 tab yt 复制当前 tab 一份 x 关闭当前 tab X 恢复关闭的 tab alt + p pin / unpin 当前 tab 其他 快捷键 操作 f 在当前 tab 打开页面中的某个链接，会需要你二次选择 F 在新 tab 中打开页面中的某个链接，会需要你二次选择 </description>
+    </item>
+    <item>
+      <title>Neovim 的配置与使用</title>
+      <link>http://localhost:1313/posts/blog/neovim_tutorial.zh/</link>
+      <pubDate>Fri, 17 Mar 2023 15:08:52 +0800</pubDate>
+      <guid>http://localhost:1313/posts/blog/neovim_tutorial.zh/</guid>
+      <description>安装 LazyVim 参考 Lazyvim 的官方安装教程即可安装，要求系统已经安装好了 npm。&#xA;实际上就是 clone folke 的适用于 LazyVim 的初始 配置文件 到 Neovim 的配置文件所处的目录，Linux 和 macOS 都是 ~/.config，Windows 比较特殊，位于 ~/AppData/Local/。&#xA;由于我对初始配置文件做了一定的修改，因此我这里直接 clone 我自己的 配置文件&#xA;It is recommended to run :checkhealth after installation&#xA;值得注意的是，LazyVim 会安装 nvim-treesitter 插件，而 nvim-treesitter 插件会自动编译安装 C/C++ 等语言的解析器，而编译安装是需要 C/C++ 的运行环境的，对安装了 Command Line Tool 的 Mac 或者 Linux 而言，这一步一般不会存在问题，Windows 则是容易出现问题，我在重装 Windows 系统后尝试过只通过 scoop 安装了 llvm，尽管命令行中执行 clang --version 是有正常输出的，即 C/C++ 运行环境已经正常安装好了，但是 nvim-treesitter 始终无法正常编译解释器，不得已，我又通过 scoop install mingw 安装了 mingw（gcc），安装好 mingw 之后，解释器就能正常被编译安装了，此后执行 scoop uninstall mingw 卸载掉 mingw 也还是能正常使用。</description>
+    </item>
+  </channel>
+</rss>

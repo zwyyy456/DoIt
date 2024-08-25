@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Daily on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/daily/</link>
+    <description>Recent content in Daily on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 Mar 2023 15:31:57 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/daily/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>面试题 17.05.  字母与数字 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/interview-17.05.zh/</link>
+      <pubDate>Sat, 11 Mar 2023 15:31:57 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/interview-17.05.zh/</guid>
+      <description>问题描述 面试题 17.05. 字母与数字 (Medium)&#xA;给定一个放有字母和数字的数组，找到最长的子数组，且包含的字母和数字的个数相同。&#xA;返回该子数组，若存在多个最长子数组，返回左端点下标值最小的子数组。若不存在这样的数组，返回一个空数组。&#xA;示例 1:&#xA;输入: [&amp;#34;A&amp;#34;,&amp;#34;1&amp;#34;,&amp;#34;B&amp;#34;,&amp;#34;C&amp;#34;,&amp;#34;D&amp;#34;,&amp;#34;2&amp;#34;,&amp;#34;3&amp;#34;,&amp;#34;4&amp;#34;,&amp;#34;E&amp;#34;,&amp;#34;5&amp;#34;,&amp;#34;F&amp;#34;,&amp;#34;G&amp;#34;,&amp;#34;6&amp;#34;,&amp;#34;7&amp;#34;,&amp;#34;H&amp;#34;,&amp;#34;I&amp;#34;,&amp;#34;J&amp;#34;,&amp;#34;K&amp;#34;,&amp;#34;L&amp;#34;,&amp;#34;M&amp;#34;] 输出: [&amp;#34;A&amp;#34;,&amp;#34;1&amp;#34;,&amp;#34;B&amp;#34;,&amp;#34;C&amp;#34;,&amp;#34;D&amp;#34;,&amp;#34;2&amp;#34;,&amp;#34;3&amp;#34;,&amp;#34;4&amp;#34;,&amp;#34;E&amp;#34;,&amp;#34;5&amp;#34;,&amp;#34;F&amp;#34;,&amp;#34;G&amp;#34;,&amp;#34;6&amp;#34;,&amp;#34;7&amp;#34;] 示例 2:&#xA;输入: [&amp;#34;A&amp;#34;,&amp;#34;A&amp;#34;] 输出: [] 提示：&#xA;array.length &amp;lt;= 100000 解题思路 首先使用一个前缀和数组prefix，prefix[i]表示前i个数里，数字的数量减去字母的数量，遍历array，更新prefix，同时在哈希表中查找key-&amp;gt;prefix[i]是否存在：&#xA;如果存在，比较记录的最长长度len，如果大于len，则更新idx = ump[prefix[i]]，并更新len = i - ump[prefix[i]]； 否则，更新哈希表，即ump[prefix[i]] = i； 代码 class Solution { public: vector&amp;lt;string&amp;gt; findLongestSubarray(vector&amp;lt;string&amp;gt; &amp;amp;array) { int n = array.size(); vector&amp;lt;string&amp;gt; res; if (n &amp;lt; 2) { return res; } unordered_set&amp;lt;string&amp;gt; ust; for (char c = &amp;#39;a&amp;#39;; c &amp;lt;= &amp;#39;z&amp;#39;; c++) { // 统计所有的字母 string s(1, c); ust.</description>
+    </item>
+    <item>
+      <title>1590. Make Sum Divisible by P (Medium)</title>
+      <link>http://localhost:1313/posts/leet/1590.make-sum-divisible-by-p/</link>
+      <pubDate>Fri, 10 Mar 2023 09:31:20 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1590.make-sum-divisible-by-p/</guid>
+      <description>Description 1590. Make Sum Divisible by P (Medium)&#xA;Given an array of positive integers nums, remove the smallest subarray (possibly empty) such that the sum of the remaining elements is divisible by p. It is not allowed to remove the whole array.&#xA;Return the length of the smallest subarray that you need to remove, or -1 if it&amp;rsquo;s impossible.&#xA;A subarray is defined as a contiguous block of elements in the array.</description>
+    </item>
+    <item>
+      <title>982.Triples with Bitwise AND Equal To Zero (Hard)</title>
+      <link>http://localhost:1313/posts/leet/982.triples-with-bitwise-and-equal-to-zero/</link>
+      <pubDate>Sat, 04 Mar 2023 14:43:48 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/982.triples-with-bitwise-and-equal-to-zero/</guid>
+      <description>Description 982. Triples with Bitwise AND Equal To Zero (Hard)&#xA;Given an integer array nums, return the number of AND triples.&#xA;An AND triple is a triple of indices (i, j, k) such that:&#xA;0 &amp;lt;= i &amp;lt; nums.length 0 &amp;lt;= j &amp;lt; nums.length 0 &amp;lt;= k &amp;lt; nums.length nums[i] &amp;amp; nums[j] &amp;amp; nums[k] == 0, where &amp;amp; represents the bitwise-AND operator. Example 1:&#xA;Input: nums = [2,1,3] Output: 12 Explanation: We could choose the following i, j, k triples: (i=0, j=0, k=1) : 2 &amp;amp; 2 &amp;amp; 1 (i=0, j=1, k=0) : 2 &amp;amp; 1 &amp;amp; 2 (i=0, j=1, k=1) : 2 &amp;amp; 1 &amp;amp; 1 (i=0, j=1, k=2) : 2 &amp;amp; 1 &amp;amp; 3 (i=0, j=2, k=1) : 2 &amp;amp; 3 &amp;amp; 1 (i=1, j=0, k=0) : 1 &amp;amp; 2 &amp;amp; 2 (i=1, j=0, k=1) : 1 &amp;amp; 2 &amp;amp; 1 (i=1, j=0, k=2) : 1 &amp;amp; 2 &amp;amp; 3 (i=1, j=1, k=0) : 1 &amp;amp; 1 &amp;amp; 2 (i=1, j=2, k=0) : 1 &amp;amp; 3 &amp;amp; 2 (i=2, j=0, k=1) : 3 &amp;amp; 2 &amp;amp; 1 (i=2, j=1, k=0) : 3 &amp;amp; 1 &amp;amp; 2 Example 2:</description>
+    </item>
+    <item>
+      <title>982.按位与为零的三元组 (Hard)</title>
+      <link>http://localhost:1313/posts/leet/982.triples-with-bitwise-and-equal-to-zero.zh/</link>
+      <pubDate>Sat, 04 Mar 2023 14:41:19 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/982.triples-with-bitwise-and-equal-to-zero.zh/</guid>
+      <description>问题描述 982. 按位与为零的三元组 (Hard)&#xA;给你一个整数数组 nums ，返回其中 按位与三元组 的数目。&#xA;按位与三元组 是由下标 (i, j, k) 组成的三元组，并满足下述全部条件：&#xA;0 &amp;lt;= i &amp;lt; nums.length 0 &amp;lt;= j &amp;lt; nums.length 0 &amp;lt;= k &amp;lt; nums.length nums[i] &amp;amp; nums[j] &amp;amp; nums[k] == 0 ，其中 &amp;amp; 表示按位与运算符。 示例 1：&#xA;输入：nums = [2,1,3] 输出：12 解释：可以选出如下 i, j, k 三元组： (i=0, j=0, k=1) : 2 &amp;amp; 2 &amp;amp; 1 (i=0, j=1, k=0) : 2 &amp;amp; 1 &amp;amp; 2 (i=0, j=1, k=1) : 2 &amp;amp; 1 &amp;amp; 1 (i=0, j=1, k=2) : 2 &amp;amp; 1 &amp;amp; 3 (i=0, j=2, k=1) : 2 &amp;amp; 3 &amp;amp; 1 (i=1, j=0, k=0) : 1 &amp;amp; 2 &amp;amp; 2 (i=1, j=0, k=1) : 1 &amp;amp; 2 &amp;amp; 1 (i=1, j=0, k=2) : 1 &amp;amp; 2 &amp;amp; 3 (i=1, j=1, k=0) : 1 &amp;amp; 1 &amp;amp; 2 (i=1, j=2, k=0) : 1 &amp;amp; 3 &amp;amp; 2 (i=2, j=0, k=1) : 3 &amp;amp; 2 &amp;amp; 1 (i=2, j=1, k=0) : 3 &amp;amp; 1 &amp;amp; 2 示例 2：</description>
+    </item>
+    <item>
+      <title>1487.Making File Names Unique (Medium)</title>
+      <link>http://localhost:1313/posts/leet/1487.making-file-names-unique/</link>
+      <pubDate>Fri, 03 Mar 2023 09:40:10 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1487.making-file-names-unique/</guid>
+      <description>Description 1487. Making File Names Unique (Medium)&#xA;Given an array of strings names of size n. You will create n folders in your file system such that, at the ith minute, you will create a folder with the name names[i].&#xA;Since two files cannot have the same name, if you enter a folder name that was previously used, the system will have a suffix addition to its name in the form of (k), where, k is the smallest positive integer such that the obtained name remains unique.</description>
+    </item>
+    <item>
+      <title>1487.保证文件名唯一 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/1487.making-file-names-unique.zh/</link>
+      <pubDate>Fri, 03 Mar 2023 09:40:07 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1487.making-file-names-unique.zh/</guid>
+      <description>问题描述 1487. 保证文件名唯一 (Medium)&#xA;给你一个长度为 n 的字符串数组 names 。你将会在文件系统中创建 n 个文件夹：在第 i 分钟，新建名为 names[i] 的文件夹。&#xA;由于两个文件 不能 共享相同的文件名，因此如果新建文件夹使用的文件名已经被占用，系统会以 (k) 的形式为新文件夹的文件名添加后缀，其中 k 是能保证文件名唯一的 最小正整数 。&#xA;返回长度为n 的字符串数组，其中 ans[i] 是创建第 i 个文件夹时系统分配给该文件夹的实际名称。&#xA;示例 1：&#xA;输入：names = [&amp;#34;pes&amp;#34;,&amp;#34;fifa&amp;#34;,&amp;#34;gta&amp;#34;,&amp;#34;pes(2019)&amp;#34;] 输出：[&amp;#34;pes&amp;#34;,&amp;#34;fifa&amp;#34;,&amp;#34;gta&amp;#34;,&amp;#34;pes(2019)&amp;#34;] 解释：文件系统将会这样创建文件名： &amp;#34;pes&amp;#34; --&amp;gt; 之前未分配，仍为 &amp;#34;pes&amp;#34; &amp;#34;fifa&amp;#34; --&amp;gt; 之前未分配，仍为 &amp;#34;fifa&amp;#34; &amp;#34;gta&amp;#34; --&amp;gt; 之前未分配，仍为 &amp;#34;gta&amp;#34; &amp;#34;pes(2019)&amp;#34; --&amp;gt; 之前未分配，仍为 &amp;#34;pes(2019)&amp;#34; 示例 2：&#xA;输入：names = [&amp;#34;gta&amp;#34;,&amp;#34;gta(1)&amp;#34;,&amp;#34;gta&amp;#34;,&amp;#34;avalon&amp;#34;] 输出：[&amp;#34;gta&amp;#34;,&amp;#34;gta(1)&amp;#34;,&amp;#34;gta(2)&amp;#34;,&amp;#34;avalon&amp;#34;] 解释：文件系统将会这样创建文件名： &amp;#34;gta&amp;#34; --&amp;gt; 之前未分配，仍为 &amp;#34;gta&amp;#34; &amp;#34;gta(1)&amp;#34; --&amp;gt; 之前未分配，仍为 &amp;#34;gta(1)&amp;#34; &amp;#34;gta&amp;#34; --&amp;gt; 文件名被占用，系统为该名称添加后缀 (k)，由于 &amp;#34;gta(1)&amp;#34; 也被占用，所以 k = 2 。实际创建的文件名为 &amp;#34;gta(2)&amp;#34; 。 &amp;#34;avalon&amp;#34; --&amp;gt; 之前未分配，仍为 &amp;#34;avalon&amp;#34; 示例 3：</description>
+    </item>
+    <item>
+      <title>2373.largest local values in a matrix</title>
+      <link>http://localhost:1313/posts/leet/2373.largest-local-values-in-a-matrix/</link>
+      <pubDate>Wed, 01 Mar 2023 19:44:05 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2373.largest-local-values-in-a-matrix/</guid>
+      <description>Description Largest Local Values in a Matrix (Easy) You are given an n x n integer matrix grid.&#xA;Generate an integer matrix maxLocal of size (n - 2) x (n - 2) such that:&#xA;maxLocal[i][j] is equal to the largest value of the 3 x 3 matrix in grid centered around row i + 1 and column j + 1. In other words, we want to find the largest value in every contiguous 3 x 3 matrix in grid.</description>
+    </item>
+    <item>
+      <title>2373.矩阵中的局部最大值</title>
+      <link>http://localhost:1313/posts/leet/2373.largest-local-values-in-a-matrix.zh/</link>
+      <pubDate>Wed, 01 Mar 2023 19:44:03 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2373.largest-local-values-in-a-matrix.zh/</guid>
+      <description>问题描述 2373. 矩阵中的局部最大值 (Easy)&#xA;给你一个大小为 n x n 的整数矩阵 grid 。&#xA;生成一个大小为 (n - 2) x (n - 2) 的整数矩阵 maxLocal ，并满足：&#xA;maxLocal[i][j] 等于 grid 中以 i + 1 行和 j + 1 列为中心的 3 x 3 矩阵中的 最大值 。 换句话说，我们希望找出 grid 中每个 3 x 3 矩阵中的最大值。&#xA;返回生成的矩阵。&#xA;示例 1：&#xA;输入：grid = [[9,9,8,1],[5,6,2,6],[8,2,6,4],[6,2,2,2]] 输出：[[9,9],[8,6]] 解释：原矩阵和生成的矩阵如上图所示。 注意，生成的矩阵中，每个值都对应 grid 中一个相接的 3 x 3 矩阵的最大值。 示例 2：&#xA;输入：grid = [[1,1,1,1,1],[1,1,1,1,1],[1,1,2,1,1],[1,1,1,1,1],[1,1,1,1,1]] 输出：[[2,2,2],[2,2,2],[2,2,2]] 解释：注意，2 包含在 grid 中每个 3 x 3 的矩阵中。 提示：</description>
+    </item>
+    <item>
+      <title>2363.merge similar items</title>
+      <link>http://localhost:1313/posts/leet/2363.merge-similar-items/</link>
+      <pubDate>Tue, 28 Feb 2023 09:22:05 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2363.merge-similar-items/</guid>
+      <description>Description 2363. Merge Similar Items (Easy)&#xA;You are given two 2D integer arrays, items1 and items2, representing two sets of items. Each array items has the following properties:&#xA;items[i] = [valueᵢ, weightᵢ] where valueᵢ represents the value and weightᵢ represents the weight of the ith item. The value of each item in items is unique. Return a 2D integer array retwhere ret[i] = [valueᵢ, weightᵢ],with weightᵢbeing the sum of weights of all items with value valueᵢ.</description>
+    </item>
+    <item>
+      <title>2363.合并相似的物品</title>
+      <link>http://localhost:1313/posts/leet/2363.merge-similar-items.zh/</link>
+      <pubDate>Tue, 28 Feb 2023 09:22:02 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2363.merge-similar-items.zh/</guid>
+      <description>问题描述 2363. 合并相似的物品 (Easy)&#xA;给你两个二维整数数组 items1 和 items2 ，表示两个物品集合。每个数组 items 有以下特质：&#xA;items[i] = [valueᵢ, weightᵢ] 其中 valueᵢ 表示第 i 件物品的 价值 ， weightᵢ 表示第 i 件物品的 重量 。 items 中每件物品的价值都是 唯一的 。 请你返回一个二维数组 ret，其中 ret[i] = [valueᵢ, weightᵢ]， weightᵢ 是所有价值为 valueᵢ 物品的 重量之和 。&#xA;注意： ret 应该按价值 升序 排序后返回。&#xA;示例 1：&#xA;输入：items1 = [[1,1],[4,5],[3,8]], items2 = [[3,1],[1,5]] 输出：[[1,6],[3,9],[4,5]] 解释： value = 1 的物品在 items1 中 weight = 1 ，在 items2 中 weight = 5 ，总重量为 1 + 5 = 6 。 value = 3 的物品再 items1 中 weight = 8 ，在 items2 中 weight = 1 ，总重量为 8 + 1 = 9 。 value = 4 的物品在 items1 中 weight = 5 ，总重量为 5 。 所以，我们返回 [[1,6],[3,9],[4,5]] 。 示例 2：</description>
+    </item>
+    <item>
+      <title>1247.minimum swaps to make strings.equal</title>
+      <link>http://localhost:1313/posts/leet/1247.minimum-swaps-to-make-strings-equal/</link>
+      <pubDate>Sat, 25 Feb 2023 10:11:50 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1247.minimum-swaps-to-make-strings-equal/</guid>
+      <description>Description 1247. Minimum Swaps to Make Strings Equal (Medium)&#xA;You are given two strings s1 and s2 of equal length consisting of letters &amp;quot;x&amp;quot; and &amp;quot;y&amp;quot; only. Your task is to make these two strings equal to each other. You can swap any two characters that belong to different strings, which means: swap s1[i] and s2[j].&#xA;Return the minimum number of swaps required to make s1 and s2 equal, or return -1 if it is impossible to do so.</description>
+    </item>
+    <item>
+      <title>1247.交换字符使得字符串相同</title>
+      <link>http://localhost:1313/posts/leet/1247.minimum-swaps-to-make-strings-equal.zh/</link>
+      <pubDate>Sat, 25 Feb 2023 10:01:26 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1247.minimum-swaps-to-make-strings-equal.zh/</guid>
+      <description>问题描述 1247. 交换字符使得字符串相同 (Medium)&#xA;有两个长度相同的字符串 s1 和 s2，且它们其中 只含有 字符 &amp;quot;x&amp;quot; 和 &amp;quot;y&amp;quot;，你需要通过「交换字符」的方式使这两个字符串相同。&#xA;每次「交换字符」的时候，你都可以在两个字符串中各选一个字符进行交换。&#xA;交换只能发生在两个不同的字符串之间，绝对不能发生在同一个字符串内部。也就是说，我们可以交换 s1[i] 和 s2[j]，但不能交换 s1[i] 和 s1[j]。&#xA;最后，请你返回使 s1 和 s2 相同的最小交换次数，如果没有方法能够使得这两个字符串相同，则返回 -1 。&#xA;示例 1：&#xA;输入：s1 = &amp;#34;xx&amp;#34;, s2 = &amp;#34;yy&amp;#34; 输出：1 解释： 交换 s1[0] 和 s2[1]，得到 s1 = &amp;#34;yx&amp;#34;，s2 = &amp;#34;yx&amp;#34;。 示例 2：&#xA;输入：s1 = &amp;#34;xy&amp;#34;, s2 = &amp;#34;yx&amp;#34; 输出：2 解释： 交换 s1[0] 和 s2[0]，得到 s1 = &amp;#34;yy&amp;#34;，s2 = &amp;#34;xx&amp;#34; 。 交换 s1[0] 和 s2[1]，得到 s1 = &amp;#34;xy&amp;#34;，s2 = &amp;#34;xy&amp;#34; 。 注意，你不能交换 s1[0] 和 s1[1] 使得 s1 变成 &amp;#34;yx&amp;#34;，因为我们只能交换属于两个不同字符串的字符。 示例 3：</description>
+    </item>
+    <item>
+      <title>2357.make array zero by subtracting equal amounts</title>
+      <link>http://localhost:1313/posts/leet/2357.make-array-zero-by-subtracting-equal-amounts/</link>
+      <pubDate>Fri, 24 Feb 2023 09:18:29 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2357.make-array-zero-by-subtracting-equal-amounts/</guid>
+      <description>Description 2357. Make Array Zero by Subtracting Equal Amounts (Easy)&#xA;You are given a non-negative integer array nums. In one operation, you must:&#xA;Choose a positive integer x such that x is less than or equal to the smallest non-zero element in nums. Subtract x from every positive element in nums. Return the minimum number of operations to make every element in nums equal to 0.&#xA;Example 1:&#xA;Input: nums = [1,5,0,3,5] Output: 3 Explanation: In the first operation, choose x = 1.</description>
+    </item>
+    <item>
+      <title>2357.使数组中所有元素都等于零</title>
+      <link>http://localhost:1313/posts/leet/2357.make-array-zero-by-subtracting-equal-amounts.zh/</link>
+      <pubDate>Fri, 24 Feb 2023 09:17:59 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2357.make-array-zero-by-subtracting-equal-amounts.zh/</guid>
+      <description>问题描述 2357. 使数组中所有元素都等于零 (Easy)&#xA;给你一个非负整数数组 nums 。在一步操作中，你必须：&#xA;选出一个正整数 x ， x 需要小于或等于 nums 中 最小 的 非零 元素。 nums 中的每个正整数都减去 x。 返回使 nums 中所有元素都等于 0 需要的 最少 操作数。&#xA;示例 1：&#xA;输入：nums = [1,5,0,3,5] 输出：3 解释： 第一步操作：选出 x = 1 ，之后 nums = [0,4,0,2,4] 。 第二步操作：选出 x = 2 ，之后 nums = [0,2,0,0,2] 。 第三步操作：选出 x = 2 ，之后 nums = [0,0,0,0,0] 。 示例 2：&#xA;输入：nums = [0] 输出：0 解释：nums 中的每个元素都已经是 0 ，所以不需要执行任何操作。 提示：</description>
+    </item>
+    <item>
+      <title>1238.circular permutation in binary representation</title>
+      <link>http://localhost:1313/posts/leet/1238.circular-permutation-in-binary-representation/</link>
+      <pubDate>Thu, 23 Feb 2023 15:56:04 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1238.circular-permutation-in-binary-representation/</guid>
+      <description>Description 1238. Circular Permutation in Binary Representation (Medium)&#xA;Given 2 integers n and start. Your task is return any permutation p of (0,1,2.....,2^n -1) such that :&#xA;p[0] = start p[i] and p[i+1] differ by only one bit in their binary representation. p[0] and p[2^n -1] must also differ by only one bit in their binary representation. Example 1:&#xA;Input: n = 2, start = 3 Output: [3,2,0,1] Explanation: The binary representation of the permutation is (11,10,00,01).</description>
+    </item>
+    <item>
+      <title>1238.循环码排列</title>
+      <link>http://localhost:1313/posts/leet/1238.circular-permutation-in-binary-representation.zh/</link>
+      <pubDate>Thu, 23 Feb 2023 15:56:01 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1238.circular-permutation-in-binary-representation.zh/</guid>
+      <description>问题描述 1238. 循环码排列 (Medium)&#xA;给你两个整数 n 和 start。你的任务是返回任意 (0,1,2,,...,2^n-1) 的排列 p，并且满足：&#xA;p[0] = start p[i] 和 p[i+1] 的二进制表示形式只有一位不同 p[0] 和 p[2^n -1] 的二进制表示形式也只有一位不同 示例 1：&#xA;输入：n = 2, start = 3 输出：[3,2,0,1] 解释：这个排列的二进制表示是 (11,10,00,01) 所有的相邻元素都有一位是不同的，另一个有效的排列是 [3,1,0,2] 示例 2：&#xA;输出：n = 3, start = 2 输出：[2,6,7,5,4,0,1,3] 解释：这个排列的二进制表示是 (010,110,111,101,100,000,001,011) 提示：&#xA;1 &amp;lt;= n &amp;lt;= 16 0 &amp;lt;= start &amp;lt; 2^n 解题思路 参照89.格雷编码，只需要将得到的结果再与start按位异或就好了，因为x ^ 0 = x对任意x恒成立。&#xA;Code class Solution { public: vector&amp;lt;int&amp;gt; circularPermutation(int n, int start) { vector&amp;lt;int&amp;gt; res(1 &amp;lt;&amp;lt; n, 0); for (int i = 0; i &amp;lt; res.</description>
+    </item>
+    <item>
+      <title>2347.best poker hand</title>
+      <link>http://localhost:1313/posts/leet/2347.best-poker-hand/</link>
+      <pubDate>Mon, 20 Feb 2023 09:38:04 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2347.best-poker-hand/</guid>
+      <description>Description 2347. Best Poker Hand (Easy)&#xA;You are given an integer array ranks and a character array suits. You have 5 cards where the ith card has a rank of ranks[i] and a suit of suits[i]. The following are the types of poker hands you can make from best to worst:&#xA;&amp;quot;Flush&amp;quot;: Five cards of the same suit. &amp;quot;Three of a Kind&amp;quot;: Three cards of the same rank. &amp;quot;Pair&amp;quot;: Two cards of the same rank.</description>
+    </item>
+    <item>
+      <title>2347.最好的扑克手牌</title>
+      <link>http://localhost:1313/posts/leet/2347.best-poker-hand.zh/</link>
+      <pubDate>Mon, 20 Feb 2023 09:38:01 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2347.best-poker-hand.zh/</guid>
+      <description>问题描述 2347. 最好的扑克手牌 (Easy)&#xA;给你一个整数数组 ranks 和一个字符数组 suit 。你有 5 张扑克牌，第 i 张牌大小为 ranks[i] ，花色为 suits[i] 。 下述是从好到坏你可能持有的 手牌类型：&#xA;&amp;quot;Flush&amp;quot;：同花，五张相同花色的扑克牌。 &amp;quot;Three of a Kind&amp;quot;：三条，有 3 张大小相同的扑克牌。 &amp;quot;Pair&amp;quot;：对子，两张大小一样的扑克牌。 &amp;quot;High Card&amp;quot;：高牌，五张大小互不相同的扑克牌。 请你返回一个字符串，表示给定的 5 张牌中，你能组成的 最好手牌类型 。 注意： 返回的字符串 大小写 需与题目描述相同。 示例 1： 输入：ranks = [13,2,3,1,9], suits = [&amp;#34;a&amp;#34;,&amp;#34;a&amp;#34;,&amp;#34;a&amp;#34;,&amp;#34;a&amp;#34;,&amp;#34;a&amp;#34;] 输出：&amp;#34;Flush&amp;#34; 解释：5 张扑克牌的花色相同，所以返回 &amp;#34;Flush&amp;#34; 。 示例 2：&#xA;输入：ranks = [4,4,2,4,4], suits = [&amp;#34;d&amp;#34;,&amp;#34;a&amp;#34;,&amp;#34;a&amp;#34;,&amp;#34;b&amp;#34;,&amp;#34;c&amp;#34;] 输出：&amp;#34;Three of a Kind&amp;#34; 解释：第一、二和四张牌组成三张相同大小的扑克牌，所以得到 &amp;#34;Three of a Kind&amp;#34; 。 注意我们也可以得到 &amp;#34;Pair&amp;#34; ，但是 &amp;#34;Three of a Kind&amp;#34; 是更好的手牌类型。 有其他的 3 张牌也可以组成 &amp;#34;Three of a Kind&amp;#34; 手牌类型。 示例 3：</description>
+    </item>
+    <item>
+      <title>1139.largest 1 bordered square</title>
+      <link>http://localhost:1313/posts/leet/1139.largest-1-bordered-square/</link>
+      <pubDate>Fri, 17 Feb 2023 15:52:30 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1139.largest-1-bordered-square/</guid>
+      <description>Description 1139. Largest 1-Bordered Square (Medium)&#xA;Given a 2D grid of 0 s and 1 s, return the number of elements in the largest square subgrid that has all 1 s on its border, or 0 if such a subgrid doesn&amp;rsquo;t exist in the grid. Example 1:&#xA;Input: grid = [[1,1,1],[1,0,1],[1,1,1]] Output: 9 Example 2:&#xA;Input: grid = [[1,1,0,0]] Output: 1 Constraints:&#xA;1 &amp;lt;= grid.length &amp;lt;= 100 1 &amp;lt;= grid[0].length &amp;lt;= 100 grid[i][j] is 0 or 1 Solution We can use prefix sum to reduce coumputaional comlexity.</description>
+    </item>
+    <item>
+      <title>1139.最大的以1为边界的正方形</title>
+      <link>http://localhost:1313/posts/leet/1139.largest-1-bordered-square.zh/</link>
+      <pubDate>Fri, 17 Feb 2023 15:52:22 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1139.largest-1-bordered-square.zh/</guid>
+      <description>问题描述 1139. 最大的以 1 为边界的正方形 (Medium)&#xA;给你一个由若干 0 和 1 组成的二维网格 grid，请你找出边界全部由 1 组成的最大 正方形 子网格，并返回该子网格中的元素数量。如果不存在，则返回 0。 示例 1：&#xA;输入：grid = [[1,1,1],[1,0,1],[1,1,1]] 输出：9 示例 2：&#xA;输入：grid = [[1,1,0,0]] 输出：1 提示：&#xA;1 &amp;lt;= grid.length &amp;lt;= 100 1 &amp;lt;= grid[0].length &amp;lt;= 100 grid[i][j] 为 0 或 1 解题思路 利用前缀和来简化满足正方形条件的计算，枚举正方形边长，找到最大的l，再和已经得出的结果进行比较。&#xA;代码 class Solution { public: int largest1BorderedSquare(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; &amp;amp;grid) { // 前缀和 int m = grid.size(), n = grid[0].size(); vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; sum_row(m, vector&amp;lt;int&amp;gt;(n + 1, 0)); // 每行前缀和 vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; sum_col(m + 1, vector&amp;lt;int&amp;gt;(n, 0)); // 每列前缀和 for (int i = 0; i &amp;lt; grid.</description>
+    </item>
+    <item>
+      <title>2341.maximum Number of Pairs in Array</title>
+      <link>http://localhost:1313/posts/leet/2341.maximum-number-of-pairs-in-array/</link>
+      <pubDate>Thu, 16 Feb 2023 19:19:14 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2341.maximum-number-of-pairs-in-array/</guid>
+      <description>Description 2341. Maximum Number of Pairs in Array (Easy)&#xA;You are given a 0-indexed integer array nums. In one operation, you may do the following:&#xA;Choose two integers in nums that are equal. Remove both integers from nums, forming a pair. The operation is done on nums as many times as possible. Return a 0-indexed integer array answer of size 2 where answer[0] is the number of pairs that are formed and answer[1] is the number of leftover integers in nums after doing the operation as many times as possible.</description>
+    </item>
+    <item>
+      <title>2341.maximum Number of Pairs in Array</title>
+      <link>http://localhost:1313/posts/leet/2341.maximum-number-of-pairs-in-array.zh/</link>
+      <pubDate>Thu, 16 Feb 2023 19:18:55 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2341.maximum-number-of-pairs-in-array.zh/</guid>
+      <description>问题描述 2341. 数组能形成多少数对 (Easy)&#xA;给你一个下标从 0 开始的整数数组 nums 。在一步操作中，你可以执行以下步骤：&#xA;从 nums 选出 两个 相等的 整数 从 nums 中移除这两个整数，形成一个 数对 请你在 nums 上多次执行此操作直到无法继续执行。 返回一个下标从 0 开始、长度为 2 的整数数组 answer 作为答案，其中 answer[0] 是形成的数对数目， answer[1] 是对 nums 尽可能执行上述操作后剩下的整数数目。 示例 1： 输入：nums = [1,3,2,1,3,2,2] 输出：[3,1] 解释： nums[0] 和 nums[3] 形成一个数对，并从 nums 中移除，nums = [3,2,3,2,2] 。 nums[0] 和 nums[2] 形成一个数对，并从 nums 中移除，nums = [2,2,2] 。 nums[0] 和 nums[1] 形成一个数对，并从 nums 中移除，nums = [2] 。 无法形成更多数对。总共形成 3 个数对，nums 中剩下 1 个数字。 示例 2：</description>
+    </item>
+    <item>
+      <title>1250.check if it is a good array</title>
+      <link>http://localhost:1313/posts/leet/1250.check-if-it-is-a-good-array/</link>
+      <pubDate>Wed, 15 Feb 2023 14:46:52 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1250.check-if-it-is-a-good-array/</guid>
+      <description>Description 1250.check-if-it-is-a-good-array&#xA;Solution Actually, what we need to determine is whether the maximum common divisor of all elements in the array is 1.&#xA;We can use rolling division to get the maximum common divisor gcd of nums[0] and nums[1], then get the new maximum common divisor gcd of gcd and nums[2]&amp;hellip;&#xA;Code #include &amp;lt;vector&amp;gt; using std::vector; class Solution { public: int gcd(int a, int b) { // b^=a,a^=b,b^=a the same as swap(a, b) while (b ^= (a ^= (b ^= (a %= b)))) ; return a; } bool isGoodArray(vector&amp;lt;int&amp;gt; &amp;amp;nums) { if (nums.</description>
+    </item>
+    <item>
+      <title>1250.检查“好数组”</title>
+      <link>http://localhost:1313/posts/leet/1250.check-if-it-is-a-good-array.zh/</link>
+      <pubDate>Wed, 15 Feb 2023 14:46:39 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1250.check-if-it-is-a-good-array.zh/</guid>
+      <description>问题描述 1250.检查“好数组”&#xA;解题思路 首先，要注意到，本题的要求，其实可以转化为数组中所有元素的最大公因数为1；&#xA;利用辗转相除法，将nums[0]和nums[1]求得的最大公因数num再与nums[2]求最大公因数作为新的num，如果到最后num == 1，返回true，否则返回false。&#xA;代码 class Solution { public: bool isGoodArray(vector&amp;lt;int&amp;gt; &amp;amp;nums) { std::sort(nums.begin(), nums.end()); // 利用哈希表储存不为1的因子，然后遍历，如果最后哈希表为空，return true if (nums[0] == 1) return true; std::unordered_set&amp;lt;int&amp;gt; factor; int root = sqrt(nums[0]); for (int i = 2; i &amp;lt;= root; i++) { if (nums[0] % i == 0) { if (factor.empty()) { factor.insert(i); factor.insert(nums[0] / i); } else { int flag = 0; // 为0说明factor里面没有它的因子 for (auto &amp;amp;num : factor) { if (i % num == 0) { flag = 1; break; } } if (flag == 0) { factor.</description>
+    </item>
+    <item>
+      <title>1234.replace the substring for balanced string</title>
+      <link>http://localhost:1313/posts/leet/1234.replace-the-substring-for-balanced-string/</link>
+      <pubDate>Mon, 13 Feb 2023 16:21:06 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1234.replace-the-substring-for-balanced-string/</guid>
+      <description>Description 1234.replace-the-substring-for-balanced-string&#xA;Solution We use two pointers left and right. Let&amp;rsquo;s traverse the string throughright from right = 0. If the amount of each character in the string other than [left, right] is less than or equal to n / 4, it means that we can form a balanced string by replacing [left, right], then increment left until [left, right] can&amp;rsquo;t form a balanced string.&#xA;Code class Solution { public: bool check(unordered_map&amp;lt;char, int&amp;gt; &amp;amp;mp, int m) { if (mp[&amp;#39;Q&amp;#39;] &amp;gt; m || mp[&amp;#39;W&amp;#39;] &amp;gt; m || mp[&amp;#39;E&amp;#39;] &amp;gt; m || mp[&amp;#39;R&amp;#39;] &amp;gt; m) return true; else return false; } int balancedString(string s) { int n = s.</description>
+    </item>
+    <item>
+      <title>1234.替换子串得到平衡字符串</title>
+      <link>http://localhost:1313/posts/leet/1234.replace-the-substring-for-balanced-string.zh/</link>
+      <pubDate>Mon, 13 Feb 2023 16:21:01 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1234.replace-the-substring-for-balanced-string.zh/</guid>
+      <description>问题描述 1234.替换子串得到平衡字符串&#xA;解题思路 利用两个指针left，right，right从0开始遍历，如果[left, right]之外的字符串中，每个字符出现次数都小于或等于n / 4，说明替换[left, right]可以构成平衡字符串，此时递增left，直到移除[left, right]不能构成平衡字符串。&#xA;代码 class Solution { public: bool check(unordered_map&amp;lt;char, int&amp;gt; &amp;amp;mp, int m) { if (mp[&amp;#39;Q&amp;#39;] &amp;gt; m || mp[&amp;#39;W&amp;#39;] &amp;gt; m || mp[&amp;#39;E&amp;#39;] &amp;gt; m || mp[&amp;#39;R&amp;#39;] &amp;gt; m) return true; else return false; } int balancedString(string s) { int n = s.size(), partial = n / 4; int res = n; unordered_map&amp;lt;char, int&amp;gt; chars; for (auto &amp;amp;c : s) chars[c]++; int flag = 1; for (auto &amp;amp;pa : chars) { // 检查字符串本身是否平衡 if (pa.</description>
+    </item>
+    <item>
+      <title>517.超级洗衣机</title>
+      <link>http://localhost:1313/posts/leet/517.super-washing-machines.zh/</link>
+      <pubDate>Mon, 13 Feb 2023 16:15:44 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/517.super-washing-machines.zh/</guid>
+      <description>问题描述 517.超级洗衣机&#xA;解题思路 参照直观清晰：理解官方题解——超级洗衣机和贪心,再动一点点脑子。&#xA;这个题我也还没搞懂，先搁置&#xA;代码 class Solution { public: int findMinMoves(vector&amp;lt;int&amp;gt; &amp;amp;machines) { int tot = accumulate(machines.begin(), machines.end(), 0); int n = machines.size(); if (tot % n) { return -1; } int avg = tot / n; int ans = 0, sum = 0; for (int num: machines) { num -= avg; sum += num; ans = max(ans, max(abs(sum), num)); } return ans; } }; </description>
+    </item>
+    <item>
+      <title>1138.alphabet board path</title>
+      <link>http://localhost:1313/posts/leet/1138.alphabet-board-path/</link>
+      <pubDate>Sun, 12 Feb 2023 19:14:25 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1138.alphabet-board-path/</guid>
+      <description>Description 1138.alphabet-board-path&#xA;Solution Hash table.&#xA;Notice that we shouldn&amp;rsquo;t go left then go down or go right then go up.&#xA;Code class Solution { public: string alphabetBoardPath(string target) { string res; vector&amp;lt;int&amp;gt; cur_loc{0, 0}; vector&amp;lt;int&amp;gt; target_loc{0, 0}; // 要注意边缘的存在 for (auto &amp;amp;c : target) { target_loc[0] = (c - &amp;#39;a&amp;#39;) / 5; target_loc[1] = (c - &amp;#39;a&amp;#39;) % 5; int move_row = target_loc[0] - cur_loc[0]; int move_col = target_loc[1] - cur_loc[1]; cur_loc[0] = target_loc[0]; cur_loc[1] = target_loc[1]; if (move_col &amp;lt; 0) { res.</description>
+    </item>
+    <item>
+      <title>1138.字母板上的路径</title>
+      <link>http://localhost:1313/posts/leet/1138.alphabet-board-path.zh/</link>
+      <pubDate>Sun, 12 Feb 2023 19:14:19 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1138.alphabet-board-path.zh/</guid>
+      <description>问题描述 1138.字母板上的路径&#xA;解题思路 考虑到&amp;rsquo;z&amp;rsquo;单独在一个地方，因此移动顺序中，左下、右上不能反过来，即不能先往下再往左或者先往右再往上。&#xA;代码 class Solution { public: string alphabetBoardPath(string target) { string res; vector&amp;lt;int&amp;gt; cur_loc{0, 0}; vector&amp;lt;int&amp;gt; target_loc{0, 0}; // 要注意边缘的存在 for (auto &amp;amp;c : target) { target_loc[0] = (c - &amp;#39;a&amp;#39;) / 5; target_loc[1] = (c - &amp;#39;a&amp;#39;) % 5; int move_row = target_loc[0] - cur_loc[0]; int move_col = target_loc[1] - cur_loc[1]; cur_loc[0] = target_loc[0]; cur_loc[1] = target_loc[1]; if (move_col &amp;lt; 0) { res.insert(res.end(), -move_col, &amp;#39;L&amp;#39;); if (move_row &amp;gt;= 0) res.</description>
+    </item>
+    <item>
+      <title>1604.alert using same key card three or more times in a one hour period</title>
+      <link>http://localhost:1313/posts/leet/1604.alert-using-same-key-card-three-or-more-times-in-a-one-hour-period/</link>
+      <pubDate>Tue, 07 Feb 2023 13:55:12 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1604.alert-using-same-key-card-three-or-more-times-in-a-one-hour-period/</guid>
+      <description>Description 1604.alert-using-same-key-card-three-or-more-times-in-a-one-hour-period&#xA;Solution Analog, hash table + sort.&#xA;Code class Solution { public: int to_min(string &amp;amp;s) { return ((s[0] - &amp;#39;0&amp;#39;) * 10 + s[1] - &amp;#39;0&amp;#39;) * 60 + (s[3] - &amp;#39;0&amp;#39;) * 10 + s[4] - &amp;#39;0&amp;#39;; } bool in_hour(vector&amp;lt;string&amp;gt; &amp;amp;time, int j) { return to_min(time[j]) - to_min(time[j - 2]) &amp;lt;= 60; } vector&amp;lt;string&amp;gt; alertNames(vector&amp;lt;string&amp;gt; &amp;amp;keyName, vector&amp;lt;string&amp;gt; &amp;amp;keyTime) { unordered_map&amp;lt;string, set&amp;lt;string&amp;gt;&amp;gt; name_time; vector&amp;lt;string&amp;gt; time; unordered_set&amp;lt;string&amp;gt; res; for (int i = 0; i &amp;lt; keyName.</description>
+    </item>
+    <item>
+      <title>1604.警告一小时内使用相同员工卡大于等于三次的人</title>
+      <link>http://localhost:1313/posts/leet/1604.alert-using-same-key-card-three-or-more-times-in-a-one-hour-period.zh/</link>
+      <pubDate>Tue, 07 Feb 2023 13:55:07 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1604.alert-using-same-key-card-three-or-more-times-in-a-one-hour-period.zh/</guid>
+      <description>问题描述 1604.警告一小时内使用相同员工卡大于等于三次的人&#xA;解题思路 模拟，哈希表+排序&#xA;代码 class Solution { public: int to_min(string &amp;amp;s) { return ((s[0] - &amp;#39;0&amp;#39;) * 10 + s[1] - &amp;#39;0&amp;#39;) * 60 + (s[3] - &amp;#39;0&amp;#39;) * 10 + s[4] - &amp;#39;0&amp;#39;; } bool in_hour(vector&amp;lt;string&amp;gt; &amp;amp;time, int j) { return to_min(time[j]) - to_min(time[j - 2]) &amp;lt;= 60; } vector&amp;lt;string&amp;gt; alertNames(vector&amp;lt;string&amp;gt; &amp;amp;keyName, vector&amp;lt;string&amp;gt; &amp;amp;keyTime) { unordered_map&amp;lt;string, set&amp;lt;string&amp;gt;&amp;gt; name_time; vector&amp;lt;string&amp;gt; time; unordered_set&amp;lt;string&amp;gt; res; for (int i = 0; i &amp;lt; keyName.</description>
+    </item>
+    <item>
+      <title>2331.evaluate boolean binary tree</title>
+      <link>http://localhost:1313/posts/leet/2331.evaluate-boolean-binary-tree/</link>
+      <pubDate>Mon, 06 Feb 2023 16:30:27 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2331.evaluate-boolean-binary-tree/</guid>
+      <description>Description 2331.evaluate-boolean-binary-tree&#xA;Solution dfs(recursion)&#xA;Code class Solution { public: bool dfs(TreeNode *root) { if (root-&amp;gt;left == nullptr) { return root-&amp;gt;val; } if (root-&amp;gt; val == 2) { return dfs(root-&amp;gt;left) || dfs(root-&amp;gt;right); } else { return dfs(root-&amp;gt;left) &amp;amp;&amp;amp; dfs(root-&amp;gt;right); } } bool evaluateTree(TreeNode* root) { return dfs(root); } }; </description>
+    </item>
+    <item>
+      <title>2331.计算布尔二叉树的值</title>
+      <link>http://localhost:1313/posts/leet/2331.evaluate-boolean-binary-tree.zh/</link>
+      <pubDate>Mon, 06 Feb 2023 16:30:21 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2331.evaluate-boolean-binary-tree.zh/</guid>
+      <description>问题描述 2331.计算布尔二叉树的值&#xA;解题思路 递归&#xA;代码 class Solution { public: bool dfs(TreeNode *root) { if (root-&amp;gt;left == nullptr) { return root-&amp;gt;val; } if (root-&amp;gt; val == 2) { return dfs(root-&amp;gt;left) || dfs(root-&amp;gt;right); } else { return dfs(root-&amp;gt;left) &amp;amp;&amp;amp; dfs(root-&amp;gt;right); } } bool evaluateTree(TreeNode* root) { return dfs(root); } }; </description>
+    </item>
+    <item>
+      <title>1210.minimum moves to reach target with rotations</title>
+      <link>http://localhost:1313/posts/leet/1210.minimum-moves-to-reach-target-with-rotations/</link>
+      <pubDate>Sun, 05 Feb 2023 17:03:24 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1210.minimum-moves-to-reach-target-with-rotations/</guid>
+      <description>Description 1210.minimum-moves-to-reach-target-with-rotations&#xA;Solution BFS.&#xA;We can use (x, y state) to denote the position of the snake, x as the abscissa of the tail of the snake, y as the ordinate of the tail of the snake. state indicates whether the snake is vertical or horizontal.&#xA;Code class Solution { public: bool is_pos(vector&amp;lt;int&amp;gt; &amp;amp;vec_tmp, vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; &amp;amp;grid, int i) { if (i == 0) { vec_tmp[1] += 1; vec_tmp[3] += 1; if (vec_tmp[3] &amp;gt;= grid.</description>
+    </item>
+    <item>
+      <title>1210.穿过迷宫的最少移动次数</title>
+      <link>http://localhost:1313/posts/leet/1210.minimum-moves-to-reach-target-with-rotations.zh/</link>
+      <pubDate>Sun, 05 Feb 2023 17:03:20 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1210.minimum-moves-to-reach-target-with-rotations.zh/</guid>
+      <description>问题描述 1210.穿过迷宫的最少移动次数&#xA;解题思路 广度优先搜索&#xA;可以用(x, y, state)来表示贪吃蛇当前所处的位置，x为蛇尾的横坐标，y为蛇尾的纵坐标，state表示蛇当前处于水平还是竖直状态。&#xA;代码 class Solution { public: bool is_pos(vector&amp;lt;int&amp;gt; &amp;amp;vec_tmp, vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; &amp;amp;grid, int i) { if (i == 0) { vec_tmp[1] += 1; vec_tmp[3] += 1; if (vec_tmp[3] &amp;gt;= grid.size()) return false; else { if (grid[vec_tmp[0]][vec_tmp[1]] == 0 &amp;amp;&amp;amp; grid[vec_tmp[2]][vec_tmp[3]] == 0) return true; else return false; } } else if (i == 1) { vec_tmp[0] += 1; vec_tmp[2] += 1; if (vec_tmp[2] &amp;gt;= grid.size()) return false; else { if (grid[vec_tmp[0]][vec_tmp[1]] == 0 &amp;amp;&amp;amp; grid[vec_tmp[2]][vec_tmp[3]] == 0 &amp;amp;&amp;amp; vec_tmp[2] &amp;lt; grid.</description>
+    </item>
+    <item>
+      <title>1798.maximum number of consecutive values you can make</title>
+      <link>http://localhost:1313/posts/leet/1798.maximum-number-of-consecutive-values-you-can-make/</link>
+      <pubDate>Sat, 04 Feb 2023 18:26:47 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1798.maximum-number-of-consecutive-values-you-can-make/</guid>
+      <description>Description 1798.maximum-number-of-consecutive-values-you-can-make&#xA;Solution Greedy algorithm + dynamic programming&#xA;First, we sort the array in ascending orders. Let res[n] be the maximum value of consecutive integer that we can make by using the first n numbers.&#xA;if (coins[i - 1] &amp;gt; res[n - 1] + 1), res[n] = res[n - 1] + coins[i - 1]; else, res[n] = res[n - 1]; Code class Solution { public: int getMaximumConsecutive(vector&amp;lt;int&amp;gt;&amp;amp; coins) { std::sort(coins.begin(), coins.</description>
+    </item>
+    <item>
+      <title>1798.你能构造出连续值的最大数目</title>
+      <link>http://localhost:1313/posts/leet/1798.maximum-number-of-consecutive-values-you-can-make.zh/</link>
+      <pubDate>Sat, 04 Feb 2023 18:26:43 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1798.maximum-number-of-consecutive-values-you-can-make.zh/</guid>
+      <description>问题描述 1798.你能构造出连续值的最大数目&#xA;解题思路 贪心+动态规划&#xA;首先将数组按升序排序，令res[n]为前n个数所能构造出的连续整数的最大值:&#xA;if (coins[i - 1] &amp;gt; res[n - 1] + 1), res[n] = res[n - 1] + coins[i - 1]; else, res[n] = res[n - 1]; 代码 class Solution { public: int getMaximumConsecutive(vector&amp;lt;int&amp;gt;&amp;amp; coins) { std::sort(coins.begin(), coins.end()); vector&amp;lt;int&amp;gt; res(coins.size() + 1, 0); // 表示前n个数能表示出来的最大值 for (int i = 1; i &amp;lt;= coins.size(); i++) { if (coins[i - 1] &amp;gt; res[i - 1] + 1) res[i] = res[i - 1]; else res[i] = res[i - 1] + coins[i - 1]; } return res[coins.</description>
+    </item>
+    <item>
+      <title>1145.binary tree coloring game</title>
+      <link>http://localhost:1313/posts/leet/1145.binary-tree-coloring-game/</link>
+      <pubDate>Fri, 03 Feb 2023 14:10:29 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1145.binary-tree-coloring-game/</guid>
+      <description>Description 1145.binary-tree-coloring-game&#xA;Solution Greedy algorithm: for second player, if he wants to win, there are three ways to color the node.&#xA;color the parent node of x, then we use dfs to get the number of red nodes, the number of blue nodes is $n$ minus the nubmer of red nodes; color the left child node of x, then we use dfs to get the number of blue nodes, the number of red nodes is $n$ minus the number of blue nodes; color the right child node of x Code class Solution { public: int get_num(TreeNode *root) { // 获取当前树的节点数 if (root !</description>
+    </item>
+    <item>
+      <title>1145.二叉树着色游戏</title>
+      <link>http://localhost:1313/posts/leet/1145.binary-tree-coloring-game.zh/</link>
+      <pubDate>Fri, 03 Feb 2023 14:10:25 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1145.binary-tree-coloring-game.zh/</guid>
+      <description>问题描述 1145.二叉树着色游戏&#xA;解题思路 贪心策略：对二号玩家来说，想要取胜，选择染色节点只有三种可能：&#xA;选择x的父节点，则通过深度优先搜索可以求得红色节点数，蓝色节点数为$n$减去红色节点数 选择x的左子节点，则通过dfs可以求得蓝色节点数，红色节点数为$n$减去蓝色节点数 选择x的右子节点 代码 class Solution { public: int get_num(TreeNode *root) { // 获取当前树的节点数 if (root != nullptr) return get_num(root-&amp;gt;left) + get_num(root-&amp;gt;right) + 1; else return 0; } TreeNode *get_pos(int x, int n, TreeNode *root) { // 获取当前x对应的指针 if (root == nullptr) return nullptr; else { if (root-&amp;gt;val == x) return root; else { TreeNode *l = get_pos(x, n, root-&amp;gt;left); TreeNode *r = get_pos(x, n, root-&amp;gt;right); if (l !</description>
+    </item>
+    <item>
+      <title>1129.shortest path with alternating colors</title>
+      <link>http://localhost:1313/posts/leet/1129.shortest-path-with-alternating-colors/</link>
+      <pubDate>Thu, 02 Feb 2023 13:41:31 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1129.shortest-path-with-alternating-colors/</guid>
+      <description>Description 1129.shortest-path-with-alternating-colors&#xA;Solution First, we need represent the graph as an edge matrix, and we use bfs to find the shortest path.&#xA;In this problem, since the edge color of the shortest path must change along the path, when we judge whether the current node is visited, we should distinguish the cases that the current node is visited by red edges and the cases that the current node is visited by blue edges.</description>
+    </item>
+    <item>
+      <title>1129.颜色交替的最短路径</title>
+      <link>http://localhost:1313/posts/leet/1129.shortest-path-with-alternating-colors.zh/</link>
+      <pubDate>Thu, 02 Feb 2023 13:41:27 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1129.shortest-path-with-alternating-colors.zh/</guid>
+      <description>问题描述 1129.颜色交替的最短路径&#xA;解题思路 首先，将本题的图结构以边表的形式表现出来，然后采取广度优先搜索的方式寻找最短路径，一般来说广度优先搜索能够保证找到的是最短路径。&#xA;在本题中，由于要求最短路径是交替出现的，那么在判断节点是否已经访问过时，要分红色路径访问节点和蓝色路径访问节点两种情况讨论。&#xA;队列中的元素为三元组tie(point, len, c_flag)，分别表示当前节点的索引、到达当前节点的路径长度（不一定是最短的，本题中存在环）、到达当前节点的路径颜色（0表示蓝色，1表示红色）&#xA;提示bfs(q, red_connect, blue_connect, answer, n)（其中q包含tie(0, 0, 0)和tie(0, 0, 1)）与bfs(q, red_connect, blue_connect, answer, n)执行两次（q分别为tie(0, 0, 0)和tie(0, 0, 1)）的结果是一样的。&#xA;代码 class Solution { public: void bfs(queue&amp;lt;tuple&amp;lt;int, int, int&amp;gt;&amp;gt; q, vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; &amp;amp;red_connect, vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; &amp;amp;blue_connect, vector&amp;lt;int&amp;gt; &amp;amp;answer, int n, int i) { vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; visited(n, vector&amp;lt;int&amp;gt;(2, 0)); // visited[k][1]表示由红到point，visited[k][0]为1表示由蓝到point int tmp_point = 0; while (!q.empty()) { auto [point, len, c_flag] = q.front(); visited[point][c_flag] = 1; q.pop(); if (answer[point] == -1) answer[point] = len; else answer[point] = min(answer[point], len); if (c_flag == 0) { for (int k = 0; k &amp;lt; red_connect[point].</description>
+    </item>
+    <item>
+      <title>2325.decode the message</title>
+      <link>http://localhost:1313/posts/leet/2325.decode-the-message/</link>
+      <pubDate>Wed, 01 Feb 2023 14:57:49 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2325.decode-the-message/</guid>
+      <description>Description 2325.decode-the-message&#xA;Solution We use arrya as a hash table, to keep track of the order in which the letter appear.&#xA;Code class Solution { public: string decodeMessage(string key, string message) { int cnt = 0; vector&amp;lt;int&amp;gt; arr(26, -1); // -1 means the letter never appears, other value means the order in which the letter appears for (auto &amp;amp;c : key) { if (c != &amp;#39; &amp;#39;) { if (arr[c - &amp;#39;a&amp;#39;] == -1) { arr[c - &amp;#39;a&amp;#39;] = cnt++; // cnt++; } } } string res; for (auto &amp;amp;c : message) { if (c !</description>
+    </item>
+    <item>
+      <title>2325.解密消息</title>
+      <link>http://localhost:1313/posts/leet/2325.decode-the-message.zh/</link>
+      <pubDate>Wed, 01 Feb 2023 14:57:45 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2325.decode-the-message.zh/</guid>
+      <description>问题描述 2325.解密消息&#xA;解题思路 利用数组作为哈希表，记录每个字母是第几个出现的&#xA;代码 class Solution { public: string decodeMessage(string key, string message) { int cnt = 0; vector&amp;lt;int&amp;gt; arr(26, -1); // 为-1表示这个字母从未出现过，0，1，2等表示这个字母对应的解密字母 for (auto &amp;amp;c : key) { if (c != &amp;#39; &amp;#39;) { if (arr[c - &amp;#39;a&amp;#39;] == -1) { arr[c - &amp;#39;a&amp;#39;] = cnt++; // cnt++; } } } string res; for (auto &amp;amp;c : message) { if (c != &amp;#39; &amp;#39;) res.push_back(&amp;#39;a&amp;#39; + arr[c - &amp;#39;a&amp;#39;]); else res.</description>
+    </item>
+    <item>
+      <title>2319.check if matrix is X matrix</title>
+      <link>http://localhost:1313/posts/leet/2319.check-if-matrix-is-x-matrix/</link>
+      <pubDate>Tue, 31 Jan 2023 09:50:21 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2319.check-if-matrix-is-x-matrix/</guid>
+      <description>Description 2319.check-if-matrix-is-X-matrix&#xA;Solution Analog&#xA;Code class Solution { public: bool checkXMatrix(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; &amp;amp;grid) { bool res = true; for (int i = 0; i &amp;lt; grid.size(); i++) { for (int j = 0; j &amp;lt; grid[0].size(); j++) { if (i == j || i + j == grid.size() - 1) { if (grid[i][j] == 0) return false; } else { if (grid[i][j] != 0) return false; } } } return true; } }; </description>
+    </item>
+    <item>
+      <title>2319.判断矩阵是否是一个X矩阵</title>
+      <link>http://localhost:1313/posts/leet/2319.check-if-matrix-is-x-matrix.zh/</link>
+      <pubDate>Tue, 31 Jan 2023 09:50:17 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2319.check-if-matrix-is-x-matrix.zh/</guid>
+      <description>问题描述 2319.判断矩阵是否是一个X矩阵&#xA;解题思路 模拟&#xA;代码 class Solution { public: bool checkXMatrix(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; &amp;amp;grid) { bool res = true; for (int i = 0; i &amp;lt; grid.size(); i++) { for (int j = 0; j &amp;lt; grid[0].size(); j++) { if (i == j || i + j == grid.size() - 1) { if (grid[i][j] == 0) return false; } else { if (grid[i][j] != 0) return false; } } } return true; } }; </description>
+    </item>
+    <item>
+      <title>1669.merge in between linked list</title>
+      <link>http://localhost:1313/posts/leet/1669.merge-in-between-linked-list/</link>
+      <pubDate>Mon, 30 Jan 2023 12:22:25 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1669.merge-in-between-linked-list/</guid>
+      <description>Description 1669.merge-in-between-linked-list&#xA;Solution Analog&#xA;Code class Solution { public: ListNode *mergeInBetween(ListNode *list1, int a, int b, ListNode *list2) { ListNode *head = list1; ListNode *tail2 = list2; ListNode *head2 = list1; for (int i = 0; i &amp;lt; a - 1; i++) { head = head-&amp;gt;next; } for (int i = 0; i &amp;lt; b; i++) { head2 = head2-&amp;gt;next; } while (tail2-&amp;gt;next != nullptr) tail2 = tail2-&amp;gt;next; tail2-&amp;gt;next = head2-&amp;gt;next; head2-&amp;gt;next = nullptr; head-&amp;gt;next = list2; return list1; } }; </description>
+    </item>
+    <item>
+      <title>1669.合并两个链表</title>
+      <link>http://localhost:1313/posts/leet/1669.merge-in-between-linked-list.zh/</link>
+      <pubDate>Mon, 30 Jan 2023 12:22:21 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1669.merge-in-between-linked-list.zh/</guid>
+      <description>问题描述 1669.合并两个链表&#xA;解题思路 模拟&#xA;代码 class Solution { public: ListNode *mergeInBetween(ListNode *list1, int a, int b, ListNode *list2) { ListNode *head = list1; ListNode *tail2 = list2; ListNode *head2 = list1; for (int i = 0; i &amp;lt; a - 1; i++) { head = head-&amp;gt;next; } for (int i = 0; i &amp;lt; b; i++) { head2 = head2-&amp;gt;next; } while (tail2-&amp;gt;next != nullptr) tail2 = tail2-&amp;gt;next; tail2-&amp;gt;next = head2-&amp;gt;next; head2-&amp;gt;next = nullptr; head-&amp;gt;next = list2; return list1; } }; </description>
+    </item>
+    <item>
+      <title>1814.count nice pairs in an array</title>
+      <link>http://localhost:1313/posts/leet/1814.count-nice-pairs-in-an-array/</link>
+      <pubDate>Tue, 17 Jan 2023 17:19:34 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1814.count-nice-pairs-in-an-array/</guid>
+      <description>Description 1814.count-nice-pairs-in-an-array&#xA;Solution We can change the requirements to nums[i] - rev(nums[i]) == nums[j] - rev(nums[j]).&#xA;Then we use hash tables to record the times of occurrence of the value.&#xA;Code class Solution { public: int rev(int num) { vector&amp;lt;int&amp;gt; tmp; int ans = 0; while (num != 0) { tmp.push_back(num % 10); num /= 10; } for (int i = 0; i &amp;lt; tmp.size(); i++) { ans = ans * 10 + tmp[i]; } return ans; } int countNicePairs(vector&amp;lt;int&amp;gt;&amp;amp; nums) { map&amp;lt;int, int&amp;gt; mp; for (int i = 0; i &amp;lt; nums.</description>
+    </item>
+    <item>
+      <title>1814.统计一个数组中好对子的数目</title>
+      <link>http://localhost:1313/posts/leet/1814.count-nice-pairs-in-an-array.zh/</link>
+      <pubDate>Tue, 17 Jan 2023 17:12:38 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1814.count-nice-pairs-in-an-array.zh/</guid>
+      <description>问题描述 1814.统计一个数组中好对子的数目&#xA;解题思路 首先，变换一下题目的需求，nums[i] - rev(nums[i]) == nums[j] - rev(nums[j])，然后利用哈希表记录每个值出现了多少次就可以了。&#xA;代码 class Solution { public: int rev(int num) { vector&amp;lt;int&amp;gt; tmp; int ans = 0; while (num != 0) { tmp.push_back(num % 10); num /= 10; } for (int i = 0; i &amp;lt; tmp.size(); i++) { ans = ans * 10 + tmp[i]; } return ans; } int countNicePairs(vector&amp;lt;int&amp;gt;&amp;amp; nums) { map&amp;lt;int, int&amp;gt; mp; for (int i = 0; i &amp;lt; nums.</description>
+    </item>
+    <item>
+      <title>2042.check if numbers are ascending in a sentence</title>
+      <link>http://localhost:1313/posts/leet/2042.check-if-numbers-are-ascending-in-a-sentence/</link>
+      <pubDate>Tue, 03 Jan 2023 16:34:11 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2042.check-if-numbers-are-ascending-in-a-sentence/</guid>
+      <description>Description 2042.check-if-numbers-are-ascending-in-a-sentence&#xA;Solution analog1 I change string s to &amp;quot; &amp;quot; + s + &amp;quot; &amp;quot;, then traverse the new string, check whether substr between two blanks is numbers;&#xA;analog2 We just check whether current char is a number, if that, num = num * 10 + s[i] - &#39;0&#39;, loop until current char is not a number.&#xA;Code code1 class Solution { public: int mpow(int e, int x) { while (x--) e *= 10; return e; } int str2num(int l, int r, string &amp;amp;s) { int ans = 0; for (int i = l + 1; i &amp;lt; r; i++) { if (s[i] - &amp;#39;0&amp;#39; &amp;lt;= 9 &amp;amp;&amp;amp; s[i] - &amp;#39;0&amp;#39; &amp;gt;= 0) { ans += mpow(s[i] - &amp;#39;0&amp;#39;, r - i - 1); } else { return 0; } } return ans; } bool areNumbersAscending(string s) { int blank_l = 0; int blank_r = 0, tmp = 0; vector&amp;lt;int&amp;gt; numbers; s = &amp;#34; &amp;#34; + s + &amp;#34; &amp;#34;; for (int i = 0; i &amp;lt; s.</description>
+    </item>
+    <item>
+      <title>2042.检查句子中的数字是否递增</title>
+      <link>http://localhost:1313/posts/leet/2042.check-if-numbers-are-ascending-in-a-sentence.zh/</link>
+      <pubDate>Tue, 03 Jan 2023 16:34:07 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2042.check-if-numbers-are-ascending-in-a-sentence.zh/</guid>
+      <description>问题描述 2042.检查句子中的数字是否递增&#xA;解题思路 模拟一 首先将字符串的首尾都加上空格，然后遍历即可，检查两次空格之间的字符串是否是数字，如果是就转化为数字;&#xA;模拟二 直接判断字符是否是数字，如果是数字，num = num * 10 + s[i] - &#39;0&#39;，循环直到碰到空格&#xA;代码 代码一 class Solution { public: int mpow(int e, int x) { while (x--) e *= 10; return e; } int str2num(int l, int r, string &amp;amp;s) { int ans = 0; for (int i = l + 1; i &amp;lt; r; i++) { if (s[i] - &amp;#39;0&amp;#39; &amp;lt;= 9 &amp;amp;&amp;amp; s[i] - &amp;#39;0&amp;#39; &amp;gt;= 0) { ans += mpow(s[i] - &amp;#39;0&amp;#39;, r - i - 1); } else { return 0; } } return ans; } bool areNumbersAscending(string s) { int blank_l = 0; int blank_r = 0, tmp = 0; vector&amp;lt;int&amp;gt; numbers; s = &amp;#34; &amp;#34; + s + &amp;#34; &amp;#34;; for (int i = 0; i &amp;lt; s.</description>
+    </item>
+  </channel>
+</rss>

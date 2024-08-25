@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cs on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/cs/</link>
+    <description>Recent content in Cs on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 15 Jun 2024 16:19:53 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/cs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>计算机常用术语中英文对比</title>
+      <link>http://localhost:1313/posts/tech/cs-zh-en-translation.zh/</link>
+      <pubDate>Sat, 15 Jun 2024 16:19:53 +0800</pubDate>
+      <guid>http://localhost:1313/posts/tech/cs-zh-en-translation.zh/</guid>
+      <description>前言 在计算机科学中，很多专业术语或者名词的初始版本都是英文的，之后会被翻译成中文而引入国内。然而，个人看来，许多专业名词的中文翻译，看起来都非常奇怪，反而不如其原始的英文表述好理解，故本文列出笔者常见的一些计算机专业术语以及它的英文版本，以供查阅&#xA;术语列表 中文版本 英文版本 个人理解 快照 snapshot 在某个特定时刻，对系统、数据或者文件的状态进行捕捉与记录从而生成的副本，功能上类似备份 会话 session 一段时间内，用户与系统之间的交互或者连接状态 接口 interface 也许可以理解为暴露出来供用户（开发者）调用的函数？ </description>
+    </item>
+    <item>
+      <title>计算机教育缺失的一课：Shell 工具与脚本</title>
+      <link>http://localhost:1313/posts/tech/missing-semester-shell.zh/</link>
+      <pubDate>Thu, 09 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/tech/missing-semester-shell.zh/</guid>
+      <description>$ 符号的功能 Shell 中，$ 符号可以与数字或者其他符号组合在一起表示特殊的值或者变量，如下：&#xA;#!/bin/bash echo $0 # $0 用于获取当前脚本文件名名称 echo &amp;#34;The first parameter: $1&amp;#34; # $1 表示第一个参数 echo &amp;#34;The eleventh parameter: ${11}2&amp;#34; echo &amp;#34;The eleventh parameter: ${11}x&amp;#34; echo &amp;#34;The eleventh parameter: $11x&amp;#34; echo &amp;#34;The eleventh parameter: $12&amp;#34; tmp=&amp;#34;hello&amp;#34; echo &amp;#34;$tmp world&amp;#34; 将以上脚本文件命名为 test.sh 并执行 bash test.sh 1 2 3 4 5 6 7 8 9 10 13 14，输出如下：&#xA;test.sh The first parameter: 1 The eleventh parameter: 132 The eleventh parameter: 13x The eleventh parameter: 11x The eleventh parameter: 12 hello wolrd 这是因为，只有 $n 才能表示第 n 个参数（n 为单个数字），如果想表示第 11 个参数，就必须使用 ${11}（加上大括号）来表示，bash 会将 $12 处理为名为 12 的变量。</description>
+    </item>
+  </channel>
+</rss>

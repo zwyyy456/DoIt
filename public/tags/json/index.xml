@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Json on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/json/</link>
+    <description>Recent content in Json on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 04 May 2024 10:10:30 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/json/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Json 快速入门</title>
+      <link>http://localhost:1313/posts/tech/json-startup.zh/</link>
+      <pubDate>Sat, 04 May 2024 10:10:30 +0800</pubDate>
+      <guid>http://localhost:1313/posts/tech/json-startup.zh/</guid>
+      <description>简介 Json 格式的全称为 JavaScript Object Notation，是一种起源于编程语言 JavaScript 的序列化数据格式，其特点在于，可以通过特定的文本格式表达一定程度的复杂数据，被广泛应用于其他编程语言中。&#xA;六个构造字符 Json 有六种有效符号，如下：&#xA;符号 名称 [ 左方括号 ] 右方括号 { 左花括号 } 右花括号 , 逗号 : 冒号 在这些符号之间的空格与换行在 Json 中没有实际意义，一般用于使 Json 代码更加规整。注意，Json 标准中无法表示注释。&#xA;五种数据类型 Json 中存在 5 种数据类型，分别是 数字、字符串、数组、对象、字面名（也可以理解为保留值）。&#xA;数字 数字是最基础的数据类型，可以是一个整数、也可以是一个小数&#xA;1234, 12.34 字符串 类似其他编程语言中的字符串。&#xA;&amp;#34;Json&amp;#34;, &amp;#34;中文&amp;#34; 数组 数组表示一串有固定的顺序的值，相比起 C++ 中的数组，Json 中的数组中的值的数据类型可以不同，数组中的值的元素类型也可以是 数组 或者 对象。&#xA;数组的格式如下：以 [ 作为起始，以 ] 作为结束，数组中的值之间以 , 分隔。&#xA;[ 12345, &amp;#34;start&amp;#34;, [&amp;#34;end&amp;#34;], {&amp;#34;123&amp;#34;: &amp;#34;45&amp;#34;} ] 对象 对象可以简单理解为一系列的键值对。&#xA;对象基本格式是以 { 为起始，以 } 作为结束，每个键值对以 , 进行分割，键值对中的键与值利用 : 进行分隔。</description>
+    </item>
+  </channel>
+</rss>

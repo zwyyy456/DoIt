@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nvim on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/nvim/</link>
+    <description>Recent content in Nvim on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 08 Nov 2023 19:08:56 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/nvim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sublime Text4 使用 NeoVintageous 插件</title>
+      <link>http://localhost:1313/posts/blog/sublime-neovim.zh/</link>
+      <pubDate>Wed, 08 Nov 2023 19:08:56 +0800</pubDate>
+      <guid>http://localhost:1313/posts/blog/sublime-neovim.zh/</guid>
+      <description>安装插件 利用 Sublime Text4 的 package control 安装 NeoVintageous 插件。&#xA;启用ctrl + [作为esc 点击sublime Text -&amp;gt; settings -&amp;gt;settings，编辑右侧的配置文件，添加&amp;quot;vintageous_ctrl_keys&amp;quot;: true,。&#xA;启用jk为esc 点击sublime Text -&amp;gt; settings -&amp;gt;settings，编辑右侧的配置文件，添加&amp;quot;vintageous_i_escape_jk&amp;quot;: true,&#xA;使yy会复制到系统剪贴板 点击sublime Text -&amp;gt; settings -&amp;gt;settings，编辑右侧的配置文件，添加&amp;quot;vintageous_use_sys_clipboard&amp;quot;: true,</description>
+    </item>
+    <item>
+      <title>vscode使用 vscode-neovim 插件</title>
+      <link>http://localhost:1313/posts/blog/vscode-neovim.zh/</link>
+      <pubDate>Wed, 08 Nov 2023 16:52:21 +0800</pubDate>
+      <guid>http://localhost:1313/posts/blog/vscode-neovim.zh/</guid>
+      <description>启用插件 Win11 插件设置：Settings-user页面，Neovim Executable Paths: Win32内容设置为C:\Users\zwyyy\scoop\apps\neovim\current\bin\nvim.exe，Neovim Init Vim Paths: Win32内容无需设置。&#xA;WSL 插件设置：Settings-Remote [WSL:Debian]页面，Neovim Executable Paths: Linux内容设置为/usr/bin/nvim，Neovim Init Vim Paths: Linux内容无需设置。&#xA;MacOS 插件设置：Settings-user页面，Neovim Executable Paths: Darwin 内容设置为 /opt/homebrew/bin/nvim，Neovim Init Vim Paths: Darwin 内容无需设置。&#xA;key bindings 中查找ctrl+c，删除与neovim有关的两项，否则会导致插入模式下无法使用ctrl+c复制（我没有选择删除）。&#xA;设置 jk 为 esc 已于 1.11.1 版本废弃 编辑 keybings.json，添加&#xA;{ &amp;#34;command&amp;#34;: &amp;#34;vscode-neovim.compositeEscape1&amp;#34;, &amp;#34;key&amp;#34;: &amp;#34;j&amp;#34;, &amp;#34;when&amp;#34;: &amp;#34;neovim.mode == insert &amp;amp;&amp;amp; editorTextFocus&amp;#34;, &amp;#34;args&amp;#34;: &amp;#34;j&amp;#34; }, { &amp;#34;command&amp;#34;: &amp;#34;vscode-neovim.compositeEscape2&amp;#34;, &amp;#34;key&amp;#34;: &amp;#34;k&amp;#34;, &amp;#34;when&amp;#34;: &amp;#34;neovim.mode == insert &amp;amp;&amp;amp; editorTextFocus&amp;#34;, &amp;#34;args&amp;#34;: &amp;#34;k&amp;#34; } 使用 gc 作为注释快捷键 已废弃 原先解决方案是在 neovim 的配置目录的 lua/vscode/config 目录下新建 keymaps.</description>
+    </item>
+  </channel>
+</rss>

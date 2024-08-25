@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sliding Window on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/sliding-window/</link>
+    <description>Recent content in Sliding Window on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 06 Mar 2023 19:11:58 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/sliding-window/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>209.Minimum Size Subarray Sum (Medium)</title>
+      <link>http://localhost:1313/posts/leet/209.minimum-size-subarray-sum/</link>
+      <pubDate>Mon, 06 Mar 2023 19:11:58 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/209.minimum-size-subarray-sum/</guid>
+      <description>Description 209. Minimum Size Subarray Sum (Medium)&#xA;Given an array of positive integers nums and a positive integer target, return the minimal length of a subarray whose sum is greater than or equal to target. If there is no such subarray, return 0 instead.&#xA;Example 1:&#xA;Input: target = 7, nums = [2,3,1,2,4,3] Output: 2 Explanation: The subarray [4,3] has the minimal length under the problem constraint. Example 2:&#xA;Input: target = 4, nums = [1,4,4] Output: 1 Example 3:</description>
+    </item>
+    <item>
+      <title>209.长度最小的子数组 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/209.minimum-size-subarray-sum.zh/</link>
+      <pubDate>Mon, 06 Mar 2023 19:11:55 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/209.minimum-size-subarray-sum.zh/</guid>
+      <description>问题描述 209. 长度最小的子数组 (Medium)&#xA;给定一个含有 n 个正整数的数组和一个正整数 target 。&#xA;找出该数组中满足其和 ≥ target 的长度最小的 连续子数组 [numsₗ, numsₗ+₁, ..., numsr-₁, numsr] ，并返回其长度 。 如果不存在符合条件的子数组，返回 0 。&#xA;示例 1：&#xA;输入：target = 7, nums = [2,3,1,2,4,3] 输出：2 解释：子数组 [4,3] 是该条件下的长度最小的子数组。 示例 2：&#xA;输入：target = 4, nums = [1,4,4] 输出：1 示例 3：&#xA;输入：target = 11, nums = [1,1,1,1,1,1,1,1] 输出：0 提示：&#xA;1 &amp;lt;= target &amp;lt;= 10⁹ 1 &amp;lt;= nums.length &amp;lt;= 10⁵ 1 &amp;lt;= nums[i] &amp;lt;= 10⁵ 进阶：</description>
+    </item>
+    <item>
+      <title>1234.replace the substring for balanced string</title>
+      <link>http://localhost:1313/posts/leet/1234.replace-the-substring-for-balanced-string/</link>
+      <pubDate>Mon, 13 Feb 2023 16:21:06 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1234.replace-the-substring-for-balanced-string/</guid>
+      <description>Description 1234.replace-the-substring-for-balanced-string&#xA;Solution We use two pointers left and right. Let&amp;rsquo;s traverse the string throughright from right = 0. If the amount of each character in the string other than [left, right] is less than or equal to n / 4, it means that we can form a balanced string by replacing [left, right], then increment left until [left, right] can&amp;rsquo;t form a balanced string.&#xA;Code class Solution { public: bool check(unordered_map&amp;lt;char, int&amp;gt; &amp;amp;mp, int m) { if (mp[&amp;#39;Q&amp;#39;] &amp;gt; m || mp[&amp;#39;W&amp;#39;] &amp;gt; m || mp[&amp;#39;E&amp;#39;] &amp;gt; m || mp[&amp;#39;R&amp;#39;] &amp;gt; m) return true; else return false; } int balancedString(string s) { int n = s.</description>
+    </item>
+    <item>
+      <title>1234.替换子串得到平衡字符串</title>
+      <link>http://localhost:1313/posts/leet/1234.replace-the-substring-for-balanced-string.zh/</link>
+      <pubDate>Mon, 13 Feb 2023 16:21:01 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1234.replace-the-substring-for-balanced-string.zh/</guid>
+      <description>问题描述 1234.替换子串得到平衡字符串&#xA;解题思路 利用两个指针left，right，right从0开始遍历，如果[left, right]之外的字符串中，每个字符出现次数都小于或等于n / 4，说明替换[left, right]可以构成平衡字符串，此时递增left，直到移除[left, right]不能构成平衡字符串。&#xA;代码 class Solution { public: bool check(unordered_map&amp;lt;char, int&amp;gt; &amp;amp;mp, int m) { if (mp[&amp;#39;Q&amp;#39;] &amp;gt; m || mp[&amp;#39;W&amp;#39;] &amp;gt; m || mp[&amp;#39;E&amp;#39;] &amp;gt; m || mp[&amp;#39;R&amp;#39;] &amp;gt; m) return true; else return false; } int balancedString(string s) { int n = s.size(), partial = n / 4; int res = n; unordered_map&amp;lt;char, int&amp;gt; chars; for (auto &amp;amp;c : s) chars[c]++; int flag = 1; for (auto &amp;amp;pa : chars) { // 检查字符串本身是否平衡 if (pa.</description>
+    </item>
+    <item>
+      <title>443.压缩字符串</title>
+      <link>http://localhost:1313/posts/leet/443.string-compression.zh/</link>
+      <pubDate>Thu, 08 Dec 2022 18:45:43 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/443.string-compression.zh/</guid>
+      <description>问题描述 443.压缩字符串&#xA;解题思路 双指针、滑动窗口，注意for循环中不需要fast++。&#xA;代码 class Solution { public: int compress(vector&amp;lt;char&amp;gt;&amp;amp; chars) { vector&amp;lt;char&amp;gt; res; int cnt = 0; for (int slow = 0, fast = 0; fast &amp;lt; chars.size(); ) { while (fast &amp;lt; chars.size() &amp;amp;&amp;amp; chars[fast] == chars[slow]) fast++; cnt = fast - slow; if (cnt == 1) res.push_back(chars[slow]); else if (cnt &amp;gt; 1 &amp;amp;&amp;amp; cnt &amp;lt;= 9) { res.push_back(chars[slow]); res.push_back(cnt + &amp;#39;0&amp;#39;); } else if (cnt &amp;gt;= 10 &amp;amp;&amp;amp; cnt &amp;lt;= 99) { res.</description>
+    </item>
+    <item>
+      <title>443.string compression</title>
+      <link>http://localhost:1313/posts/leet/443.string-compression/</link>
+      <pubDate>Thu, 08 Dec 2022 18:45:39 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/443.string-compression/</guid>
+      <description>Description 443.string-compression&#xA;Solution Sliding window, please pay attention to that fast++ is not needed in for loop.&#xA;Code class Solution { public: int compress(vector&amp;lt;char&amp;gt;&amp;amp; chars) { vector&amp;lt;char&amp;gt; res; int cnt = 0; for (int slow = 0, fast = 0; fast &amp;lt; chars.size(); ) { while (fast &amp;lt; chars.size() &amp;amp;&amp;amp; chars[fast] == chars[slow]) fast++; cnt = fast - slow; if (cnt == 1) res.push_back(chars[slow]); else if (cnt &amp;gt; 1 &amp;amp;&amp;amp; cnt &amp;lt;= 9) { res.</description>
+    </item>
+    <item>
+      <title>438.find all anagrams in a string</title>
+      <link>http://localhost:1313/posts/leet/438.find-all-anagrams-in-a-string/</link>
+      <pubDate>Wed, 07 Dec 2022 19:23:52 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/438.find-all-anagrams-in-a-string/</guid>
+      <description>Description 438.find-all-anagrams-in-a-string&#xA;Solution Similar to 30.substring-with-concatenation-of-all-words, easier.&#xA;Code class Solution { public: vector&amp;lt;int&amp;gt; findAnagrams(string s, string p) { unordered_map&amp;lt;char, int&amp;gt; mp; for (char &amp;amp;c : p) mp[c]++; vector&amp;lt;int&amp;gt; res; unordered_map&amp;lt;char, int&amp;gt; tmp = mp; for (int l = 0, r = 0; r &amp;lt; s.size(); r++) { if (tmp.find(s[r]) != tmp.end()) { tmp[s[r]]--; if (tmp[s[r]] == 0) { tmp.erase(s[r]); if (tmp.empty()) { res.push_back(l); tmp[s[l++]]++; } } } else { if (mp.</description>
+    </item>
+    <item>
+      <title>438.找到字符串中所有字母异位词</title>
+      <link>http://localhost:1313/posts/leet/438.find-all-anagrams-in-a-string.zh/</link>
+      <pubDate>Wed, 07 Dec 2022 19:23:48 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/438.find-all-anagrams-in-a-string.zh/</guid>
+      <description>问题描述 438.找到字符串中所有字母异位词&#xA;解题思路 参照30.串联所有单词串，思路完全一致。&#xA;代码 class Solution { public: vector&amp;lt;int&amp;gt; findAnagrams(string s, string p) { unordered_map&amp;lt;char, int&amp;gt; mp; for (char &amp;amp;c : p) mp[c]++; vector&amp;lt;int&amp;gt; res; unordered_map&amp;lt;char, int&amp;gt; tmp = mp; for (int l = 0, r = 0; r &amp;lt; s.size(); r++) { if (tmp.find(s[r]) != tmp.end()) { tmp[s[r]]--; if (tmp[s[r]] == 0) { tmp.erase(s[r]); if (tmp.empty()) { res.push_back(l); tmp[s[l++]]++; } } } else { if (mp.find(s[r]) != mp.end()) { while (s[l] !</description>
+    </item>
+    <item>
+      <title>219.contains duplicate ii</title>
+      <link>http://localhost:1313/posts/leet/219.contains-duplicate-ii/</link>
+      <pubDate>Tue, 06 Dec 2022 20:00:33 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/219.contains-duplicate-ii/</guid>
+      <description>Description 219.contains-duplicate-ii&#xA;Solution We can use unordered_map to record the number of ocurrence of each integer and slide window accrording the unordered_map.&#xA;Code class Solution { public: bool containsNearbyDuplicate(vector&amp;lt;int&amp;gt;&amp;amp; nums, int k) { unordered_map&amp;lt;int, int&amp;gt; mp; for (int i = 0; i &amp;lt; nums.size(); i++) { if (mp.find(nums[i]) != mp.end()) { if (i - mp[nums[i]] &amp;lt;= k) return true; else mp[nums[i]] = i; } else { mp[nums[i]] = i; } } return false; } }; </description>
+    </item>
+    <item>
+      <title>219.存在重复元素II</title>
+      <link>http://localhost:1313/posts/leet/219.contains-duplicate-ii.zh/</link>
+      <pubDate>Tue, 06 Dec 2022 20:00:30 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/219.contains-duplicate-ii.zh/</guid>
+      <description>问题描述 219.存在重复元素II&#xA;解题思路 利用unordered_map记录元素出现的次数，使用滑动窗口法。&#xA;代码 class Solution { public: bool containsNearbyDuplicate(vector&amp;lt;int&amp;gt;&amp;amp; nums, int k) { unordered_map&amp;lt;int, int&amp;gt; mp; for (int i = 0; i &amp;lt; nums.size(); i++) { if (mp.find(nums[i]) != mp.end()) { if (i - mp[nums[i]] &amp;lt;= k) return true; else mp[nums[i]] = i; } else { mp[nums[i]] = i; } } return false; } }; </description>
+    </item>
+    <item>
+      <title>3.longest substring without repeating characters</title>
+      <link>http://localhost:1313/posts/leet/3.longest-substring-without-repeating-characters/</link>
+      <pubDate>Mon, 05 Dec 2022 20:20:35 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/3.longest-substring-without-repeating-characters/</guid>
+      <description>Description 3.longest-substring-withou-repeating-characters&#xA;Solution We use arr[96] to record the number of occurence of each character. If the number is larger than 1, than there is repeating character between l and r; else, update res, if current length of substr is larger than res.&#xA;Code class Solution { public: int lengthOfLongestSubstring(string s) { int arr[96] = {0}; int res = 0; int l = 0; for (int r = 0; r &amp;lt; s.</description>
+    </item>
+    <item>
+      <title>3.无重复字符的最长子串</title>
+      <link>http://localhost:1313/posts/leet/3.longest-substring-without-repeating-characters.zh/</link>
+      <pubDate>Mon, 05 Dec 2022 20:20:31 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/3.longest-substring-without-repeating-characters.zh/</guid>
+      <description>问题描述 3.无重复字符的最长子串&#xA;解题思路 用arr[96]记录每个字符出现的次数，如果字符次数大于1，说明已经包含了重复字符，则要更新l，否则递增r，并记录最大的子串长度。&#xA;代码 class Solution { public: int lengthOfLongestSubstring(string s) { int arr[96] = {0}; int res = 0; int l = 0; for (int r = 0; r &amp;lt; s.size(); r++) { arr[s[r] - &amp;#39; &amp;#39;]++; if (arr[s[r] - &amp;#39; &amp;#39;] &amp;gt; 1) { while (l &amp;lt; r &amp;amp;&amp;amp; arr[s[r] - &amp;#39; &amp;#39;] &amp;gt; 1) arr[s[l++] - &amp;#39; &amp;#39;]--; } else { res = max(r - l + 1, res); } } return res; } }; </description>
+    </item>
+    <item>
+      <title>30.substring with concatenation of all words</title>
+      <link>http://localhost:1313/posts/leet/30.substring-with-concatenation-of-all-words/</link>
+      <pubDate>Mon, 05 Dec 2022 19:55:57 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/30.substring-with-concatenation-of-all-words/</guid>
+      <description>Description 30.substring-with-concatenation-of-all-words&#xA;Solution For each word sequence {s.substr(i, word_len), s.substr(i + word_len, word_len)...} of i($[0, word_len - 1]$), we use sliding window to judge;&#xA;We should pay attention to the detail when judging. We can use mp to determine whether substr is in words, and mp_tmp to determine whether it is concatenated substring, if mp is empty, then it is;&#xA;For key-value in mp_tmp, if value becomes 0, then erase(key);</description>
+    </item>
+    <item>
+      <title>30.串联所有单词串</title>
+      <link>http://localhost:1313/posts/leet/30.substring-with-concatenation-of-all-words.zh/</link>
+      <pubDate>Mon, 05 Dec 2022 19:55:54 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/30.substring-with-concatenation-of-all-words.zh/</guid>
+      <description>问题描述 30.串联所有单词串&#xA;解题思路 首先，由于words中所有字符串长度相同，要比较words与s: - s从i = 0开始，可以划分为一系列的长为word_len = words[0].size()的单词; - s从i = 1开始，可以划分为一系列的长为word_len = words[0].size()的单词; - &amp;hellip;&amp;hellip; - s从i = word_len - 1开始&amp;hellip;&amp;hellip;&#xA;然后要注意利用unordered_map&amp;lt;string, int&amp;gt;判断是否满足条件的细节，mp用于判断word是否在words中;&#xA;mp_tmp的键值对中，如果值为0，就删掉该键;&#xA;还要注意l的处理，分为在mp_tmp为空，和mp_tmp不为空，但是word已经出现了超过words中的次数.&#xA;代码 class Solution { public: vector&amp;lt;int&amp;gt; findSubstring(string s, vector&amp;lt;string&amp;gt; &amp;amp;words) { unordered_map&amp;lt;string, int&amp;gt; mp; int word_len = words[0].size(); int cnt = 0; vector&amp;lt;int&amp;gt; res; for (int i = 0; i &amp;lt; words.size(); i++) { mp[words[i]]++; cnt++; } if (cnt * word_len &amp;gt; s.</description>
+    </item>
+    <item>
+      <title>1610.maximum Number of Visible Points</title>
+      <link>http://localhost:1313/posts/leet/1610.maximum-number-of-visible-points/</link>
+      <pubDate>Sun, 04 Dec 2022 19:42:55 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1610.maximum-number-of-visible-points/</guid>
+      <description>Descripiton 1610.maximum-number-of-visible-points&#xA;Soluiton We can use function atan2 to change slope to angle in $-\pi ~ \pi$.&#xA;We need also expand arrays, let angle[n + i] = angle[i] + 360, and the length of array to be 2 * n, so we can avoid omission.&#xA;Code class Solution { public: int visiblePoints(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; &amp;amp;points, int angle, vector&amp;lt;int&amp;gt; &amp;amp;location) { vector&amp;lt;float&amp;gt; point_angle(points.size(), 0); for (int i = 0; i &amp;lt; points.size(); i++) { if (points[i][0] == location[0]) { if (points[i][1] &amp;gt; location[1]) point_angle[i] = 90; else if (points[i][1] == location[1]) point_angle[i] = 361; // 用来标记这是一个重叠的点 else point_angle[i] = -90; } else { point_angle[i] = atan2(points[i][1] - location[1], points[i][0] - location[0]) * 180 / M_PI; } } int cnt = 0; std::sort(point_angle.</description>
+    </item>
+    <item>
+      <title>1610.可见点的最大数目</title>
+      <link>http://localhost:1313/posts/leet/1610.maximum-number-of-visible-points.zh/</link>
+      <pubDate>Sun, 04 Dec 2022 19:42:50 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1610.maximum-number-of-visible-points.zh/</guid>
+      <description>问题描述 1610.可见点的最大数目&#xA;解题思路 利用atan2函数，即可将斜率转化为$-\pi ~ \pi$的角度;&#xA;扩充数组，令angle[n + i] = angle[i] + 360，使角度数组长度为2 * n，这样就能避免遗漏一四象限。&#xA;代码 class Solution { public: int visiblePoints(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; &amp;amp;points, int angle, vector&amp;lt;int&amp;gt; &amp;amp;location) { vector&amp;lt;float&amp;gt; point_angle(points.size(), 0); for (int i = 0; i &amp;lt; points.size(); i++) { if (points[i][0] == location[0]) { if (points[i][1] &amp;gt; location[1]) point_angle[i] = 90; else if (points[i][1] == location[1]) point_angle[i] = 361; // 用来标记这是一个重叠的点 else point_angle[i] = -90; } else { point_angle[i] = atan2(points[i][1] - location[1], points[i][0] - location[0]) * 180 / M_PI; } } int cnt = 0; std::sort(point_angle.</description>
+    </item>
+  </channel>
+</rss>

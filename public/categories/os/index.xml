@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OS on My New Hugo Site</title>
+    <link>http://localhost:1313/categories/os/</link>
+    <description>Recent content in OS on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 May 2023 17:45:58 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/os/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>从汇编的角度理解 C/Cpp 的函数调用过程</title>
+      <link>http://localhost:1313/posts/tech/function_call_stack.zh/</link>
+      <pubDate>Mon, 01 May 2023 17:45:58 +0800</pubDate>
+      <guid>http://localhost:1313/posts/tech/function_call_stack.zh/</guid>
+      <description>代码 测试代码内容如下，定义了一个 add 函数，用来求两个函数的和。&#xA;int add(int a, int b) { return a + b; } int sum(int a, int b) { return 10 + add(a, b); } int main() { int res = sum(10, 20); return 0; } 汇编代码如下:&#xA;.file&#x9;&amp;#34;add.c&amp;#34; .text .globl&#x9;add .type&#x9;add, @function add: .LFB0: .cfi_startproc pushq&#x9;%rbp .cfi_def_cfa_offset 16 .cfi_offset 6, -16 movq&#x9;%rsp, %rbp .cfi_def_cfa_register 6 movl&#x9;%edi, -4(%rbp) movl&#x9;%esi, -8(%rbp) movl&#x9;-4(%rbp), %edx movl&#x9;-8(%rbp), %eax addl&#x9;%edx, %eax popq&#x9;%rbp .</description>
+    </item>
+  </channel>
+</rss>

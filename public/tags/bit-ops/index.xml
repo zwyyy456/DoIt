@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bit Ops on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/bit-ops/</link>
+    <description>Recent content in Bit Ops on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 16 Oct 2023 10:53:58 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/bit-ops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>260. Single Number III (Medium)</title>
+      <link>http://localhost:1313/posts/leet/260.single-number-iii/</link>
+      <pubDate>Mon, 16 Oct 2023 10:53:58 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/260.single-number-iii/</guid>
+      <description>Description 260. Single Number III (Medium)&#xA;Given an integer array nums, in which exactly two elements appear only once and all the other elements appear exactly twice. Find the two elements that appear only once. You can return the answer in any order.&#xA;You must write an algorithm that runs in linear runtime complexity and uses only constant extra space.&#xA;Example 1:&#xA;Input: nums = [1,2,1,3,2,5] Output: [3,5] Explanation: [5, 3] is also a valid answer.</description>
+    </item>
+    <item>
+      <title>260. 只出现一次的数字 III (Medium)</title>
+      <link>http://localhost:1313/posts/leet/260.single-number-iii.zh/</link>
+      <pubDate>Mon, 16 Oct 2023 10:53:54 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/260.single-number-iii.zh/</guid>
+      <description>问题描述 260. 只出现一次的数字 III (Medium)&#xA;给你一个整数数组 nums，其中恰好有两个元素只出现一次，其余所有元素均出现两次。 找出只出现一次的那两 个元素。你可以按 任意顺序 返回答案。&#xA;你必须设计并实现线性时间复杂度的算法且仅使用常量额外空间来解决此问题。&#xA;示例 1：&#xA;输入：nums = [1,2,1,3,2,5] 输出：[3,5] 解释：[5, 3] 也是有效的答案。 示例 2：&#xA;输入：nums = [-1,0] 输出：[-1,0] 示例 3：&#xA;输入：nums = [0,1] 输出：[1,0] 提示：&#xA;2 &amp;lt;= nums.length &amp;lt;= 3 * 10⁴ -2³¹ &amp;lt;= nums[i] &amp;lt;= 2³¹ - 1 除两个只出现一次的整数外， nums 中的其他数字都出现两次 解题思路 首先对所有数取异或，假设要找出来的元素分别为 $a$ 和 $b$，那么异或的结果就是 $c = a \oplus b$，我们考虑求 $c$ 的 lowbit，即 $c &amp;amp; (-c)$，那么我们就可以把所有元素分成两类，一类是 $nums[i] &amp;amp; lowbit = 0$，另一类是不为 $0$，$a$ 和 $b$ 一定是各属于一类，如果第一类元素的所有值的异或就是 $a$，那么第二类所有元素的异或值就是 $b$。</description>
+    </item>
+    <item>
+      <title>137. Single Number II (Medium)</title>
+      <link>http://localhost:1313/posts/leet/137.single-number-ii/</link>
+      <pubDate>Mon, 16 Oct 2023 10:43:17 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/137.single-number-ii/</guid>
+      <description>Description 137. Single Number II (Medium)&#xA;Given an integer array nums where every element appears three times except for one, which appears exactly once. Find the single element and return it.&#xA;You must implement a solution with a linear runtime complexity and use only constant extra space.&#xA;Example 1:&#xA;Input: nums = [2,2,3,2] Output: 3 Example 2:&#xA;Input: nums = [0,1,0,1,0,1,99] Output: 99 Constraints:&#xA;1 &amp;lt;= nums.length &amp;lt;= 3 * 10⁴ -2³¹ &amp;lt;= nums[i] &amp;lt;= 2³¹ - 1 Each element in nums appears exactly three times except for one element which appears once.</description>
+    </item>
+    <item>
+      <title>137. 只出现一次的数字 II (Medium)</title>
+      <link>http://localhost:1313/posts/leet/137.single-number-ii.zh/</link>
+      <pubDate>Mon, 16 Oct 2023 10:43:14 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/137.single-number-ii.zh/</guid>
+      <description>问题描述 137. 只出现一次的数字 II (Medium) 给你一个整数数组 nums ，除某个元素仅出现 一次 外，其余每个元素都恰出现 三次 。 请你找出并 返回那个只出现了一次的元素。&#xA;你必须设计并实现线性时间复杂度的算法且使用常数级空间来解决此问题。&#xA;示例 1：&#xA;输入：nums = [2,2,3,2] 输出：3 示例 2：&#xA;输入：nums = [0,1,0,1,0,1,99] 输出：99 提示：&#xA;1 &amp;lt;= nums.length &amp;lt;= 3 * 10⁴ -2³¹ &amp;lt;= nums[i] &amp;lt;= 2³¹ - 1 nums 中，除某个元素仅出现 一次 外，其余每个元素都恰出现 三次 解题思路 要想保证空间复杂度为 $O(1)$，我们需要考虑 nums 的二进制表示，即统计 nums[i] 的每一位上的数的和，由于只有一个元素出现一次，其他都出现了三次，那么我们对这个和 $ \mod 3$，得到的结果就是待找出的元素的每一位上的数。&#xA;代码 class Solution { public: int singleNumber(vector&amp;lt;int&amp;gt; &amp;amp;nums) { vector&amp;lt;int&amp;gt; cnt(32); int n = nums.</description>
+    </item>
+  </channel>
+</rss>

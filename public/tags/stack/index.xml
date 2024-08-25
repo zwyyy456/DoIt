@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stack on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/stack/</link>
+    <description>Recent content in Stack on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 13 Sep 2023 11:10:27 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/stack/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>331.verify Preorder Serialization of a Binary Tree</title>
+      <link>http://localhost:1313/posts/leet/331.verify-preorder-serialization-of-a-binary-tree.zh/</link>
+      <pubDate>Wed, 13 Sep 2023 11:10:27 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/331.verify-preorder-serialization-of-a-binary-tree.zh/</guid>
+      <description>问题描述 331. 验证二叉树的前序序列化 (Medium)&#xA;序列化二叉树的一种方法是使用 前序遍历。当我们遇到一个非空节点时，我们可以记录下这个节点的值。如 果它是一个空节点，我们可以使用一个标记值记录，例如 #。&#xA;例如，上面的二叉树可以被序列化为字符串 &amp;quot;9,3,4,#,#,1,#,#,2,#,6,#,#&amp;quot;，其中 # 代表一个空节点。&#xA;给定一串以逗号分隔的序列，验证它是否是正确的二叉树的前序序列化。编写一个在不重构树的条件下的可行算法 。&#xA;保证 每个以逗号分隔的字符或为一个整数或为一个表示 null 指针的 &#39;#&#39; 。&#xA;你可以认为输入格式总是有效的&#xA;例如它永远不会包含两个连续的逗号，比如 &amp;quot;1,,3&amp;quot; 。 注意： 不允许重建树。&#xA;示例 1:&#xA;输入: preorder = &amp;#34;9,3,4,#,#,1,#,#,2,#,6,#,#&amp;#34; 输出: true 示例 2:&#xA;输入: preorder = &amp;#34;1,#&amp;#34; 输出: false 示例 3:&#xA;输入: preorder = &amp;#34;9,#,#,1&amp;#34; 输出: false 提示:&#xA;1 &amp;lt;= preorder.length &amp;lt;= 10⁴ preorder 由以逗号 “，” 分隔的 [0,100] 范围内的整数和 “#” 组成 解题思路 归约 本质上还是一种递归的思想，在前序遍历时，我们可以注意到，每个叶子结点必定跟随两个 null，因此，我们可以反过来，将连续的一个非空结点和两个空结点，归约为一个空结点，这个过程有点像消消乐，可以利用栈来实现这个过程，最后根据栈是否只剩下一个空结点来判断。&#xA;递归 递归的思路参照 剑指 Offer 37.</description>
+    </item>
+    <item>
+      <title>31.next Permutation</title>
+      <link>http://localhost:1313/posts/leet/31.next-permutation/</link>
+      <pubDate>Tue, 08 Aug 2023 13:32:33 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/31.next-permutation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>31. 下一个排列 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/31.next-permutation.zh/</link>
+      <pubDate>Tue, 08 Aug 2023 13:32:27 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/31.next-permutation.zh/</guid>
+      <description>问题描述 31. 下一个排列 (Medium)&#xA;整数数组的一个 排列 就是将其所有成员以序列或线性顺序排列。&#xA;例如， arr = [1,2,3] ，以下这些都可以视作 arr 的排列： [1,2,3]、 [1,3,2]、 [3,1,2]、 [2 ,3,1] 。 整数数组的 下一个排列 是指其整数的下一个字典序更大的排列。更正式地，如果数组的所有排列根据其字典 顺序从小到大排列在一个容器中，那么数组的 下一个排列 就是在这个有序容器中排在它后面的那个排列。如 果不存在下一个更大的排列，那么这个数组必须重排为字典序最小的排列（即，其元素按升序排列）。&#xA;例如， arr = [1,2,3] 的下一个排列是 [1,3,2] 。 类似地， arr = [2,3,1] 的下一个排列是 [3,1,2] 。 而 arr = [3,2,1] 的下一个排列是 [1,2,3] ，因为 [3,2,1] 不存在一个字典序更大的排列。 给你一个整数数组 nums ，找出 nums 的下一个排列。&#xA;必须 原地 修改，只允许使用 额外常数空间。&#xA;示例 1：&#xA;输入：nums = [1,2,3] 输出：[1,3,2] 示例 2：&#xA;输入：nums = [3,2,1] 输出：[1,2,3] 示例 3：</description>
+    </item>
+  </channel>
+</rss>

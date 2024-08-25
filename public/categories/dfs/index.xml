@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dfs on My New Hugo Site</title>
+    <link>http://localhost:1313/categories/dfs/</link>
+    <description>Recent content in Dfs on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 19 Sep 2023 14:15:52 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/dfs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>310. Minimum Height Trees (Medium)</title>
+      <link>http://localhost:1313/posts/leet/310.minimum-height-trees/</link>
+      <pubDate>Tue, 19 Sep 2023 14:15:52 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/310.minimum-height-trees/</guid>
+      <description>Description 310. Minimum Height Trees (Medium)&#xA;A tree is an undirected graph in which any two vertices are connected by exactly one path. In other words, any connected graph without simple cycles is a tree.&#xA;Given a tree of n nodes labelled from 0 to n - 1, and an array of n - 1 edges where edges[i] = [aᵢ, bᵢ] indicates that there is an undirected edge between the two nodes aᵢ and bᵢ in the tree, you can choose any node of the tree as the root.</description>
+    </item>
+    <item>
+      <title>310. 最小高度树 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/310.minimum-height-trees.zh/</link>
+      <pubDate>Tue, 19 Sep 2023 14:15:49 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/310.minimum-height-trees.zh/</guid>
+      <description>问题描述 310. 最小高度树 (Medium)&#xA;树是一个无向图，其中任何两个顶点只通过一条路径连接。 换句话说，一个任何没有简单环路的连通图都是一棵 树。&#xA;给你一棵包含 n 个节点的树，标记为 0 到 n - 1 。给定数字 n 和一个有 n - 1 条无向边的 edges 列表（每一个边都是一对标签），其中 edges[i] = [aᵢ, bᵢ] 表示树中节点 aᵢ 和 bᵢ 之间存在一条无 向边。&#xA;可选择树中任何一个节点作为根。当选择节点 x 作为根节点时，设结果树的高度为 h 。在所有可能的树中， 具有最小高度的树（即， min(h)）被称为 最小高度树 。&#xA;请你找到所有的 最小高度树 并按 任意顺序 返回它们的根节点标签列表。&#xA;树的 高度 是指根节点和叶子节点之间最长向下路径上边的数量。&#xA;示例 1：&#xA;输入：n = 4, edges = [[1,0],[1,2],[1,3]] 输出：[1] 解释：如图所示，当根是标签为 1 的节点时，树的高度是 1 ，这是唯一的最小高度树。 示例 2：&#xA;输入：n = 6, edges = [[3,0],[3,1],[3,2],[3,4],[5,4]] 输出：[3,4] 提示：</description>
+    </item>
+  </channel>
+</rss>

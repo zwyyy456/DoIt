@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Backtracking on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/backtracking/</link>
+    <description>Recent content in Backtracking on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 08 Dec 2022 15:47:38 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/backtracking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>698.partition to k equal sum subsets</title>
+      <link>http://localhost:1313/posts/leet/698.partition-to-k-equal-sum-subsets/</link>
+      <pubDate>Thu, 08 Dec 2022 15:47:38 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/698.partition-to-k-equal-sum-subsets/</guid>
+      <description>Description 698.partition-to-k-equal-sum-subsets&#xA;Solution Sort array from large to small, so that we can avoid making mistake of judging arrays like [1, 1, 2, 2].&#xA;We use used[i] to avoid using the same element more than once, if sum == target, sum = 0, if cnt == k, than it can be devided.&#xA;Code class Solution { public: bool dfs(vector&amp;lt;int&amp;gt; &amp;amp;nums, int index, int sum, int target, int cnt, int k, vector&amp;lt;int&amp;gt; &amp;amp;used, int idx) { if (cnt == k) return true; if (sum == target) { return dfs(nums, idx - 1, 0, target, cnt + 1, k, used, idx - 1); // pay attention to the `idx - 1` rather than `index - 1` } for (int i = index; i &amp;gt;= 0; i--) { if (used[i] || sum + nums[i] &amp;gt; target) continue; used[i] = 1; if (dfs(nums, i - 1, sum + nums[i], target, cnt, k, used, idx)) return true; used[i] = 0; if (sum == 0) return false; } return false; } bool canPartitionKSubsets(vector&amp;lt;int&amp;gt; &amp;amp;nums, int k) { int sum = 0; for (int i : nums) sum += i; if (sum % k !</description>
+    </item>
+    <item>
+      <title>698.划为k个相等的子集</title>
+      <link>http://localhost:1313/posts/leet/698.partition-to-k-equal-sum-subsets.zh/</link>
+      <pubDate>Thu, 08 Dec 2022 15:47:34 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/698.partition-to-k-equal-sum-subsets.zh/</guid>
+      <description>问题描述 698.划为k个相等的子集&#xA;解题思路 首先，对数组按照从大到小排序，相比从小到大排序，能避免[1, 1, 2, 2]这样的数组的误判;&#xA;利用used[i]数组避免重复使用同一个元素，如果sum == target，就将sum置零，如果cnt == k，说明满足条件。&#xA;代码 class Solution { public: bool dfs(vector&amp;lt;int&amp;gt; &amp;amp;nums, int index, int sum, int target, int cnt, int k, vector&amp;lt;int&amp;gt; &amp;amp;used, int idx) { if (cnt == k) return true; if (sum == target) { return dfs(nums, idx - 1, 0, target, cnt + 1, k, used, idx - 1); //注意这里是idex - 1而不是index - 1 } for (int i = index; i &amp;gt;= 0; i--) { if (used[i] || sum + nums[i] &amp;gt; target) continue; used[i] = 1; if (dfs(nums, i - 1, sum + nums[i], target, cnt, k, used, idx)) return true; used[i] = 0; if (sum == 0) return false; } return false; } bool canPartitionKSubsets(vector&amp;lt;int&amp;gt; &amp;amp;nums, int k) { int sum = 0; for (int i : nums) sum += i; if (sum % k !</description>
+    </item>
+    <item>
+      <title>131.palindrome patitioning</title>
+      <link>http://localhost:1313/posts/leet/131.palindrome-patitioning/</link>
+      <pubDate>Tue, 06 Dec 2022 19:01:22 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/131.palindrome-patitioning/</guid>
+      <description>Description 131.palindrome-partitioning&#xA;Solution We can whether it is palindrome by dynamic programming: - if (s[i] == s[j]) dp[i][j] = dp[i + 1][j - 1];&#xA;When traversing, pay attention to the order of traversing i;&#xA;Last, we use backtracking to update res.&#xA;Code class Solution { public: vector&amp;lt;vector&amp;lt;string&amp;gt;&amp;gt; res; vector&amp;lt;string&amp;gt; res_tmp; void track_back(string &amp;amp;s, int index, vector&amp;lt;vector&amp;lt;bool&amp;gt;&amp;gt; &amp;amp;dp) { if (index &amp;gt;= s.size()) { res.push_back(res_tmp); return; } for (int i = index; i &amp;lt; s.</description>
+    </item>
+    <item>
+      <title>131.分割回文串</title>
+      <link>http://localhost:1313/posts/leet/131.palindrome-patitioning.zh/</link>
+      <pubDate>Tue, 06 Dec 2022 19:01:17 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/131.palindrome-patitioning.zh/</guid>
+      <description>问题描述 131.分割回文串&#xA;解题思路 利用动态规划来判断字符串是否是回文串: - if (s[i] == s[j]) dp[i][j] = dp[i + 1][j - 1];&#xA;这里遍历的时候要注意i的遍历顺序;&#xA;最后考虑利用回溯法，更新答案。&#xA;代码 class Solution { public: vector&amp;lt;vector&amp;lt;string&amp;gt;&amp;gt; res; vector&amp;lt;string&amp;gt; res_tmp; void track_back(string &amp;amp;s, int index, vector&amp;lt;vector&amp;lt;bool&amp;gt;&amp;gt; &amp;amp;dp) { if (index &amp;gt;= s.size()) { res.push_back(res_tmp); return; } for (int i = index; i &amp;lt; s.size(); i++) { if (dp[index][i]) { res_tmp.push_back(s.substr(index, i - index + 1)); track_back(s, i + 1, dp); res_tmp.pop_back(); } } return; } vector&amp;lt;vector&amp;lt;string&amp;gt;&amp;gt; partition(string s) { vector&amp;lt;vector&amp;lt;bool&amp;gt;&amp;gt; dp(s.</description>
+    </item>
+  </channel>
+</rss>

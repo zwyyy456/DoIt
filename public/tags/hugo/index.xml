@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/hugo/</link>
+    <description>Recent content in Hugo on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 18 Aug 2024 09:51:38 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>基于 Hugo 搭建个人博客</title>
+      <link>http://localhost:1313/posts/blog/build-site-with-papermod.zh/</link>
+      <pubDate>Sun, 11 Aug 2024 09:51:38 +0800</pubDate>
+      <guid>http://localhost:1313/posts/blog/build-site-with-papermod.zh/</guid>
+      <description>简介与安装 Hugo 是一个用 Go 编写的静态网站生成器，可以轻松生成个人博客。&#xA;Hugo 安装起来也非常方便，以下是 Hugo 的安装命令：&#xA;brew install hugo # mac sudo apt install hugo # Debian scoop install hugo # windows Windows 推荐使用 scoop 包管理器，非常好用&#xA;安装好 Hugo 后，执行 hugo new site blog 就会在当前目录下创建名为 blog 的目录，Hugo 后续将基于该目录中的内容来创建网站。&#xA;主题配置 这里介绍了三个个人比较喜欢的 Hugo 主题的配置方案。读者可以自选其一，我是部署了三个博客网站，当然只有一个能被搜索引擎检索到。&#xA;PaperMod 安装主题 在 blog 目录下，执行以下命令：&#xA;git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod git submodule update --init --recursive # needed when you reclone your repo (submodules may not get cloned automatically) 主题就被安装在了 blog/themes/PaperMod 目录下，该目录下就是 PaperMod 主题的源码。</description>
+    </item>
+    <item>
+      <title>使博客被搜索引擎收录</title>
+      <link>http://localhost:1313/posts/blog/blog-google-bing.zh/</link>
+      <pubDate>Wed, 15 May 2024 15:44:28 +0800</pubDate>
+      <guid>http://localhost:1313/posts/blog/blog-google-bing.zh/</guid>
+      <description>前言 在网站没有被搜索引擎收录之前，网站内容是无法通过搜索引擎搜索到的，因此我们手动让网站被 Google 和 Bing 收录。&#xA;Google 进入 Google Search Console，点击 添加资源，资源类型选择 网址前缀，这里我的网址前缀为 https://blog.zwyyy456.tech/，验证方法选择通过 HTML 文件，按照提示，下载一个 google 开头的 html 文件，将这个文件放在 Hugo 博客文件目录的 static 目录下，这是因为 static 目录中的文件与目录在编译时，会被复制到 public 目录，即网站的根目录。&#xA;完成验证之后，下一步则是添加网站地图，如下图所示：&#xA;Hugo 会自动为我们生成 sitemap.xml 文件，即站点地图，由于我的网站支持中英双语，因此站点地图的位置为 https://blog.zwyyy456.tech/zh/sitemap.xml 和 https://blog.zwyyy456.tech/en/sitemap.xml，如果是单语言的 Hugo 博客网站，则是 https://HugoExample.com/sitemap.xml。添加好站点地图之后等待谷歌处理数据即可。&#xA;Bing 进入 Bing Webmaster Tools，可以直接从 Google Search Console 导入网站，提交站点地图的方法是类似的。&#xA;为博客添加搜索功能 我使用的博客主题是秉承简洁纯粹理念的 hugo_coder 主题，该主题不支持搜索功能，而我比较需要这个搜索功能，因此通过 Google 或者 Bing 的自定义搜索功能来为博客添加搜索功能是一个比较简单的做法，这里我使用的是 Bing 的自定义搜索功能。</description>
+    </item>
+    <item>
+      <title>将博客的图床从 SM.MS 迁移到又拍云</title>
+      <link>http://localhost:1313/posts/blog/change-image-src-from-smms-to-upyun.zh/</link>
+      <pubDate>Tue, 26 Dec 2023 16:25:29 +0800</pubDate>
+      <guid>http://localhost:1313/posts/blog/change-image-src-from-smms-to-upyun.zh/</guid>
+      <description>前言 为了存储博客的图片，我需要一个图床，一开始本来是想用七牛云或者又拍云提供的免费存储服务和流量来做图床的，奈何它们都需要一个通过了备案的域名才能实现，于是退而求其次选择了 SM.MS，在 picgo 或者 upic 中配置 SM.MS 图床非常方便，填一个 token 即可，在科学加持的情况下，图片显示也是很快速的。&#xA;但是，由于我的博客很多内容是我自己的学习笔记，因此其中的图片内容也是很重要的，考虑到 SM.MS 的图床稳定性与国内的可直接访问性，当我的 zwyyy456.tech 域名通过备案之后，我就着手将图床从 SM.MS 迁移到了又拍云。&#xA;又拍云设置 又拍云联盟的用户每月可获得 10GB 免费存储空间与 15GB 免费 CDN 流量，要加入又拍云联盟也很简单，只需要在网站地步添加又拍云 LOGO 与又拍云网站的对应链接即可。&#xA;在博客所属根目录下，将 layouts/partials/foot.html 的内容修改为如下：&#xA;&amp;lt;footer class=&amp;#34;footer&amp;#34;&amp;gt; &amp;lt;section class=&amp;#34;container&amp;#34;&amp;gt; © {{ if (and .Site.Params.since (lt .Site.Params.since now.Year)) }} {{ .Site.Params.since }} - {{ end }} {{ now.Year }} {{ with .Site.Params.author }} {{ . }} {{ end }} · {{ if (and .Site.Params.license) }} {{ i18n &amp;#34;licensed_under&amp;#34; }} {{ .</description>
+    </item>
+    <item>
+      <title>解决 Netlify 部署 Hugo 静态博客时的 `fatal: remote error: upload-pack: not our ref` 问题</title>
+      <link>http://localhost:1313/posts/blog/netlify-build-error.zh/</link>
+      <pubDate>Mon, 18 Dec 2023 12:46:49 +0800</pubDate>
+      <guid>http://localhost:1313/posts/blog/netlify-build-error.zh/</guid>
+      <description>问题描述 我的其中一个 Hugo 博客采用了 PaperMod 主题，另一个是 hugo-coder 主题，都是通过 Netlify 部署，昨天晚上发现，Netlify 显示 paper.191000.xyz 对应的站点部署失败。&#xA;问题日志显示：&#xA;12:26:05 PM: Waiting for other deploys from your team to complete. Check the queue: https://app.netlify.com/teams/zwyyy456/builds 12:26:20 PM: build-image version: 3ffff9df3d5419545acc1b673a54de348174406d (focal) 12:26:20 PM: buildbot version: 4613af4169363e3b38cfadfa4665d34cd1d1427b 12:26:20 PM: Fetching cached dependencies 12:26:20 PM: Starting to download cache of 106.8MB 12:26:22 PM: Finished downloading cache in 1.935s 12:26:22 PM: Starting to extract cache 12:26:23 PM: Finished extracting cache in 720ms 12:26:23 PM: Finished fetching cache in 2.</description>
+    </item>
+    <item>
+      <title>基于 hugo 和 papermod 主题搭建自己的博客</title>
+      <link>http://localhost:1313/posts/blog/create_blog_with_papermod.zh/</link>
+      <pubDate>Fri, 04 Nov 2022 18:22:26 +0800</pubDate>
+      <guid>http://localhost:1313/posts/blog/create_blog_with_papermod.zh/</guid>
+      <description>部署博客到vercel FreeNom申请域名 首先，梯子最好选择美国的，并且freenom选择地址时最好与ip所在州可以对应得上； 进入FreeNom，输入zwyb.tk，然后点击检查可用性，这里要记得输入后缀，能避免点击现在获取显示不可用的问题。 如下图所示: Cloudfare管理域名 cloudfare添加站点zwyyy456.ml，然后添加DNS record，内容如下图所示： 下一步，进入freenom, Services-&amp;gt;My Domains-&amp;gt;Manage Domain-&amp;gt;Management Tools-&amp;gt;Nameservers，选择Use custom nameservers(enter blow)，填入cloudfare生成的nameservers。注意cloudfare的SSL/TLS策略必须是Full。&#xA;vercel部署博客和绑定域名 将整个项目，如papermod这个文件夹，作为一个git仓库上传到github，然后vercel创建新项目，选择continue with github，就能将对应的仓库导入到vercel，部署的时候注意添加Environment Variables&#xA;HUGO_VERSION 0.93.0 项目部署好之后，点击该项目，Settings-&amp;gt;Domains，添加之前FreeNom申请的域名，DNS record在上一步cloudfare管理域名那里已经添加过了。</description>
+    </item>
+    <item>
+      <title>基于 Hugo 搭建自己的博客</title>
+      <link>http://localhost:1313/posts/blog/create_blog_with_hugo.zh/</link>
+      <pubDate>Fri, 04 Nov 2022 18:22:26 +0800</pubDate>
+      <guid>http://localhost:1313/posts/blog/create_blog_with_hugo.zh/</guid>
+      <description>前言 Hugo 是用 Go 语言写的静态网站生成器（Static Site Generator）。可以把 Markdown 文件转化成 HTML 文件，因此有很多人利用 Hugo 来搭建自己的博客网站。&#xA;安装 Hugo Mac 上，执行 brew install hugo，Win 上执行 scoop install hugo 即可。使用 hugo new site test-coder 即可创建博客，该命令会在当前目录创建一个名为 test-coder 的子目录，该目录就是创建的博客的源文件仓库。其中，test-coder 可以自行修改为你希望的名称。该目录中的内容如下：&#xA;test-coder on  main [+?] ❯ ls archetypes assets content data hugo.toml i18n layouts public resources static themes archetypes：存放 front matter 模板，hugo 命令创建 .md 文件时会根据该模板来创建； content：存放博客内容； layouts：存放定义为网站的样式，写在 layouts 目录下的样式文件会覆盖安装的主题中的 layouts 目录下的同名样式文件； static：存放静态文件，static 目录中的内容会在编译时会被移动到 public 目录，而本地的 public 目录对应着网站的根目录； public：存放 hugo 生成的静态网页； themes：存放主题文件； config.</description>
+    </item>
+    <item>
+      <title>为 papermod 主题添加 Latex 支持</title>
+      <link>http://localhost:1313/posts/blog/latex_support_papermod.zh/</link>
+      <pubDate>Mon, 26 Sep 2022 11:42:46 +0800</pubDate>
+      <guid>http://localhost:1313/posts/blog/latex_support_papermod.zh/</guid>
+      <description>steps to follow 在themes/PaperMod/layouts/partials目录下创建math.html文件，文件内容如下&#xA;&amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css&amp;#34; integrity=&amp;#34;sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt; &amp;lt;script defer src=&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.js&amp;#34; integrity=&amp;#34;sha384-Qsn9KnoKISj6dI8g7p1HBlNpVx0I8p1SvlwOldgi3IorMle61nQy4zEahWYtljaz&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script defer src=&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/auto-render.min.js&amp;#34; integrity=&amp;#34;sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script&amp;gt; document.addEventListener(&amp;#34;DOMContentLoaded&amp;#34;, function() { renderMathInElement(document.body, { // customised options // • auto-render specific keys, e.g.: delimiters: [ {left: &amp;#39;$$&amp;#39;, right: &amp;#39;$$&amp;#39;, display: true}, {left: &amp;#39;$&amp;#39;, right: &amp;#39;$&amp;#39;, display: false}, {left: &amp;#39;\\(&amp;#39;, right: &amp;#39;\\)&amp;#39;, display: false}, {left: &amp;#39;\\[&amp;#39;, right: &amp;#39;\\]&amp;#39;, display: true} ], // • rendering keys, e.g.: throwOnError : false }); }); &amp;lt;/script&amp;gt; 编辑themes/PaperMod/layouts/partials目录下的extend_head.</description>
+    </item>
+    <item>
+      <title>为 PaperMod 主题添加 LaTeX 支持</title>
+      <link>http://localhost:1313/posts/blog/latex_support_papermod/</link>
+      <pubDate>Mon, 26 Sep 2022 11:42:46 +0800</pubDate>
+      <guid>http://localhost:1313/posts/blog/latex_support_papermod/</guid>
+      <description>steps to follow 在themes/PaperMod/layouts/partials目录下创建math.html文件，文件内容如下&#xA;&amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css&amp;#34; integrity=&amp;#34;sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt; &amp;lt;script defer src=&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.js&amp;#34; integrity=&amp;#34;sha384-Qsn9KnoKISj6dI8g7p1HBlNpVx0I8p1SvlwOldgi3IorMle61nQy4zEahWYtljaz&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script defer src=&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/auto-render.min.js&amp;#34; integrity=&amp;#34;sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script&amp;gt; document.addEventListener(&amp;#34;DOMContentLoaded&amp;#34;, function() { renderMathInElement(document.body, { // customised options // • auto-render specific keys, e.g.: delimiters: [ {left: &amp;#39;$$&amp;#39;, right: &amp;#39;$$&amp;#39;, display: true}, {left: &amp;#39;$&amp;#39;, right: &amp;#39;$&amp;#39;, display: false}, {left: &amp;#39;\\(&amp;#39;, right: &amp;#39;\\)&amp;#39;, display: false}, {left: &amp;#39;\\[&amp;#39;, right: &amp;#39;\\]&amp;#39;, display: true} ], // • rendering keys, e.g.: throwOnError : false }); }); &amp;lt;/script&amp;gt; 编辑themes/PaperMod/layouts/partials目录下的extend_head.</description>
+    </item>
+  </channel>
+</rss>

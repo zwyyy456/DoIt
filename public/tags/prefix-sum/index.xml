@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Prefix Sum on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/prefix-sum/</link>
+    <description>Recent content in Prefix Sum on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 16 Oct 2023 10:37:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/prefix-sum/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2906. Construct Product Matrix (Medium)</title>
+      <link>http://localhost:1313/posts/leet/2906.construct-product-matrix/</link>
+      <pubDate>Mon, 16 Oct 2023 10:37:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2906.construct-product-matrix/</guid>
+      <description>Description 2906. Construct Product Matrix (Medium)&#xA;Given a 0-indexed 2D integer matrix grid of size n * m, we define a 0-indexed 2D matrix p of size n * m as the product matrix of grid if the following condition is met:&#xA;Each element p[i][j] is calculated as the product of all elements in grid except for the element grid[i][j]. This product is then taken modulo 12345. Return the product matrix of grid.</description>
+    </item>
+    <item>
+      <title>2906. 构造乘积矩阵 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/2906.construct-product-matrix.zh/</link>
+      <pubDate>Mon, 16 Oct 2023 10:36:57 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2906.construct-product-matrix.zh/</guid>
+      <description>问题描述 2906. 构造乘积矩阵 (Medium)&#xA;给你一个下标从 0 开始、大小为 n * m 的二维整数矩阵 grid ，定义一个下标从 0 开始、大小为 n * m 的的二维矩阵 p。如果满足以下条件，则称 p 为 grid 的 乘积矩阵 ：&#xA;对于每个元素 p[i][j] ，它的值等于除了 grid[i][j] 外所有元素的乘积。乘积对 12345 取余数。 返回 grid 的乘积矩阵。&#xA;示例 1：&#xA;输入：grid = [[1,2],[3,4]] 输出：[[24,12],[8,6]] 解释：p[0][0] = grid[0][1] * grid[1][0] * grid[1][1] = 2 * 3 * 4 = 24 p[0][1] = grid[0][0] * grid[1][0] * grid[1][1] = 1 * 3 * 4 = 12 p[1][0] = grid[0][0] * grid[0][1] * grid[1][1] = 1 * 2 * 4 = 8 p[1][1] = grid[0][0] * grid[0][1] * grid[1][0] = 1 * 2 * 3 = 6 所以答案是 [[24,12],[8,6]] 。 示例 2：</description>
+    </item>
+    <item>
+      <title>1074. Number of Submatrices That Sum to Target (Hard)</title>
+      <link>http://localhost:1313/posts/leet/1074.number-of-submatrices-that-sum-to-target/</link>
+      <pubDate>Fri, 13 Oct 2023 11:28:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1074.number-of-submatrices-that-sum-to-target/</guid>
+      <description>Description 1074. Number of Submatrices That Sum to Target (Hard)&#xA;Given a matrix and a target, return the number of non-empty submatrices that sum to target.&#xA;A submatrix x1, y1, x2, y2 is the set of all cells matrix[x][y] with x1 &amp;lt;= x &amp;lt;= x2 and y1 &amp;lt;= y &amp;lt;= y2.&#xA;Two submatrices (x1, y1, x2, y2) and (x1&#39;, y1&#39;, x2&#39;, y2&#39;) are different if they have some coordinate that is different: for example, if x1 !</description>
+    </item>
+    <item>
+      <title>1074. 元素和为目标值的子矩阵数量 (Hard)</title>
+      <link>http://localhost:1313/posts/leet/1074.number-of-submatrices-that-sum-to-target.zh/</link>
+      <pubDate>Fri, 13 Oct 2023 11:27:57 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1074.number-of-submatrices-that-sum-to-target.zh/</guid>
+      <description>问题描述 1074. 元素和为目标值的子矩阵数量 (Hard)&#xA;给出矩阵 matrix 和目标值 target，返回元素总和等于目标值的非空子矩阵的数量。&#xA;子矩阵 x1, y1, x2, y2 是满足 x1 &amp;lt;= x &amp;lt;= x2 且 y1 &amp;lt;= y &amp;lt;= y2 的所有单元 matrix[x][y] 的集合。&#xA;如果 (x1, y1, x2, y2) 和 (x1&#39;, y1&#39;, x2&#39;, y2&#39;) 两个子矩阵中部分坐标不同（如： x1 != x1&#39;），那么 这两个子矩阵也不同。&#xA;示例 1：&#xA;输入：matrix = [[0,1,0],[1,1,1],[0,1,0]], target = 0 输出：4 解释：四个只含 0 的 1x1 子矩阵。 示例 2：&#xA;输入：matrix = [[1,-1],[-1,1]], target = 0 输出：5 解释：两个 1x2 子矩阵，加上两个 2x1 子矩阵，再加上一个 2x2 子矩阵。 示例 3：</description>
+    </item>
+    <item>
+      <title>2389.Longest Subsequence With Limited Sum (Easy)</title>
+      <link>http://localhost:1313/posts/leet/2389.longest-subsequence-with-limited-sum/</link>
+      <pubDate>Fri, 17 Mar 2023 15:44:21 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2389.longest-subsequence-with-limited-sum/</guid>
+      <description>Description 2389. Longest Subsequence With Limited Sum (Easy)&#xA;You are given an integer array nums of length n, and an integer array queries of length m.&#xA;Return an array answer of length m where answer[i] is the maximum size of a subsequence that you can take from nums such that the sum of its elements is less than or equal to queries[i].&#xA;A subsequence is an array that can be derived from another array by deleting some or no elements without changing the order of the remaining elements.</description>
+    </item>
+    <item>
+      <title>2389.和有限的最长子序列 (Easy)</title>
+      <link>http://localhost:1313/posts/leet/2389.longest-subsequence-with-limited-sum.zh/</link>
+      <pubDate>Fri, 17 Mar 2023 15:44:16 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2389.longest-subsequence-with-limited-sum.zh/</guid>
+      <description>问题描述 和有限的最长子序列 (Easy) 给你一个长度为 n 的整数数组 nums ，和一个长度为 m 的整数数组 queries 。&#xA;返回一个长度为 m 的数组 answer，其中 answer[i] 是 nums 中元素之和小于等于 queries[i] 的 子序列 的 最大 长度。&#xA;子序列 是由一个数组删除某些元素（也可以不删除）但不改变剩余元素顺序得到的一个数组。&#xA;示例 1：&#xA;输入：nums = [4,5,2,1], queries = [3,10,21] 输出：[2,3,4] 解释：queries 对应的 answer 如下： - 子序列 [2,1] 的和小于或等于 3 。可以证明满足题目要求的子序列的最大长度是 2 ，所以 answer[0] = 2 。 - 子序列 [4,5,1] 的和小于或等于 10 。可以证明满足题目要求的子序列的最大长度是 3 ，所以 answer[1] = 3 。 - 子序列 [4,5,2,1] 的和小于或等于 21 。可以证明满足题目要求的子序列的最大长度是 4 ，所以 answer[2] = 4 。 示例 2：</description>
+    </item>
+    <item>
+      <title>面试题 17.05.  字母与数字 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/interview-17.05.zh/</link>
+      <pubDate>Sat, 11 Mar 2023 15:31:57 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/interview-17.05.zh/</guid>
+      <description>问题描述 面试题 17.05. 字母与数字 (Medium)&#xA;给定一个放有字母和数字的数组，找到最长的子数组，且包含的字母和数字的个数相同。&#xA;返回该子数组，若存在多个最长子数组，返回左端点下标值最小的子数组。若不存在这样的数组，返回一个空数组。&#xA;示例 1:&#xA;输入: [&amp;#34;A&amp;#34;,&amp;#34;1&amp;#34;,&amp;#34;B&amp;#34;,&amp;#34;C&amp;#34;,&amp;#34;D&amp;#34;,&amp;#34;2&amp;#34;,&amp;#34;3&amp;#34;,&amp;#34;4&amp;#34;,&amp;#34;E&amp;#34;,&amp;#34;5&amp;#34;,&amp;#34;F&amp;#34;,&amp;#34;G&amp;#34;,&amp;#34;6&amp;#34;,&amp;#34;7&amp;#34;,&amp;#34;H&amp;#34;,&amp;#34;I&amp;#34;,&amp;#34;J&amp;#34;,&amp;#34;K&amp;#34;,&amp;#34;L&amp;#34;,&amp;#34;M&amp;#34;] 输出: [&amp;#34;A&amp;#34;,&amp;#34;1&amp;#34;,&amp;#34;B&amp;#34;,&amp;#34;C&amp;#34;,&amp;#34;D&amp;#34;,&amp;#34;2&amp;#34;,&amp;#34;3&amp;#34;,&amp;#34;4&amp;#34;,&amp;#34;E&amp;#34;,&amp;#34;5&amp;#34;,&amp;#34;F&amp;#34;,&amp;#34;G&amp;#34;,&amp;#34;6&amp;#34;,&amp;#34;7&amp;#34;] 示例 2:&#xA;输入: [&amp;#34;A&amp;#34;,&amp;#34;A&amp;#34;] 输出: [] 提示：&#xA;array.length &amp;lt;= 100000 解题思路 首先使用一个前缀和数组prefix，prefix[i]表示前i个数里，数字的数量减去字母的数量，遍历array，更新prefix，同时在哈希表中查找key-&amp;gt;prefix[i]是否存在：&#xA;如果存在，比较记录的最长长度len，如果大于len，则更新idx = ump[prefix[i]]，并更新len = i - ump[prefix[i]]； 否则，更新哈希表，即ump[prefix[i]] = i； 代码 class Solution { public: vector&amp;lt;string&amp;gt; findLongestSubarray(vector&amp;lt;string&amp;gt; &amp;amp;array) { int n = array.size(); vector&amp;lt;string&amp;gt; res; if (n &amp;lt; 2) { return res; } unordered_set&amp;lt;string&amp;gt; ust; for (char c = &amp;#39;a&amp;#39;; c &amp;lt;= &amp;#39;z&amp;#39;; c++) { // 统计所有的字母 string s(1, c); ust.</description>
+    </item>
+    <item>
+      <title>1590. Make Sum Divisible by P (Medium)</title>
+      <link>http://localhost:1313/posts/leet/1590.make-sum-divisible-by-p/</link>
+      <pubDate>Fri, 10 Mar 2023 09:31:20 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1590.make-sum-divisible-by-p/</guid>
+      <description>Description 1590. Make Sum Divisible by P (Medium)&#xA;Given an array of positive integers nums, remove the smallest subarray (possibly empty) such that the sum of the remaining elements is divisible by p. It is not allowed to remove the whole array.&#xA;Return the length of the smallest subarray that you need to remove, or -1 if it&amp;rsquo;s impossible.&#xA;A subarray is defined as a contiguous block of elements in the array.</description>
+    </item>
+    <item>
+      <title>1590.使数组和能被 P 整除 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/1590.make-sum-divisible-by-p.zh/</link>
+      <pubDate>Fri, 10 Mar 2023 09:31:15 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1590.make-sum-divisible-by-p.zh/</guid>
+      <description>问题描述 1590. 使数组和能被 P 整除 (Medium)&#xA;给你一个正整数数组 nums，请你移除 最短 子数组（可以为 空），使得剩余元素的 和 能被 p 整除。 不允许 将整个数组都移除。&#xA;请你返回你需要移除的最短子数组的长度，如果无法满足题目要求，返回 -1 。&#xA;子数组 定义为原数组中连续的一组元素。&#xA;示例 1：&#xA;输入：nums = [3,1,4,2], p = 6 输出：1 解释：nums 中元素和为 10，不能被 p 整除。我们可以移除子数组 [4] ，剩余元素的和为 6 。 示例 2：&#xA;输入：nums = [6,3,5,2], p = 9 输出：2 解释：我们无法移除任何一个元素使得和被 9 整除，最优方案是移除子数组 [5,2] ，剩余元素为 [6,3]，和为 9 。 示例 3：&#xA;输入：nums = [1,2,3], p = 3 输出：0 解释：和恰好为 6 ，已经能被 3 整除了。所以我们不需要移除任何元素。 示例 4：</description>
+    </item>
+    <item>
+      <title>1310.XOR Queries of a Subarray (Medium)</title>
+      <link>http://localhost:1313/posts/leet/1310.xor-queries-of-a-subarray/</link>
+      <pubDate>Thu, 09 Mar 2023 09:16:23 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1310.xor-queries-of-a-subarray/</guid>
+      <description>Description 1310. XOR Queries of a Subarray (Medium)&#xA;You are given an array arr of positive integers. You are also given the array queries where queries[i] = [leftᵢ, rightᵢ].&#xA;For each query i compute the XOR of elements from leftᵢ to rightᵢ (that is, arr[leftᵢ] XOR arr[leftᵢ + 1] XOR ... XOR arr[rightᵢ] ).&#xA;Return an array answer where answer[i] is the answer to the ith query.&#xA;Example 1:&#xA;Input: arr = [1,3,4,8], queries = [[0,1],[1,2],[0,3],[3,3]] Output: [2,7,14,8] Explanation: The binary representation of the elements in the array are: 1 = 0001 3 = 0011 4 = 0100 8 = 1000 The XOR values for queries are: [0,1] = 1 xor 3 = 2 [1,2] = 3 xor 4 = 7 [0,3] = 1 xor 3 xor 4 xor 8 = 14 [3,3] = 8 Example 2:</description>
+    </item>
+    <item>
+      <title>1310. 子数组异或查询 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/1310.xor-queries-of-a-subarray.zh/</link>
+      <pubDate>Thu, 09 Mar 2023 09:16:18 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1310.xor-queries-of-a-subarray.zh/</guid>
+      <description>问题描述 1310. 子数组异或查询 (Medium)&#xA;有一个正整数数组 arr，现给你一个对应的查询数组 queries，其中 queries[i] = [Lᵢ, Rᵢ]。&#xA;对于每个查询 i，请你计算从 Lᵢ 到 Rᵢ 的 XOR 值（即 arr[Lᵢ] xor arr[Lᵢ+1] xor ... xor arr[Rᵢ]）作为本次查询的结果。&#xA;并返回一个包含给定查询 queries 所有结果的数组。&#xA;示例 1：&#xA;输入：arr = [1,3,4,8], queries = [[0,1],[1,2],[0,3],[3,3]] 输出：[2,7,14,8] 解释： 数组中元素的二进制表示形式是： 1 = 0001 3 = 0011 4 = 0100 8 = 1000 查询的 XOR 值为： [0,1] = 1 xor 3 = 2 [1,2] = 3 xor 4 = 7 [0,3] = 1 xor 3 xor 4 xor 8 = 14 [3,3] = 8 示例 2：</description>
+    </item>
+    <item>
+      <title>560. Subarray Sum Equals K (Medium)</title>
+      <link>http://localhost:1313/posts/leet/560.subarray-sum-equals-k/</link>
+      <pubDate>Tue, 07 Mar 2023 15:28:41 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/560.subarray-sum-equals-k/</guid>
+      <description>Description 560. Subarray Sum Equals K (Medium)&#xA;Given an array of integers nums and an integer k, return the total number of subarrays whose sum equals to k.&#xA;A subarray is a contiguous non-empty sequence of elements within an array.&#xA;Example 1:&#xA;Input: nums = [1,1,1], k = 2 Output: 2 Example 2:&#xA;Input: nums = [1,2,3], k = 3 Output: 2 Constraints:&#xA;1 &amp;lt;= nums.length &amp;lt;= 2 * 10⁴ -1000 &amp;lt;= nums[i] &amp;lt;= 1000 -10⁷ &amp;lt;= k &amp;lt;= 10⁷ Solution We only need traverse once.</description>
+    </item>
+    <item>
+      <title>560. 和为 K 的子数组 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/560.subarray-sum-equals-k.zh/</link>
+      <pubDate>Tue, 07 Mar 2023 15:28:36 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/560.subarray-sum-equals-k.zh/</guid>
+      <description>问题描述 560. 和为 K 的子数组 (Medium)&#xA;给你一个整数数组 nums 和一个整数 k ，请你统计并返回 该数组中和为 k 的连续子数组的个数 。&#xA;示例 1：&#xA;输入：nums = [1,1,1], k = 2 输出：2 示例 2：&#xA;输入：nums = [1,2,3], k = 3 输出：2 提示：&#xA;1 &amp;lt;= nums.length &amp;lt;= 2 * 10⁴ -1000 &amp;lt;= nums[i] &amp;lt;= 1000 -10⁷ &amp;lt;= k &amp;lt;= 10⁷ 解题思路 一次遍历，记录数组的前缀和prefix[i]，然后在ump中查找key为prefix[i] - target的元素是否存在，如果存在res += ump[prefix[i] - k]，++ump[prefix[i]]。&#xA;代码 class Solution { public: int subarraySum(vector&amp;lt;int&amp;gt; &amp;amp;nums, int k) { vector&amp;lt;int&amp;gt; prefix(nums.</description>
+    </item>
+    <item>
+      <title>497.Random Point in Non-overlapping Rectangles (Medium)</title>
+      <link>http://localhost:1313/posts/leet/497.random-point-in-non-overlapping-rectangles/</link>
+      <pubDate>Tue, 07 Mar 2023 14:45:36 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/497.random-point-in-non-overlapping-rectangles/</guid>
+      <description>Description 497. Random Point in Non-overlapping Rectangles (Medium)&#xA;You are given an array of non-overlapping axis-aligned rectangles rects where rects[i] = [aᵢ, bᵢ, xᵢ, yᵢ] indicates that (aᵢ, bᵢ) is the bottom-left corner point of the ith rectangle and (xᵢ, yᵢ) is the top-right corner point of the ith rectangle. Design an algorithm to pick a random integer point inside the space covered by one of the given rectangles. A point on the perimeter of a rectangle is included in the space covered by the rectangle.</description>
+    </item>
+    <item>
+      <title>497.非重叠矩形中的随机点 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/497.random-point-in-non-overlapping-rectangles.zh/</link>
+      <pubDate>Tue, 07 Mar 2023 14:45:31 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/497.random-point-in-non-overlapping-rectangles.zh/</guid>
+      <description>问题描述 497. 非重叠矩形中的随机点 (Medium)&#xA;给定一个由非重叠的轴对齐矩形的数组 rects ，其中 rects[i] = [ai, bi, xi, yi] 表示 (ai, bi) 是第 i 个矩形的左下角点， (xi, yi) 是第 i 个矩形的右上角点。设计一个算法来随机挑选一个被某一矩形覆盖的整数点。矩形周长上的点也算做是被矩形覆盖。所有满足要求的点必须等概率被返回。&#xA;在给定的矩形覆盖的空间内的任何整数点都有可能被返回。&#xA;请注意，整数点是具有整数坐标的点。&#xA;实现 Solution 类:&#xA;Solution(int[][] rects) 用给定的矩形数组 rects 初始化对象。 int[] pick() 返回一个随机的整数点 [u, v] 在给定的矩形所覆盖的空间内。 示例 1：&#xA;输入: [&amp;#34;Solution&amp;#34;, &amp;#34;pick&amp;#34;, &amp;#34;pick&amp;#34;, &amp;#34;pick&amp;#34;, &amp;#34;pick&amp;#34;, &amp;#34;pick&amp;#34;] [[[[-2, -2, 1, 1], [2, 2, 4, 6]]], [], [], [], [], []] 输出: [null, [1, -2], [1, -1], [-1, -2], [-2, -2], [0, 0]] 解释： Solution solution = new Solution([[-2, -2, 1, 1], [2, 2, 4, 6]]); solution.</description>
+    </item>
+    <item>
+      <title>209.Minimum Size Subarray Sum (Medium)</title>
+      <link>http://localhost:1313/posts/leet/209.minimum-size-subarray-sum/</link>
+      <pubDate>Mon, 06 Mar 2023 19:11:58 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/209.minimum-size-subarray-sum/</guid>
+      <description>Description 209. Minimum Size Subarray Sum (Medium)&#xA;Given an array of positive integers nums and a positive integer target, return the minimal length of a subarray whose sum is greater than or equal to target. If there is no such subarray, return 0 instead.&#xA;Example 1:&#xA;Input: target = 7, nums = [2,3,1,2,4,3] Output: 2 Explanation: The subarray [4,3] has the minimal length under the problem constraint. Example 2:&#xA;Input: target = 4, nums = [1,4,4] Output: 1 Example 3:</description>
+    </item>
+    <item>
+      <title>209.长度最小的子数组 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/209.minimum-size-subarray-sum.zh/</link>
+      <pubDate>Mon, 06 Mar 2023 19:11:55 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/209.minimum-size-subarray-sum.zh/</guid>
+      <description>问题描述 209. 长度最小的子数组 (Medium)&#xA;给定一个含有 n 个正整数的数组和一个正整数 target 。&#xA;找出该数组中满足其和 ≥ target 的长度最小的 连续子数组 [numsₗ, numsₗ+₁, ..., numsr-₁, numsr] ，并返回其长度 。 如果不存在符合条件的子数组，返回 0 。&#xA;示例 1：&#xA;输入：target = 7, nums = [2,3,1,2,4,3] 输出：2 解释：子数组 [4,3] 是该条件下的长度最小的子数组。 示例 2：&#xA;输入：target = 4, nums = [1,4,4] 输出：1 示例 3：&#xA;输入：target = 11, nums = [1,1,1,1,1,1,1,1] 输出：0 提示：&#xA;1 &amp;lt;= target &amp;lt;= 10⁹ 1 &amp;lt;= nums.length &amp;lt;= 10⁵ 1 &amp;lt;= nums[i] &amp;lt;= 10⁵ 进阶：</description>
+    </item>
+    <item>
+      <title>1653.minimum deletions to make string balanced</title>
+      <link>http://localhost:1313/posts/leet/1653.minimum-deletions-to-make-string-balanced/</link>
+      <pubDate>Mon, 06 Mar 2023 10:36:12 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1653.minimum-deletions-to-make-string-balanced/</guid>
+      <description>Description 1653. Minimum Deletions to Make String Balanced (Medium)&#xA;You are given a string s consisting only of characters &#39;a&#39; and &#39;b&#39; .&#xA;You can delete any number of characters in s to make s balanced. s is balanced if there is no pair of indices (i,j) such that i &amp;lt; j and s[i] = &#39;b&#39; and s[j]= &#39;a&#39;.&#xA;Return the minimum number of deletions needed to make sbalanced.&#xA;Example 1:</description>
+    </item>
+    <item>
+      <title>1653.使字符串平衡的最少删除次数 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/1653.minimum-deletions-to-make-string-balanced.zh/</link>
+      <pubDate>Mon, 06 Mar 2023 10:36:09 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1653.minimum-deletions-to-make-string-balanced.zh/</guid>
+      <description>问题描述 1653. 使字符串平衡的最少删除次数 (Medium)&#xA;给你一个字符串 s ，它仅包含字符 &#39;a&#39; 和 &#39;b&#39; 。&#xA;你可以删除 s 中任意数目的字符，使得 s 平衡 。当不存在下标对 (i,j) 满足 i &amp;lt; j ，且 s[i] = &#39;b&#39; 的同时 s[j]= &#39;a&#39; ，此时认为 s 是 平衡 的。&#xA;请你返回使 s 平衡 的 最少 删除次数。&#xA;示例 1：&#xA;输入：s = &amp;#34;aababbab&amp;#34; 输出：2 解释：你可以选择以下任意一种方案： 下标从 0 开始，删除第 2 和第 6 个字符（&amp;#34;aababbab&amp;#34; -&amp;gt; &amp;#34;aaabbb&amp;#34;）， 下标从 0 开始，删除第 3 和第 6 个字符（&amp;#34;aababbab&amp;#34; -&amp;gt; &amp;#34;aabbbb&amp;#34;）。 示例 2：&#xA;输入：s = &amp;#34;bbaaaaabb&amp;#34; 输出：2 解释：唯一的最优解是删除最前面两个字符。 提示：</description>
+    </item>
+    <item>
+      <title>1124.longest well performing interval</title>
+      <link>http://localhost:1313/posts/leet/1124.longest-well-performing-interval/</link>
+      <pubDate>Fri, 17 Feb 2023 16:13:18 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1124.longest-well-performing-interval/</guid>
+      <description>Description 1124. Longest Well-Performing Interval (Medium)&#xA;We are given hours, a list of the number of hours worked per day for a given employee. A day is considered to be a tiring day if and only if the number of hours worked is (strictly) greater than 8. A well-performing interval is an interval of days for which the number of tiring days is strictly larger than the number of non-tiring days.</description>
+    </item>
+    <item>
+      <title>1124.表现良好的最长时间段</title>
+      <link>http://localhost:1313/posts/leet/1124.longest-well-performing-interval.zh/</link>
+      <pubDate>Fri, 17 Feb 2023 16:13:15 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1124.longest-well-performing-interval.zh/</guid>
+      <description>问题描述 1124. 表现良好的最长时间段 (Medium)&#xA;给你一份工作时间表 hours，上面记录着某一位员工每天的工作小时数。 我们认为当员工一天中的工作小时数大于 8 小时的时候，那么这一天就是「 劳累的一天」。 所谓「表现良好的时间段」，意味在这段时间内，「劳累的天数」是严格 大于「不劳累的天数」。 请你返回「表现良好时间段」的最大长度。 示例 1：&#xA;输入：hours = [9,9,6,0,6,6,9] 输出：3 解释：最长的表现良好时间段是 [9,9,6]。 示例 2：&#xA;输入：hours = [6,6,6] 输出：0 提示：&#xA;1 &amp;lt;= hours.length &amp;lt;= 10⁴ 0 &amp;lt;= hours[i] &amp;lt;= 16 解题思路 单调栈 首先，将原数组中大于8的值设为1，小于或等于8的值设为-1，分别表示劳累的一天和不劳累的一天，然后求这个新数组的前缀和，得到一个前缀和数组prefix；&#xA;那么我们就是要求满足prefix[j] &amp;gt; prefix[i]条件下的最大的j - i，首先，我们考虑左端点，如果prefix[i1] &amp;lt; prefix[i2]且i1 &amp;lt;= i2，那么我们完全不需要考虑使用i2作为左端点，因为选择i1作为左端点的res一定更大，所以我们可以正向遍历prefix，并将索引idx压入单调栈，满足栈底到栈顶单调递减；&#xA;然后，我们从从右往左遍历prefix找右端点，如果prefix[j1] &amp;gt; prefix[stk.top()]，那就弹出栈顶元素并更新res = std::max(res, r - stk.top())，如果选择从左往右遍历的话，prefix[j2] &amp;lt; prefix[stk.top()]的时候，最终结果可能是j2 - i，其中i是一个被弹出的元素，从左往右遍历右端点，这种情况无法考虑到。&#xA;哈希表 如果prefix[i] &amp;gt; 0，说明这i天内都是表现良好的时间段，那么res = max(i, res)； 如果prefix[i] &amp;lt;= 0，如果key prefix[i]之前未在哈希表ump中出现过，那么ump[prefix[i]] = i, 否则不更新ump[prefix[i]]，因为哈希表中key对应的value一定更小，对应的差值即时间长度会更大， 以第i天结尾表现良好的时间段的最大长度即为ump[prefix[i]] - ump[prefix[i] - 1]（要求key prefix[i] - 1在哈希表中，否则为0，即不存在这样的时间段），这是因为由于新数组中只有1和-1两种元素，那么值prefix[i] - 1一定比prefix[i] - 2先出现在前缀和数组中。 代码 单调栈 class Solution { public: int longestWPI(vector&amp;lt;int&amp;gt; &amp;amp;hours) { int n = hours.</description>
+    </item>
+    <item>
+      <title>1139.largest 1 bordered square</title>
+      <link>http://localhost:1313/posts/leet/1139.largest-1-bordered-square/</link>
+      <pubDate>Fri, 17 Feb 2023 15:52:30 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1139.largest-1-bordered-square/</guid>
+      <description>Description 1139. Largest 1-Bordered Square (Medium)&#xA;Given a 2D grid of 0 s and 1 s, return the number of elements in the largest square subgrid that has all 1 s on its border, or 0 if such a subgrid doesn&amp;rsquo;t exist in the grid. Example 1:&#xA;Input: grid = [[1,1,1],[1,0,1],[1,1,1]] Output: 9 Example 2:&#xA;Input: grid = [[1,1,0,0]] Output: 1 Constraints:&#xA;1 &amp;lt;= grid.length &amp;lt;= 100 1 &amp;lt;= grid[0].length &amp;lt;= 100 grid[i][j] is 0 or 1 Solution We can use prefix sum to reduce coumputaional comlexity.</description>
+    </item>
+    <item>
+      <title>1139.最大的以1为边界的正方形</title>
+      <link>http://localhost:1313/posts/leet/1139.largest-1-bordered-square.zh/</link>
+      <pubDate>Fri, 17 Feb 2023 15:52:22 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1139.largest-1-bordered-square.zh/</guid>
+      <description>问题描述 1139. 最大的以 1 为边界的正方形 (Medium)&#xA;给你一个由若干 0 和 1 组成的二维网格 grid，请你找出边界全部由 1 组成的最大 正方形 子网格，并返回该子网格中的元素数量。如果不存在，则返回 0。 示例 1：&#xA;输入：grid = [[1,1,1],[1,0,1],[1,1,1]] 输出：9 示例 2：&#xA;输入：grid = [[1,1,0,0]] 输出：1 提示：&#xA;1 &amp;lt;= grid.length &amp;lt;= 100 1 &amp;lt;= grid[0].length &amp;lt;= 100 grid[i][j] 为 0 或 1 解题思路 利用前缀和来简化满足正方形条件的计算，枚举正方形边长，找到最大的l，再和已经得出的结果进行比较。&#xA;代码 class Solution { public: int largest1BorderedSquare(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; &amp;amp;grid) { // 前缀和 int m = grid.size(), n = grid[0].size(); vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; sum_row(m, vector&amp;lt;int&amp;gt;(n + 1, 0)); // 每行前缀和 vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; sum_col(m + 1, vector&amp;lt;int&amp;gt;(n, 0)); // 每列前缀和 for (int i = 0; i &amp;lt; grid.</description>
+    </item>
+    <item>
+      <title>303.range sum query-immutable</title>
+      <link>http://localhost:1313/posts/leet/303.range-sum-query-immutable/</link>
+      <pubDate>Fri, 02 Dec 2022 16:50:58 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/303.range-sum-query-immutable/</guid>
+      <description>Description 303.range-sum-query-immutable&#xA;Solution We can use prefix sum array, so we can get sum without traversing.&#xA;Code class NumArray { private: vector&amp;lt;int&amp;gt; sum; public: NumArray(vector&amp;lt;int&amp;gt; &amp;amp;nums) { sum.resize(nums.size(), 0); sum[0] = nums[0]; for (int i = 1; i &amp;lt; nums.size(); i++) sum[i] = sum[i - 1] + nums[i]; } int sumRange(int left, int right) { if (left == 0) return sum[right]; return sum[right] - sum[left - 1]; } }; </description>
+    </item>
+    <item>
+      <title>303.区域和检索-数组不可变</title>
+      <link>http://localhost:1313/posts/leet/303.range-sum-query-immutable.zh/</link>
+      <pubDate>Fri, 02 Dec 2022 16:50:52 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/303.range-sum-query-immutable.zh/</guid>
+      <description>问题描述 303.区域和检索-数组不可变&#xA;解题思路 利用前缀和数组，使得求区间和时无需再遍历数组求和。&#xA;代码 class NumArray { private: vector&amp;lt;int&amp;gt; sum; public: NumArray(vector&amp;lt;int&amp;gt; &amp;amp;nums) { sum.resize(nums.size(), 0); sum[0] = nums[0]; for (int i = 1; i &amp;lt; nums.size(); i++) sum[i] = sum[i - 1] + nums[i]; } int sumRange(int left, int right) { if (left == 0) return sum[right]; return sum[right] - sum[left - 1]; } }; </description>
+    </item>
+    <item>
+      <title>1769.minimum number of operation to ove ll balls to each box</title>
+      <link>http://localhost:1313/posts/leet/1769.minimum-number-of-operation-to-move-all-balls-to-each-box/</link>
+      <pubDate>Fri, 02 Dec 2022 16:27:32 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1769.minimum-number-of-operation-to-move-all-balls-to-each-box/</guid>
+      <description>Description 1769.minimum-number-of-operations-to-move-all-balls-to-each-box&#xA;Solution Violent solution: $\Theta(n^2)$&#xA;We could use prefix sum to reduce the time complexity.&#xA;nums[i] denotes the number of ball in first i + 1 boxes, res[i] is the minimum number of operation to ove ll balls to the i + 1th box, sum is the total number of balls. Compared to moving all balls to i th box, if we want to move all ball to the i + 1th box, the balls in 0 =&amp;gt; i - 1 all need move an additional step, while the balls in i =&amp;gt; n - 1 will move one step less.</description>
+    </item>
+    <item>
+      <title>1769.移动所有球到每个盒子所需的最小操作数</title>
+      <link>http://localhost:1313/posts/leet/1769.minimum-number-of-operation-to-move-all-balls-to-each-box.zh/</link>
+      <pubDate>Fri, 02 Dec 2022 16:27:27 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1769.minimum-number-of-operation-to-move-all-balls-to-each-box.zh/</guid>
+      <description>问题描述 1769.移动所有球到每个盒子所需的最小操作数&#xA;解题思路 暴力求解，时间复杂度为$\Theta(n^2)$;&#xA;可以考虑利用前缀和来降低时间复杂度: 设nums[i]是前i + 1个盒子里的球的总个数，res[i]为将所有球移到第i + 1个盒子里所需要的操作数，sum为球总个数，移到第i + 1个盒子相比移到第i个盒子，左边的球各要多移一步，右边的球各少移一步，因此有那么有:res[i] = res[i - 1] + nums[i - 1] - (sum - nums[i - 1])，&#xA;代码 class Solution { public: vector&amp;lt;int&amp;gt; minOperations(string boxes) { vector&amp;lt;int&amp;gt; nums(boxes.size(), 0); int sum = boxes[0] - &amp;#39;0&amp;#39;; nums[0] = boxes[0] - &amp;#39;0&amp;#39;; for (int i = 1; i &amp;lt; boxes.size(); i++) { if (boxes[i] == &amp;#39;1&amp;#39;) { nums[i] = nums[i - 1] + 1; sum++; } else nums[i] = nums[i - 1]; } vector&amp;lt;int&amp;gt; res(boxes.</description>
+    </item>
+  </channel>
+</rss>

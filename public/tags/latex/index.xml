@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Latex on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/latex/</link>
+    <description>Recent content in Latex on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 22 Feb 2024 20:18:43 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/latex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>利用 Latex 写毕业论文</title>
+      <link>http://localhost:1313/posts/blog/latex-sjtu.zh/</link>
+      <pubDate>Thu, 22 Feb 2024 20:18:43 +0800</pubDate>
+      <guid>http://localhost:1313/posts/blog/latex-sjtu.zh/</guid>
+      <description>前言 本科写毕业论文的时候，是用的学校的 word 模板，体验比较糟糕，当时跟我一组的同学就是用的 Latex 的本科学位论文模板，当时由于我写本科毕业论文的时间比较紧迫了，所以没有折腾这些，此外，当时的 Latex 学位论文模板属于是纯民间支持的性质，而现在，学校已经半官方地支持了 Latex 学位论文模板，因此，研究生毕业论文我就准备使用 Latex 而不再使用 word 来写了。&#xA;模板介绍 首先观察 main.tex，其中 \input{contents/abstract} 就是表示会加载 main.tex 所在目录的的 contents 目录下的 abstract.tex 的内容，即摘要。&#xA;然后是 \tablecontents 命令以生成目录，目录生成方式应该是由模板决定的。&#xA;以下这些则是正文内容：&#xA;\input{contents/intro} \input{contents/math_and_citations} \input{contents/floats} \input{contents/summary} 我们可以观察一下 contents 目录下的 intro.tex，首先是 \chapter{简介}，这里的大括号中的内容就是这一章的标题，后续则分别是一级标题、二级标题、三级标题、四级标题，对应的 Latex 语法如下：&#xA;\section{二级标题} \subsection{三级标题} \subsubsection{四级标题} 模板的默认字体应该就是宋体，模板中给出了手动指定该段落的字体的方法。&#xA;contents 目录下的 math_and_citations.tex 给出了 Latex 中的数学公式（包括字符）与引用文献的标注方法。&#xA;contents 目录下的 floats.tex 则是给出了 Latex 插入图片与表格的方法。&#xA;setup.tex 中则是封面以及 Latex 的样式控制的相关信息。&#xA;SJTUThesis 模板食用方法 Overleaf 学校网络信息中心应该是根据 Overleaf 自己搭建了一个可以在线编译 Latex 的平台：Latex 文档助手。&#xA;首先去 SJTUThesis 的 GitHub 页面下载论文模板的 压缩包：master.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nas on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/nas/</link>
+    <description>Recent content in Nas on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 04 Dec 2023 23:22:04 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/nas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nas 预组</title>
+      <link>http://localhost:1313/posts/blog/nas-build.zh/</link>
+      <pubDate>Mon, 04 Dec 2023 23:22:04 +0800</pubDate>
+      <guid>http://localhost:1313/posts/blog/nas-build.zh/</guid>
+      <description>功能简介 应该可以说是一台 AIO，利用 PVE 虚拟化多个系统，实现不同功能：&#xA;基于 Debian 的开发机，ssh 连接上去进行远程开发、编译； Nas，预计采用 TrueNAS SCALE； 其他服务，都通过 Docker 运行，考虑采用 FlatCar 这种容器化系统，也可能直接跑在 Debian 上。 qBittorrent; Immich; Memos; Restic; Plex Media Server CloudDrive2 IYUUPlus Alist Rclone 硬件选择 联想 RD450x CPU 拟采用 E5 2680v4。&#xA;优点：硬件成本低，机箱 + 主板 + CPU 仅需 ￥600，且有极强的扩展性；&#xA;缺点：功耗高，不带硬盘的待机功耗约为 80W，满载功耗约为 200W，无 GPU 硬件转码功能；&#xA;梵隆机箱 主板可以选择 MATX 主板，CPU 考虑使用 12400？&#xA;优点：功耗相比服务器更低，12400 待机功耗约 30W，待机功耗大概能低 50W？考虑到上海电费，一年能省下 50 * 24 /1000 * 365 * 0.75 = 300 元人民币左右，可以使用 GPU 硬件进行转码；</description>
+    </item>
+  </channel>
+</rss>

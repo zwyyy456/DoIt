@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Attention on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/attention/</link>
+    <description>Recent content in Attention on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Mar 2023 19:02:35 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/attention/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Leetcode 常见报错的原因分析</title>
+      <link>http://localhost:1313/posts/tech/leetcode_error.zh/</link>
+      <pubDate>Wed, 01 Mar 2023 19:02:35 +0800</pubDate>
+      <guid>http://localhost:1313/posts/tech/leetcode_error.zh/</guid>
+      <description>问题1 问题描述 Line 522: Char 69: runtime error: applying non-zero offset 18446744073709551615 to null pointer (basic_string.h)&#xA;报错原因 string res = 0&#xA;报错分析 这里报错的原因是因为使用了int整型变量来初始化string。&#xA;AddressSanitizer: stack-overflow 栈溢出，通常是由于使用了缺少终止条件的递归调用。</description>
+    </item>
+  </channel>
+</rss>

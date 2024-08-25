@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Image on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/image/</link>
+    <description>Recent content in Image on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 Dec 2023 16:25:29 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/image/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>将博客的图床从 SM.MS 迁移到又拍云</title>
+      <link>http://localhost:1313/posts/blog/change-image-src-from-smms-to-upyun.zh/</link>
+      <pubDate>Tue, 26 Dec 2023 16:25:29 +0800</pubDate>
+      <guid>http://localhost:1313/posts/blog/change-image-src-from-smms-to-upyun.zh/</guid>
+      <description>前言 为了存储博客的图片，我需要一个图床，一开始本来是想用七牛云或者又拍云提供的免费存储服务和流量来做图床的，奈何它们都需要一个通过了备案的域名才能实现，于是退而求其次选择了 SM.MS，在 picgo 或者 upic 中配置 SM.MS 图床非常方便，填一个 token 即可，在科学加持的情况下，图片显示也是很快速的。&#xA;但是，由于我的博客很多内容是我自己的学习笔记，因此其中的图片内容也是很重要的，考虑到 SM.MS 的图床稳定性与国内的可直接访问性，当我的 zwyyy456.tech 域名通过备案之后，我就着手将图床从 SM.MS 迁移到了又拍云。&#xA;又拍云设置 又拍云联盟的用户每月可获得 10GB 免费存储空间与 15GB 免费 CDN 流量，要加入又拍云联盟也很简单，只需要在网站地步添加又拍云 LOGO 与又拍云网站的对应链接即可。&#xA;在博客所属根目录下，将 layouts/partials/foot.html 的内容修改为如下：&#xA;&amp;lt;footer class=&amp;#34;footer&amp;#34;&amp;gt; &amp;lt;section class=&amp;#34;container&amp;#34;&amp;gt; © {{ if (and .Site.Params.since (lt .Site.Params.since now.Year)) }} {{ .Site.Params.since }} - {{ end }} {{ now.Year }} {{ with .Site.Params.author }} {{ . }} {{ end }} · {{ if (and .Site.Params.license) }} {{ i18n &amp;#34;licensed_under&amp;#34; }} {{ .</description>
+    </item>
+  </channel>
+</rss>

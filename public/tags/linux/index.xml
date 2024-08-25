@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/linux/</link>
+    <description>Recent content in Linux on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Aug 2024 23:22:48 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RHEL 7 个人开发环境部署</title>
+      <link>http://localhost:1313/posts/blog/rhel7-dev-env-deploy.zh/</link>
+      <pubDate>Wed, 21 Aug 2024 23:22:48 +0800</pubDate>
+      <guid>http://localhost:1313/posts/blog/rhel7-dev-env-deploy.zh/</guid>
+      <description>前言 入职了某公司，福利待遇不错，就是这开发环境属实一言难尽，开发机部署在内网，没有网络，只能通过内外网交换软件传文件，没有 root 权限（暂无，后面拿到 root 权限我也不敢用来安装什么软件），开发机的系统版本还特别旧，是 2014 年发布的 RHEL 7，上面的软件版本也是老掉牙了（除了没人用的 cmake），令人无语。故这里记录一下我克服困难，在这个 RHEL 7 上配置开发环境的步骤。&#xA;注，考虑到安全问题，以及权限受限，软件都安装在 $HOME/.local 目录下，然后设置对应的环境变量，其中 bash 不会去设置环境变量。&#xA;整体部署思路如下，利用自己的 VPS 开了一个 CentOS 7 的 docker 镜像，并创建一个与开发机上本人用户一致的用户，并使其 $HOME 目录与开发机的一致，在 CentOS 7 上，通过源码编译安装到 $HOME/.local 目录下，然后将 $HOME/.local 目录拷贝到开发机上，再配置好对应的环境变量，如果再不行，再考虑把源码以及依赖的源码拷贝到开发机上，再进行编译安装。&#xA;可以通过执行 ldd ${binary_name} 来查看运行该程序需要哪些动态链接库。&#xA;软件安装 GCC 执行以下命令即可安装 GCC：&#xA;mkdir src # 安装依赖库 GMP cd $HOME/src wget https://gmplib.org/download/gmp/gmp-6.2.1.tar.xz tar -xvf gmp-6.2.1.tar.xz cd gmp-6.2.1 ./configure --prefix=$HOME/.local make -j$(nproc) make install # 安装依赖库 MPFR cd $HOME/src wget https://www.</description>
+    </item>
+    <item>
+      <title>虚拟内存</title>
+      <link>http://localhost:1313/posts/tech/virtual_memory.zh/</link>
+      <pubDate>Fri, 28 Jul 2023 19:55:47 +0800</pubDate>
+      <guid>http://localhost:1313/posts/tech/virtual_memory.zh/</guid>
+      <description>虚拟地址空间与物理地址空间 地址空间（address space）是一个非负整数地址的有序集合：&#xA;$$\lbrace 0, 1, 2, \cdots\rbrace$$&#xA;如果地址空间中的整数是连续的，那么我们说它是个线性地址空间（linear address space），为了简化讨论，我们总是假设我们使用的是线性地址空间。&#xA;地址空间的大小由表示最大地址所需的位数来决定，例如 $N - 1= 2^n - 1$，因此最大地址需要 $n$ 位数来表示，于是一个包含 $N = 2^n$ 个地址的地址空间就叫一个 $n$ 位地址空间。&#xA;虚拟地址空间 在一个带虚拟内存的系统中，CPU 由 $N=2^n$ 的地址空间中生成虚拟地址，这个虚拟地址的有序集合称为虚拟地址空间（virtual address space）：&#xA;$$ \lbrace 0, 1, 2, \cdots N - 1\rbrace$$&#xA;这个地址空间是 $n$ 位的。&#xA;物理地址空间 一个系统还有一个物理地址空间（physical address space），对应于系统中物理内存的 $M$ 个字节：&#xA;$$\lbrace0,1,2,\cdots,M-1\rbrace$$&#xA;$M$ 并不要求是 $2$ 的幂，例如可能是 $12GB$，但是为了简化讨论，我们假设 $M=2^m$，即地址空间是 $m$ 位的。&#xA;物理内存作为虚拟内存的缓存 概念上而言，虚拟内存被组织为一个存放在磁盘上的由 $N=2^n$ 个连续字节大小的单元组成的数组，每个字节都有一个唯一的虚拟地址，作为到数组的索引；对应的，计算机的主存（main memory，后面简称内存）被组织成一个由 $M=2^m$ 个连续的字节大小的单元组成的数组，每字节都有一个唯一的物理地址。&#xA;VM（Virtual Memory）系统通过将虚拟内存分割为称为虚拟页（Virtual Page，VP）的大小固定的块来处理这个问题，每个虚拟页的大小为 $P=2^p$ 字节。相应的，物理内存被分割为物理页（Physical Page，PP）来处理，大小也为 P 字节。这里的物理页就像是 SRAM cache 中的 block。</description>
+    </item>
+    <item>
+      <title>MIT 6.S081 File system performance and fast crash recovery</title>
+      <link>http://localhost:1313/posts/tech/mit6.s081-lec16.zh/</link>
+      <pubDate>Thu, 27 Jul 2023 16:34:51 +0800</pubDate>
+      <guid>http://localhost:1313/posts/tech/mit6.s081-lec16.zh/</guid>
+      <description>引入 当我们针对文件系统讨论 logging 或者 journal 时，其实是在讨论同一件事，二者是同义词。&#xA;这一部分主要是讨论 Linux 的 ext3 文件系统，它相比 ext2，可以就说就是加了一层 logging，其他基本没有改变。我们要关注 ext3 与 xv6 的文件系统的不同之处，重点放在 ext3 是如何在保证 logging 的同时尽可能提升性能的。&#xA;ext3 file system log format ext3 数据结构与 xv6 相似，在内存中存在 block cache，它们是 write-back 的（即改动不会马上写回到磁盘）。&#xA;logging 系统有两个非常重要的准则：&#xA;write-adead rule：必须现在 log 中记录好所有这些写操作，才能将这些写操作应用到磁盘； freeing rule：即我们不能覆盖或者重用 log。 ext3 还维护了一些 transaction 的信息，transaction_t 中包含：&#xA;一个序列号； 一系列该 transaction 修改的 block 的编号，这些 block 编号指向 cache 中的 blcok； 一系列的 handle，handle 对应属于transaction 的系统调用，它们会读写 cache 中的 block； ext3 的磁盘组织与 xv6 类似，存在一个文件系统树，包含 inode、目录、file 等，存在 bimtap lock 来标识每个 data block 是被分配还是空闲的，在磁盘的一个指定区域保存 log。</description>
+    </item>
+    <item>
+      <title>Linux 虚拟内存系统</title>
+      <link>http://localhost:1313/posts/tech/linux_virtual_memory.zh/</link>
+      <pubDate>Sun, 18 Jun 2023 14:50:57 +0800</pubDate>
+      <guid>http://localhost:1313/posts/tech/linux_virtual_memory.zh/</guid>
+      <description>Linux 虚拟内存系统 首先，对 Linux 的虚拟内存系统做一个概述，以了解一个实际的操作系统是如何组织虚拟内存，以及如何处理缺页（page fault）的。&#xA;Linux 位为每个进程维护了一个单独的虚拟地址空间，形式如下：&#xA;可以看到，虚拟地址空间可以分为内核虚拟内存空间和用户虚拟内存空间两部分，实际上，$64$ 位系统的虚拟空间划分是这样的：&#xA;我们可以看到，在用户内存空间和内核内存空间之间还有一大片的“未定义”的区域，这是为什么呢？（注意，后续图片将有灵魂画手出没！）。&#xA;之前我们提到，AMD 制定的 $64$ 位 CPU 架构时，虽然是 $64$ 位的，即总的虚拟地址空间是 $64$ 位的，但实际上，用到的虚拟地址其实只有其中的低 $48$ 位。&#xA;当我们把 addr_val 解释为一个虚拟地址时，我们使用的真正的虚拟地址，其实只有它的低 $48$ 位，（由 AMD 设计 CPU 架构的时候规定，其实 $48$ 位也完全够用了），后 $16$ 位的值会与 addr_val 的第 $47$ 位保持一致（全 $0$ 或者全 $1$），全 $0$ 表示该虚拟地址处于当前虚拟地址空间的用户态部分，全 $1$ 表示处于内核态部分。&#xA;换言之，虚拟地址的高 $16$ 位是由 CPU 在生成要访问的虚拟地址时，先生成低 $48$ 位的虚拟地址，再根据第 $47$ 位的值是 $0$ 还是 $1$，判断地址属于内核虚拟地址空间还是用户虚拟地址空间（或者说进程虚拟地址空间），再生成虚拟地址的高 $16$ 位。&#xA;如下图所示：&#xA;Linux 虚拟内存区域（area） Linux organizes the virtual memory as a collection of areas (also called segments).</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Netlify on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/netlify/</link>
+    <description>Recent content in Netlify on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 18 Dec 2023 12:46:49 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/netlify/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>解决 Netlify 部署 Hugo 静态博客时的 `fatal: remote error: upload-pack: not our ref` 问题</title>
+      <link>http://localhost:1313/posts/blog/netlify-build-error.zh/</link>
+      <pubDate>Mon, 18 Dec 2023 12:46:49 +0800</pubDate>
+      <guid>http://localhost:1313/posts/blog/netlify-build-error.zh/</guid>
+      <description>问题描述 我的其中一个 Hugo 博客采用了 PaperMod 主题，另一个是 hugo-coder 主题，都是通过 Netlify 部署，昨天晚上发现，Netlify 显示 paper.191000.xyz 对应的站点部署失败。&#xA;问题日志显示：&#xA;12:26:05 PM: Waiting for other deploys from your team to complete. Check the queue: https://app.netlify.com/teams/zwyyy456/builds 12:26:20 PM: build-image version: 3ffff9df3d5419545acc1b673a54de348174406d (focal) 12:26:20 PM: buildbot version: 4613af4169363e3b38cfadfa4665d34cd1d1427b 12:26:20 PM: Fetching cached dependencies 12:26:20 PM: Starting to download cache of 106.8MB 12:26:22 PM: Finished downloading cache in 1.935s 12:26:22 PM: Starting to extract cache 12:26:23 PM: Finished extracting cache in 720ms 12:26:23 PM: Finished fetching cache in 2.</description>
+    </item>
+  </channel>
+</rss>

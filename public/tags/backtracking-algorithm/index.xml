@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Backtracking Algorithm on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/backtracking-algorithm/</link>
+    <description>Recent content in Backtracking Algorithm on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 26 Sep 2022 15:03:27 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/backtracking-algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>37.sudoku Solver 解数独</title>
+      <link>http://localhost:1313/posts/leet/37.sudoku-solver.zh/</link>
+      <pubDate>Mon, 26 Sep 2022 15:03:27 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/37.sudoku-solver.zh/</guid>
+      <description>题目描述 链接：37.Sodoku Solver&#xA;解题思路 相比一般的回溯，需要两层for循环，一个处理行，一个处理列，递归的过程来决定，空格处到底填哪个数字； 本递归函数用bool作为返回值类型，要注意返回值在递归中的作用； 另外还有一个判断board是否合规的函数。&#xA;代码 class Solution { private: bool isValid(int row, int col, char val, vector&amp;lt;vector&amp;lt;char&amp;gt;&amp;gt; &amp;amp;board) { for (int i = 0; i &amp;lt; 9; i++) { // 判断行里是否重复 if (board[row][i] == val) { return false; } } for (int j = 0; j &amp;lt; 9; j++) { // 判断列里是否重复 if (board[j][col] == val) { return false; } } int startRow = (row / 3) * 3; int startCol = (col / 3) * 3; for (int i = startRow; i &amp;lt; startRow + 3; i++) { // 判断9方格里是否重复 for (int j = startCol; j &amp;lt; startCol + 3; j++) { if (board[i][j] == val) { return false; } } } return true; } bool track_back(vector&amp;lt;vector&amp;lt;char&amp;gt;&amp;gt; &amp;amp;board) { for (int i = 0; i &amp;lt; 9; i++) { // 逐行 for (int j = 0; j &amp;lt; 9; j++) { // 逐列 if (board[i][j] !</description>
+    </item>
+    <item>
+      <title>37.解数独</title>
+      <link>http://localhost:1313/posts/leet/37.sudoku-solver/</link>
+      <pubDate>Mon, 26 Sep 2022 15:03:27 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/37.sudoku-solver/</guid>
+      <description>Description 链接：37.Sodoku Solver&#xA;Solution Compared with usual backtracking, we need for loop of two layers, one for row and another for column. A recursive process is used to determine exactly which number to fill in the space.&#xA;This return type of this function is bool, please pay attention to the role of return value in recursion.&#xA;Also a function to determine whether board is legal is required.&#xA;Code class Solution { private: bool isValid(int row, int col, char val, vector&amp;lt;vector&amp;lt;char&amp;gt;&amp;gt; &amp;amp;board) { for (int i = 0; i &amp;lt; 9; i++) { // judge whether there are duplicates in a row if (board[row][i] == val) { return false; } } for (int j = 0; j &amp;lt; 9; j++) { // judge whether there are duplicates in a column if (board[j][col] == val) { return false; } } int startRow = (row / 3) * 3; int startCol = (col / 3) * 3; // judge whether there are duplicates in ninepin for (int i = startRow; i &amp;lt; startRow + 3; i++) { for (int j = startCol; j &amp;lt; startCol + 3; j++) { if (board[i][j] == val) { return false; } } } return true; } bool track_back(vector&amp;lt;vector&amp;lt;char&amp;gt;&amp;gt; &amp;amp;board) { for (int i = 0; i &amp;lt; 9; i++) { // traverse in row for (int j = 0; j &amp;lt; 9; j++) { // traverse in column if (board[i][j] !</description>
+    </item>
+    <item>
+      <title>47.permutations-ii</title>
+      <link>http://localhost:1313/posts/leet/47.permutations-ii/</link>
+      <pubDate>Sun, 25 Sep 2022 22:05:03 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/47.permutations-ii/</guid>
+      <description>Description 47.permutations-ii&#xA;Solution Compared with 47.permutations, there is interference from duplicate numbers. So we should de-duplicate such as combination-sum-ii&#xA;Judge whether nums[i] is in path by if (used[i] == 1), de-duplicate by if (i &amp;gt; 0 &amp;amp;&amp;amp; nums[i] == nums[i - 1] &amp;amp;&amp;amp; used[i - 1] == 0).&#xA;Attention: we should sort the array first.&#xA;Code #include &amp;lt;vector&amp;gt; #include &amp;lt;algorithm&amp;gt; using std::vector; class Solution { private: vector&amp;lt;int&amp;gt; path; vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; res; int used[8] = {0}; void track_back(vector&amp;lt;int&amp;gt; nums, int index) { if (path.</description>
+    </item>
+    <item>
+      <title>47.permutations-ii 全排列II</title>
+      <link>http://localhost:1313/posts/leet/47.permutations-ii.zh/</link>
+      <pubDate>Sun, 25 Sep 2022 22:05:03 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/47.permutations-ii.zh/</guid>
+      <description>问题描述 47.全排列II&#xA;解题思路 相比全排列，多了重复数字的干扰，可以参照带重复数字的组合问题来进行去重:&#xA;if (used[i] == 1)判断nums[i]是否已经在path中，if (i &amp;gt; 0 &amp;amp;&amp;amp; nums[i] == nums[i - 1] &amp;amp;&amp;amp; used[i - 1] == 0)来进行去重。&#xA;注意，要先对目标数组排序。&#xA;代码 #include &amp;lt;vector&amp;gt; #include &amp;lt;algorithm&amp;gt; using std::vector; class Solution { private: vector&amp;lt;int&amp;gt; path; vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; res; int used[8] = {0}; void track_back(vector&amp;lt;int&amp;gt; nums, int index) { if (path.size() &amp;gt;= nums.size()) { res.push_back(path); return; } for (int i = 0; i &amp;lt; nums.size(); i++) { if (i &amp;gt; 0 &amp;amp;&amp;amp; nums[i] == nums[i - 1] &amp;amp;&amp;amp; used[i - 1] == 0) continue; if (used[i] == 1) continue; path.</description>
+    </item>
+    <item>
+      <title>51.n Queens</title>
+      <link>http://localhost:1313/posts/leet/51.n-queens/</link>
+      <pubDate>Sun, 25 Sep 2022 21:42:57 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/51.n-queens/</guid>
+      <description>Description 51.n-queens&#xA;Solution Backtracking, please pay attention to how to judge whether chess is in the same diagonal.&#xA;Code class Solution { private: int row_col[17] = {0}; int row_plus_col[17] = {0}; int row_arr[9] = {9, 9, 9, 9, 9, 9, 9, 9, 9}; int col_arr[9] = {0}; // int col = 0; string path = &amp;#34;.........&amp;#34;; vector&amp;lt;string&amp;gt; row_str; vector&amp;lt;vector&amp;lt;string&amp;gt;&amp;gt; res; void track_back(int n, int index) { if (index &amp;gt;= n) { res.</description>
+    </item>
+    <item>
+      <title>51.n皇后</title>
+      <link>http://localhost:1313/posts/leet/51.n-queens.zh/</link>
+      <pubDate>Sun, 25 Sep 2022 21:42:57 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/51.n-queens.zh/</guid>
+      <description>问题描述 51.n皇后&#xA;解题思路 典型的回溯，注意如何判断棋子在同一斜线上。&#xA;代码 class Solution { private: int row_col[17] = {0}; int row_plus_col[17] = {0}; int row_arr[9] = {9, 9, 9, 9, 9, 9, 9, 9, 9}; int col_arr[9] = {0}; // int col = 0; string path = &amp;#34;.........&amp;#34;; vector&amp;lt;string&amp;gt; row_str; vector&amp;lt;vector&amp;lt;string&amp;gt;&amp;gt; res; void track_back(int n, int index) { if (index &amp;gt;= n) { res.push_back(row_str); return; } for (int i = 0; i &amp;lt; n; i++) { // i表示在第几列，index表示在第几行 if (col_arr[i] !</description>
+    </item>
+  </channel>
+</rss>

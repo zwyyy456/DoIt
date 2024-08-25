@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tree on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/tree/</link>
+    <description>Recent content in Tree on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 19 Sep 2023 14:15:52 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/tree/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>310. Minimum Height Trees (Medium)</title>
+      <link>http://localhost:1313/posts/leet/310.minimum-height-trees/</link>
+      <pubDate>Tue, 19 Sep 2023 14:15:52 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/310.minimum-height-trees/</guid>
+      <description>Description 310. Minimum Height Trees (Medium)&#xA;A tree is an undirected graph in which any two vertices are connected by exactly one path. In other words, any connected graph without simple cycles is a tree.&#xA;Given a tree of n nodes labelled from 0 to n - 1, and an array of n - 1 edges where edges[i] = [aᵢ, bᵢ] indicates that there is an undirected edge between the two nodes aᵢ and bᵢ in the tree, you can choose any node of the tree as the root.</description>
+    </item>
+    <item>
+      <title>310. 最小高度树 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/310.minimum-height-trees.zh/</link>
+      <pubDate>Tue, 19 Sep 2023 14:15:49 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/310.minimum-height-trees.zh/</guid>
+      <description>问题描述 310. 最小高度树 (Medium)&#xA;树是一个无向图，其中任何两个顶点只通过一条路径连接。 换句话说，一个任何没有简单环路的连通图都是一棵 树。&#xA;给你一棵包含 n 个节点的树，标记为 0 到 n - 1 。给定数字 n 和一个有 n - 1 条无向边的 edges 列表（每一个边都是一对标签），其中 edges[i] = [aᵢ, bᵢ] 表示树中节点 aᵢ 和 bᵢ 之间存在一条无 向边。&#xA;可选择树中任何一个节点作为根。当选择节点 x 作为根节点时，设结果树的高度为 h 。在所有可能的树中， 具有最小高度的树（即， min(h)）被称为 最小高度树 。&#xA;请你找到所有的 最小高度树 并按 任意顺序 返回它们的根节点标签列表。&#xA;树的 高度 是指根节点和叶子节点之间最长向下路径上边的数量。&#xA;示例 1：&#xA;输入：n = 4, edges = [[1,0],[1,2],[1,3]] 输出：[1] 解释：如图所示，当根是标签为 1 的节点时，树的高度是 1 ，这是唯一的最小高度树。 示例 2：&#xA;输入：n = 6, edges = [[3,0],[3,1],[3,2],[3,4],[5,4]] 输出：[3,4] 提示：</description>
+    </item>
+    <item>
+      <title>331.verify Preorder Serialization of a Binary Tree</title>
+      <link>http://localhost:1313/posts/leet/331.verify-preorder-serialization-of-a-binary-tree.zh/</link>
+      <pubDate>Wed, 13 Sep 2023 11:10:27 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/331.verify-preorder-serialization-of-a-binary-tree.zh/</guid>
+      <description>问题描述 331. 验证二叉树的前序序列化 (Medium)&#xA;序列化二叉树的一种方法是使用 前序遍历。当我们遇到一个非空节点时，我们可以记录下这个节点的值。如 果它是一个空节点，我们可以使用一个标记值记录，例如 #。&#xA;例如，上面的二叉树可以被序列化为字符串 &amp;quot;9,3,4,#,#,1,#,#,2,#,6,#,#&amp;quot;，其中 # 代表一个空节点。&#xA;给定一串以逗号分隔的序列，验证它是否是正确的二叉树的前序序列化。编写一个在不重构树的条件下的可行算法 。&#xA;保证 每个以逗号分隔的字符或为一个整数或为一个表示 null 指针的 &#39;#&#39; 。&#xA;你可以认为输入格式总是有效的&#xA;例如它永远不会包含两个连续的逗号，比如 &amp;quot;1,,3&amp;quot; 。 注意： 不允许重建树。&#xA;示例 1:&#xA;输入: preorder = &amp;#34;9,3,4,#,#,1,#,#,2,#,6,#,#&amp;#34; 输出: true 示例 2:&#xA;输入: preorder = &amp;#34;1,#&amp;#34; 输出: false 示例 3:&#xA;输入: preorder = &amp;#34;9,#,#,1&amp;#34; 输出: false 提示:&#xA;1 &amp;lt;= preorder.length &amp;lt;= 10⁴ preorder 由以逗号 “，” 分隔的 [0,100] 范围内的整数和 “#” 组成 解题思路 归约 本质上还是一种递归的思想，在前序遍历时，我们可以注意到，每个叶子结点必定跟随两个 null，因此，我们可以反过来，将连续的一个非空结点和两个空结点，归约为一个空结点，这个过程有点像消消乐，可以利用栈来实现这个过程，最后根据栈是否只剩下一个空结点来判断。&#xA;递归 递归的思路参照 剑指 Offer 37.</description>
+    </item>
+    <item>
+      <title>109. Convert Sorted List to Binary Search Tree (Medium)</title>
+      <link>http://localhost:1313/posts/leet/109.convert-sorted-list-to-binary-search-tree/</link>
+      <pubDate>Mon, 11 Sep 2023 14:40:12 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/109.convert-sorted-list-to-binary-search-tree/</guid>
+      <description>Description 109. Convert Sorted List to Binary Search Tree (Medium)&#xA;Given the head of a singly linked list where elements are sorted in ascending order, convert it to a height-balancedbinary search tree.&#xA;Example 1:&#xA;Input: head = [-10,-3,0,5,9] Output: [0,-3,9,-10,null,5] Explanation: One possible answer is [0,-3,9,-10,null,5], which represents the shown height balanced BST. Example 2:&#xA;Input: head = [] Output: [] Constraints:&#xA;The number of nodes in head is in the range [0, 2 * 10⁴].</description>
+    </item>
+    <item>
+      <title>109. 有序链表转换二叉搜索树 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/109.convert-sorted-list-to-binary-search-tree.zh/</link>
+      <pubDate>Mon, 11 Sep 2023 14:40:09 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/109.convert-sorted-list-to-binary-search-tree.zh/</guid>
+      <description>问题描述 109. 有序链表转换二叉搜索树 (Medium)&#xA;给定一个单链表的头节点 head ，其中的元素 按升序排序 ，将其转换为高度平衡的二叉搜索树。&#xA;本题中，一个高度平衡二叉树是指一个二叉树每个节点 的左右两个子树的高度差不超过 1。&#xA;示例 1:&#xA;输入: head = [-10,-3,0,5,9] 输出: [0,-3,9,-10,null,5] 解释: 一个可能的答案是[0，-3,9，-10,null,5]，它表示所示的高度平衡的二叉搜索树。 示例 2:&#xA;输入: head = [] 输出: [] 提示:&#xA;head 中的节点数在 [0, 2 * 10⁴] 范围内 -10⁵ &amp;lt;= Node.val &amp;lt;= 10⁵ 解题思路 首先，如果将链表换成数组，可以很方便地在 $O(n)$ 时间内完成，然后由于链表无法像数组那样在 $O(1)$ 时间内实现随机访问，因此不能套用数组的思路。&#xA;我们首先要想到，对二叉搜索树进行中序遍历，就能得到一个升序链表，那么我们也可以通过一个类似中序遍历的过程，得到二叉搜索树。即先计算左子结点，根结点就是当前遍历到的链表结点，然后计算右子结点。&#xA;代码 class Solution { public: TreeNode *dfs(int l, int r, ListNode **head) { if (l &amp;gt;= r) { return nullptr; } int mid = l + (r - l) / 2; TreeNode *left = dfs(l, mid, head); TreeNode *root = new TreeNode((*head)-&amp;gt;val); root-&amp;gt;left = left; *head = (*head)-&amp;gt;next; root-&amp;gt;right = dfs(mid + 1, r, head); return root; } TreeNode *sortedListToBST(ListNode *head) { // 牢记，二叉搜索树的中序遍历结果是一个升序数组 ListNode *tail = head; int cnt = 0; while (tail !</description>
+    </item>
+    <item>
+      <title>99. 恢复二叉搜索树 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/99.recover-binary-search-tree.zh/</link>
+      <pubDate>Fri, 08 Sep 2023 10:15:17 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/99.recover-binary-search-tree.zh/</guid>
+      <description>问题描述 99. 恢复二叉搜索树 (Medium)&#xA;给你二叉搜索树的根节点 root ，该树中的 恰好 两个节点的值被错误地交换。请在不改变其结构的情况下 ，恢复这棵树 。&#xA;示例 1：&#xA;输入：root = [1,3,null,null,2] 输出：[3,1,null,null,2] 解释：3 不能是 1 的左孩子，因为 3 &amp;gt; 1 。交换 1 和 3 使二叉搜索树有效。 示例 2：&#xA;输入：root = [3,1,4,null,null,2] 输出：[2,1,4,null,null,3] 解释：2 不能在 3 的右子树中，因为 2 &amp;lt; 3 。交换 2 和 3 使二叉搜索树有效。 提示：&#xA;树上节点的数目在范围 [2, 1000] 内 -2³¹ &amp;lt;= Node.val &amp;lt;= 2³¹ - 1 进阶： 使用 O(n) 空间复杂度的解法很容易实现。你能想出一个只使用 O(1) 空间的解决方案吗？&#xA;解题思路 这里就直接考虑 $O(1)$ 时间复杂度的解法了，首先我们知道，对二叉搜索树进行中序遍历，其结点值是严格递增的，因此，我们可以利用这一点来找出被交换的两个节点。&#xA;我们考虑一个递增序列，然后交换序列中任意两个元素，如果这两个元素是相邻的，那么当我们遍历时，会出现一次 $a_{i} &amp;lt; a_{i - 1}$ 的情况；而如果这两个元素不相邻，那么会出现两次 $a_{i} &amp;lt; a_{i - 1}$ 的情况。我们将出现 $a_{i} &amp;lt; a_{i - 1}$ 的元素对都存入数组 vec，那么 vec.</description>
+    </item>
+    <item>
+      <title>834. Sum of Distances in Tree (Hard)</title>
+      <link>http://localhost:1313/posts/leet/834.sum-of-distances-in-tree/</link>
+      <pubDate>Tue, 18 Jul 2023 10:09:35 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/834.sum-of-distances-in-tree/</guid>
+      <description>Description 834. Sum of Distances in Tree (Hard)&#xA;Solution To find the sum of distances to a single node (e.g., $0$) denoted as $dp[0]$, we can easily use DFS to compute it with a time complexity of $O(n)$. However, finding the sum of distances for all $n$ nodes would take $O(n^2)$ time, which would obviously result in a timeout for large graphs.&#xA;However, we notice that there exists a recurrence relationship between the parent node $j$&amp;rsquo;s $dp[j]$ and the child node $i$&amp;rsquo;s $dp[i]$.</description>
+    </item>
+    <item>
+      <title>834. 树中距离之和 (Hard)</title>
+      <link>http://localhost:1313/posts/leet/834.sum-of-distances-in-tree.zh/</link>
+      <pubDate>Tue, 18 Jul 2023 10:09:33 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/834.sum-of-distances-in-tree.zh/</guid>
+      <description>问题描述 834. 树中距离之和 (Hard)&#xA;给定一个无向、连通的树。树中有 n 个标记为 0...n-1 的节点以及 n-1 条边 。&#xA;给定整数 n 和数组 edges ， edges[i] = [aᵢ, bᵢ] 表示树中的节点 aᵢ 和 bᵢ 之间有一条边。&#xA;返回长度为 n 的数组 answer ，其中 answer[i] 是树中第 i 个节点与所有其他节点之间的距离之和。&#xA;示例 1:&#xA;输入: n = 6, edges = [[0,1],[0,2],[2,3],[2,4],[2,5]] 输出: [8,12,6,10,10,10] 解释: 树如图所示。 我们可以计算出 dist(0,1) + dist(0,2) + dist(0,3) + dist(0,4) + dist(0,5) 也就是 1 + 1 + 2 + 2 + 2 = 8。 因此，answer[0] = 8，以此类推。 示例 2:</description>
+    </item>
+    <item>
+      <title>无向图形式组织的树</title>
+      <link>http://localhost:1313/posts/tech/undirected-graph-tree.zh/</link>
+      <pubDate>Tue, 18 Jul 2023 09:30:57 +0800</pubDate>
+      <guid>http://localhost:1313/posts/tech/undirected-graph-tree.zh/</guid>
+      <description>引入 如 数组形式组织的树 中所说，树一般以链表结点的形式组织，定义如下：&#xA;struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x): val(x), left(nullptr), right(nullptr) {} }; 也可能以数组的形式组织，即使用 $parent$ 数组，$y = parent[x]$ 说明 $y$ 是 $x$ 的父结点，根结点的父结点为 $-1$，表示父结点不存在。&#xA;还可以使用无向图的形式来表示，例如 leetcode 的 834. 树中距离之和。&#xA;昨天做这个题的时候，整体思路挺好想的，但就是有个地方被困住了，那就是，在树的无向图的表示情况下，如何统计以当前结点为根结点的子树的数量？（没办法转化成有向图！）&#xA;统计以当前结点为根结点的子树的结点数 统计方法还是深度优先搜索（dfs），只不过，相比一般的深度优先搜索，我们需要传入一个额外的参数，即上一次搜索的父结点，如下图所示：&#xA;相应的 dfs 代码为&#xA;for (int child : tree[pa]) { if (child == ancestor) { continue; } // 对子结点进行 dfs ... } 这样就确定出了一个遍历方向，因此，整体思路就是，我们可以任意选择一个结点作为 dfs 的起点（这里就选择 $0$ 号结点），依次进行 dfs，利用递归的方法，统计以当前结点为根结点的子树的结点数。&#xA;因此，834. 树中距离之和 的完整解题代码如下：&#xA;class Solution { public: int count(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; &amp;amp;tree, vector&amp;lt;int&amp;gt; &amp;amp;dis, vector&amp;lt;int&amp;gt; &amp;amp;cnt, int pa, int grandpa) { int res = 1; for (int child : tree[pa]) { if (child == grandpa) { // 防止重复遍历，保证 dfs 遍历时的单向性 continue; } dis[child] = dis[pa] + 1; res += count(tree, dis, cnt, child, pa); } cnt[pa] = res; return res; } vector&amp;lt;int&amp;gt; sumOfDistancesInTree(int n, vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; &amp;amp;edges) { vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; tree(n); for (auto &amp;amp;vec : edges) { tree[vec[0]].</description>
+    </item>
+    <item>
+      <title>二叉搜索树</title>
+      <link>http://localhost:1313/posts/tech/bst.zh/</link>
+      <pubDate>Fri, 23 Jun 2023 15:08:23 +0800</pubDate>
+      <guid>http://localhost:1313/posts/tech/bst.zh/</guid>
+      <description>二叉搜索树 二叉搜索树（Binary Search Tree，BST）是指一颗空树或者有下列性质的二叉树：&#xA;若任意节点的左子树不为空，那么左子树上所有节点的值均小于它的根节点的值； 若任意节点的右子树不为空，那么右子树上所有节点的值均小于它的根节点的值； 任意节点的左、右子树也分别为二叉搜索树； 二叉树的定义是从一个递归的角度来定义的，验证二叉树其实很简单，即中序遍历二叉树，节点的值从严格递增。换言之，二叉搜索树也可以定义成中序遍历时节点值严格递增的二叉树。&#xA;BST 的删除 对树的定义，我们采取 Leetcode 中的定义：&#xA;struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode() : val(0), left(nullptr), right(nullptr) { } TreeNode(int x) : val(x), left(nullptr), right(nullptr) { } TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) { } }; 首先，我们定义两个辅助函数 TreeNode *delMax(TreeNode *root, int key); 和 TreeNode *delMin(TreeNode *root, int key);，分别表示删除二叉树中的值最大的节点和值最小的节点。还需要辅助函数 int getMin(TreeNode *root); 和 int getMax(TreeNode *root)。&#xA;getMin 和 getMax 自不必多说，以 delMax 为例，都是利用递归进行处理，递归返回的是当前以 root 为根节点的树，删除了最大值之后的 root。递归终止条件即 root-&amp;gt;right == nullptr，说明找到了树的最大值，此时返回 root-&amp;gt;left。（以避免左子树不为空的情况，左子树为空则相当于返回了 nulltpr）</description>
+    </item>
+    <item>
+      <title>数组形式组织的树</title>
+      <link>http://localhost:1313/posts/tech/tree_in_array.zh/</link>
+      <pubDate>Mon, 12 Jun 2023 13:47:07 +0800</pubDate>
+      <guid>http://localhost:1313/posts/tech/tree_in_array.zh/</guid>
+      <description>引入 在 LeetCode 中，二叉树一般是以链表结点的形式组织的，定义如下：&#xA;struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x): val(x), left(nullptr), right(nullptr) {} }; 其实也可以用数组的形式组织，即使用 $parent$ 数组，$y = parent[x]$ 说明 $y$ 是 $x$ 的父结点，根结点的父结点为 $-1$，表示父结点不存在。&#xA;最近公共祖先 链表形式 对链表形式树，求最近公共祖先可以使用递归很方便的解决：&#xA;/** * Definition for a binary tree node. * struct TreeNode { * int val; * TreeNode *left; * TreeNode *right; * TreeNode(int x) : val(x), left(NULL), right(NULL) {} * }; */ class Solution { public: TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) { if (root == nullptr || root == p || root == q) { return root; } TreeNode *left = lowestCommonAncestor(root-&amp;gt;left, p, q); TreeNode *right = lowestCommonAncestor(root-&amp;gt;right, p, q); if (left !</description>
+    </item>
+    <item>
+      <title>1483. Kth Ancestor of a Tree Node (Hard)</title>
+      <link>http://localhost:1313/posts/leet/1483.kth-ancestor-of-a-tree-node/</link>
+      <pubDate>Mon, 12 Jun 2023 13:07:54 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1483.kth-ancestor-of-a-tree-node/</guid>
+      <description>Description 1483. Kth Ancestor of a Tree Node (Hard) You are given a tree with n nodes numbered from 0 to n - 1 in the form of a parent array parent where parent[i] is the parent of ith node. The root of the tree is node 0. Find the kth ancestor of a given node.&#xA;The kth ancestor of a tree node is the kth node in the path from that node to the root node.</description>
+    </item>
+    <item>
+      <title>1483. 树节点的第 K 个祖先 (Hard)</title>
+      <link>http://localhost:1313/posts/leet/1483.kth-ancestor-of-a-tree-node.zh/</link>
+      <pubDate>Mon, 12 Jun 2023 13:06:25 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1483.kth-ancestor-of-a-tree-node.zh/</guid>
+      <description>问题描述 1483. 树节点的第 K 个祖先 (Hard) 给你一棵树，树上有 n 个节点，按从 0 到 n-1 编号。树以父节点数组的形式给出，其中 parent[i] 是节点 i 的父节点。树的根节点是编号为 0 的节点。&#xA;树节点的第 k个祖先节点是从该节点到根节点路径上的第 k 个节点。&#xA;实现 TreeAncestor 类：&#xA;TreeAncestor（int n， int[] parent） 对树和父数组中的节点数初始化对象。 getKthAncestor (int node, int k) 返回节点 node 的第 k 个祖先节点。如果不存在这样的祖先节点，返回 -1 。 示例 1：&#xA;输入： [&amp;#34;TreeAncestor&amp;#34;,&amp;#34;getKthAncestor&amp;#34;,&amp;#34;getKthAncestor&amp;#34;,&amp;#34;getKthAncestor&amp;#34;] [[7,[-1,0,0,1,1,2,2]],[3,1],[5,2],[6,3]] 输出： [null,1,0,-1] 解释： TreeAncestor treeAncestor = new TreeAncestor(7, [-1, 0, 0, 1, 1, 2, 2]); treeAncestor.getKthAncestor(3, 1); // 返回 1 ，它是 3 的父节点 treeAncestor.</description>
+    </item>
+    <item>
+      <title>297.二叉树的序列化与反序列化 (Hard)</title>
+      <link>http://localhost:1313/posts/leet/297.serialize-and-deserialize-binary-tree.zh/</link>
+      <pubDate>Thu, 23 Mar 2023 10:40:46 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/297.serialize-and-deserialize-binary-tree.zh/</guid>
+      <description>问题描述 297. 二叉树的序列化与反序列化 (Hard)&#xA;序列化是将一个数据结构或者对象转换为连续的比特位的操作，进而可以将转换后的数据存储在一个文件或者内存中，同时也可以通过网络传输到另一个计算机环境，采取相反方式重构得到原数据。&#xA;请设计一个算法来实现二叉树的序列化与反序列化。这里不限定你的序列 / 反序列化算法执行逻辑，你只需要保证一个二叉树可以被序列化为一个字符串并且将这个字符串反序列化为原始的树结构。&#xA;提示: 输入输出格式与 LeetCode 目前使用的方式一致，详情请参阅 LeetCode 序列化二叉树的格式。你并非必须采取这种方式，你也可以采用其他的方法解决这个问题。&#xA;示例 1：&#xA;输入：root = [1,2,3,null,null,4,5] 输出：[1,2,3,null,null,4,5] 示例 2：&#xA;输入：root = [] 输出：[] 示例 3：&#xA;输入：root = [1] 输出：[1] 示例 4：&#xA;输入：root = [1,2] 输出：[1,2] 提示：&#xA;树中结点数在范围 [0, 10⁴] 内 -1000 &amp;lt;= Node.val &amp;lt;= 1000 解题思路 首先利用前序遍历的dfs，将节点的值存放到字符串中，如果遇到空节点，则str += &amp;quot;null_&amp;quot;，然后return。&#xA;反序列化时，首先将字符串转化为字符串链表，然后递归地进行反序列化，如果链表首元素为null，则为当前子树的root节点，然后先反序列化左子树，然后反序列化又子树，如果首元素为null，则直接返回。&#xA;可以注意到与前序遍历是相对应的的。&#xA;代码 class Codec { public: void rserialize(TreeNode* root, string&amp;amp; str) { if (root == nullptr) { str += &amp;#34;None,&amp;#34;; } else { str += to_string(root-&amp;gt;val) + &amp;#34;,&amp;#34;; rserialize(root-&amp;gt;left, str); rserialize(root-&amp;gt;right, str); } } string serialize(TreeNode* root) { string ret; rserialize(root, ret); return ret; } TreeNode* rdeserialize(list&amp;lt;string&amp;gt;&amp;amp; dataArray) { if (dataArray.</description>
+    </item>
+    <item>
+      <title>654.Maximum Binary Tree (Medium)</title>
+      <link>http://localhost:1313/posts/leet/654.maximum-binary-tree/</link>
+      <pubDate>Sun, 19 Mar 2023 17:25:10 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/654.maximum-binary-tree/</guid>
+      <description>Description 654. Maximum Binary Tree (Medium)&#xA;You are given an integer array nums with no duplicates. A maximum binary tree can be built recursively from nums using the following algorithm:&#xA;Create a root node whose value is the maximum value in nums. Recursively build the left subtree on the subarray prefix to the left of the maximum value. Recursively build the right subtree on the subarray suffix to the right of the maximum value.</description>
+    </item>
+    <item>
+      <title>654.最大二叉树 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/654.maximum-binary-tree.zh/</link>
+      <pubDate>Sun, 19 Mar 2023 17:25:05 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/654.maximum-binary-tree.zh/</guid>
+      <description>问题描述 654. 最大二叉树 (Medium)&#xA;给定一个不重复的整数数组 nums 。 最大二叉树 可以用下面的算法从 nums 递归地构建:&#xA;创建一个根节点，其值为 nums 中的最大值。 递归地在最大值 左边 的 子数组前缀上 构建左子树。 递归地在最大值 右边 的 子数组后缀上 构建右子树。 返回 nums 构建的 最大二叉树。&#xA;示例 1：&#xA;输入：nums = [3,2,1,6,0,5] 输出：[6,3,5,null,2,0,null,null,1] 解释：递归调用如下所示： - [3,2,1,6,0,5] 中的最大值是 6 ，左边部分是 [3,2,1] ，右边部分是 [0,5] 。 - [3,2,1] 中的最大值是 3 ，左边部分是 [] ，右边部分是 [2,1] 。 - 空数组，无子节点。 - [2,1] 中的最大值是 2 ，左边部分是 [] ，右边部分是 [1] 。 - 空数组，无子节点。 - 只有一个元素，所以子节点是一个值为 1 的节点。 - [0,5] 中的最大值是 5 ，左边部分是 [0] ，右边部分是 [] 。 - 只有一个元素，所以子节点是一个值为 0 的节点。 - 空数组，无子节点。 示例 2：</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Armbian on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/armbian/</link>
+    <description>Recent content in Armbian on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 09 Dec 2022 12:33:40 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/armbian/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>N1 Armbian</title>
+      <link>http://localhost:1313/posts/blog/n1-armbian/</link>
+      <pubDate>Fri, 09 Dec 2022 12:33:40 +0800</pubDate>
+      <guid>http://localhost:1313/posts/blog/n1-armbian/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>N1 安装 Armbian 简单教程</title>
+      <link>http://localhost:1313/posts/blog/n1-armbian.zh/</link>
+      <pubDate>Fri, 09 Dec 2022 12:33:32 +0800</pubDate>
+      <guid>http://localhost:1313/posts/blog/n1-armbian.zh/</guid>
+      <description>前置 这一步非必须,如果之前 N1 已经刷了 OpenWrt 或者 Armbian 那么就不需要了,否则最好还是先刷入 webpad 的官改 V2.2 固件 解压后利用双公头 usb 线和 usb-burning-tool 刷入到 N1 中。&#xA;具体步骤如下：&#xA;usb-burning-tool 导入 webpad 2.2 线刷包，勾选 擦除 flash，取消勾选 擦除 bootloader； 点击 开始 按钮； 3 秒内让 N1 通电，识别成功自动开始刷入； 完成后拔电再上电，让 N1 重启； 当 N1 能正常开机之后，用鼠标开启 N1 的开发者模式（类似安卓手机，连续点击系统版本号即可）。&#xA;制作镜像 选择Armbian_23.02.0_amlogic_s905d_bullseye_6.0.11_server_2022.12.08.img.gz，下载好之后，解压，利用rufus刷入u盘。&#xA;安装 由于盒子在刷入armbian前为安卓系统，已开启adb，mac的终端执行adb connect 192.168.123.193连接无线adb，192.168.123.193修改成N1的实际的ip地址，然后执行adb reboot update(这些过程最好都在N1外接显示器的环境下进行)，在显示器黑屏的瞬间将前一步的u盘插入到靠近hdmi的usb接口;&#xA;接下来显示器会跑一系列starting xxx的服务，直到最后让login的时候，应该是要先输入用户名root，再输入1234(默认密码)，然后输入两次重复的自定义密码(如x12x12);&#xA;然后会让你创建用户，可以按Ctrl+C跳过;&#xA;当显示已经启动完成，让你再登录之后，输入用户名root和前一步的自定义密码x12x12，即可进入命令行，然后执行nand–sata-install命令将系统刷写进N1的emmc中。&#xA;新的 armbian 镜像的刷入命令改成了 armbian-install，见 github release 的说明&#xA;安装好后的配置 添加用户 执行 adduser zwyyy 创建用户并执行usermod -aG sudo username添加到sudo用户组，之后的命令都在zwyyy用户下执行;</description>
+    </item>
+  </channel>
+</rss>

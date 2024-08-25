@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linked List on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/linked-list/</link>
+    <description>Recent content in Linked List on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 28 Nov 2022 13:46:27 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/linked-list/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>142.linked list cycle ii</title>
+      <link>http://localhost:1313/posts/leet/142.linked-list-cycle-ii/</link>
+      <pubDate>Mon, 28 Nov 2022 13:46:27 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/142.linked-list-cycle-ii/</guid>
+      <description>Description 142.linked-list-cycle-ii&#xA;Solution Like 141.linked-list-cycle, when fast and slow meet each other, we make a pointer p start from virtual head node, traverse one by one, the same as slow. slow and p will meet at the entrance of the cycle.&#xA;Code class Solution { public: ListNode *detectCycle(ListNode *head) { ListNode *vhead = new ListNode(0, head); ListNode *fast = vhead, *slow = vhead; while (fast != nullptr &amp;amp;&amp;amp; fast-&amp;gt;next != nullptr) { fast = fast-&amp;gt;next-&amp;gt;next; slow = slow-&amp;gt;next; if (fast == slow) { while (vhead !</description>
+    </item>
+    <item>
+      <title>142.环形链表II</title>
+      <link>http://localhost:1313/posts/leet/142.linked-list-cycle-ii.zh/</link>
+      <pubDate>Mon, 28 Nov 2022 13:46:16 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/142.linked-list-cycle-ii.zh/</guid>
+      <description>问题描述 142.环形链表II&#xA;解题思路 判断是否链表是否存在环的方式与141.环形链表一致，当两个指针相遇时，再让一个指针从虚拟头节点开始一个节点一个节点的遍历，slow指针也是，两个指针会在环的入口处相遇。&#xA;代码 class Solution { public: ListNode *detectCycle(ListNode *head) { ListNode *vhead = new ListNode(0, head); ListNode *fast = vhead, *slow = vhead; while (fast != nullptr &amp;amp;&amp;amp; fast-&amp;gt;next != nullptr) { fast = fast-&amp;gt;next-&amp;gt;next; slow = slow-&amp;gt;next; if (fast == slow) { while (vhead != slow) { vhead = vhead-&amp;gt;next; slow = slow-&amp;gt;next; } delete vhead; return slow; } } return nullptr; } }; </description>
+    </item>
+    <item>
+      <title>141.linked list cycle</title>
+      <link>http://localhost:1313/posts/leet/141.linked-list-cycle/</link>
+      <pubDate>Sun, 27 Nov 2022 21:09:18 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/141.linked-list-cycle/</guid>
+      <description>Description 141.linked-list-cycle&#xA;Solution We can use two pointers, one fast, one slow. For each time, fast move to next next node, slow move to next node. If there is cycle, fast will be equal to slow, or fast will be nullptr.&#xA;Code class Solution { public: bool hasCycle(ListNode *head) { ListNode *vhead = new ListNode(0, head); ListNode *fast = vhead, *slow = vhead; while (fast != nullptr &amp;amp;&amp;amp; fast-&amp;gt;next != nullptr) { fast = fast-&amp;gt;next-&amp;gt;next; slow = slow-&amp;gt;next; if (fast == slow) return true; } return false; } }; </description>
+    </item>
+    <item>
+      <title>141.环形链表</title>
+      <link>http://localhost:1313/posts/leet/141.linked-list-cycle.zh/</link>
+      <pubDate>Sun, 27 Nov 2022 21:09:11 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/141.linked-list-cycle.zh/</guid>
+      <description>问题描述 141.环形链表&#xA;解题思路 使用快慢两个指针，fast一次移动两个节点，slow一次移动一个节点，如果链表存在环，那么fast和slow一定会有相等的时候，否则fast会运动到链表末尾。&#xA;代码 class Solution { public: bool hasCycle(ListNode *head) { ListNode *vhead = new ListNode(0, head); ListNode *fast = vhead, *slow = vhead; while (fast != nullptr &amp;amp;&amp;amp; fast-&amp;gt;next != nullptr) { fast = fast-&amp;gt;next-&amp;gt;next; slow = slow-&amp;gt;next; if (fast == slow) return true; } return false; } }; </description>
+    </item>
+  </channel>
+</rss>

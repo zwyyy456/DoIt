@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dijkstra on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/dijkstra/</link>
+    <description>Recent content in Dijkstra on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 17 Mar 2023 15:29:27 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/dijkstra/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>778.Swim in Rising Water (Hard)</title>
+      <link>http://localhost:1313/posts/leet/778.swim-in-rising-water/</link>
+      <pubDate>Fri, 17 Mar 2023 15:29:27 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/778.swim-in-rising-water/</guid>
+      <description>Description 778. Swim in Rising Water (Hard)&#xA;You are given an n x n integer matrix grid where each value grid[i][j] represents the elevation at that point (i, j).&#xA;The rain starts to fall. At time t, the depth of the water everywhere is t. You can swim from a square to another 4-directionally adjacent square if and only if the elevation of both squares individually are at most t. You can swim infinite distances in zero time.</description>
+    </item>
+    <item>
+      <title>778.水位上升的泳池中游泳 (Hard)</title>
+      <link>http://localhost:1313/posts/leet/778.swim-in-rising-water.zh/</link>
+      <pubDate>Fri, 17 Mar 2023 15:29:17 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/778.swim-in-rising-water.zh/</guid>
+      <description>问题描述 778. 水位上升的泳池中游泳 (Hard)&#xA;在一个 n x n 的整数矩阵 grid 中，每一个方格的值 grid[i][j] 表示位置 (i, j) 的平台高度。&#xA;当开始下雨时，在时间为 t 时，水池中的水位为 t 。你可以从一个平台游向四周相邻的任意一个平台，但是前提是此时水位必须同时淹没这两个平台。假定你可以瞬间移动无限距离，也就是默认在方格内部游动是不耗时的。当然，在你游泳的时候你必须待在坐标方格里面。&#xA;你从坐标方格的左上平台 (0，0) 出发。返回 你到达坐标方格的右下平台 (n-1, n-1) 所需的最少时间 。&#xA;示例 1:&#xA;输入: grid = [[0,2],[1,3]] 输出: 3 解释: 时间为0时，你位于坐标方格的位置为 (0, 0)。 此时你不能游向任意方向，因为四个相邻方向平台的高度都大于当前时间为 0 时的水位。 等时间到达 3 时，你才可以游向平台 (1, 1). 因为此时的水位是 3，坐标方格中的平台没有比水位 3 更高的，所以你可以游向坐标方格中的任意位置 示例 2:&#xA;输入: grid = [[0,1,2,3,4],[24,23,22,21,5],[12,13,14,15,16],[11,17,18,19,20],[10,9,8,7,6]] 输出: 16 解释: 最终的路线用加粗进行了标记。 我们必须等到时间为 16，此时才能保证平台 (0, 0) 和 (4, 4) 是连通的 提示:</description>
+    </item>
+    <item>
+      <title>1631.Path With Minimum Effort (Medium)</title>
+      <link>http://localhost:1313/posts/leet/1631.path-with-minimum-effort/</link>
+      <pubDate>Thu, 16 Mar 2023 13:53:30 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1631.path-with-minimum-effort/</guid>
+      <description>Solution 1631. Path With Minimum Effort (Medium)&#xA;You are a hiker preparing for an upcoming hike. You are given heights, a 2D array of size rows x columns, where heights[row][col] represents the height of cell (row, col). You are situated in the top-left cell, (0, 0), and you hope to travel to the bottom-right cell, (rows-1, columns-1) (i.e., 0-indexed). You can move up, down, left, or right, and you wish to find a route that requires the minimum effort.</description>
+    </item>
+    <item>
+      <title>1631.最小体力消耗路径 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/1631.path-with-minimum-effort.zh/</link>
+      <pubDate>Thu, 16 Mar 2023 13:49:13 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1631.path-with-minimum-effort.zh/</guid>
+      <description>问题描述 1631. 最小体力消耗路径 (Medium)&#xA;你准备参加一场远足活动。给你一个二维 rows x columns 的地图 heights ，其中 heights[row][col] 表示格子 (row, col) 的高度。一开始你在最左上角的格子 (0, 0) ，且你希望去最右下角的格子 (rows-1, columns-1) （注意下标从 0 开始编号）。你每次可以往 上， 下， 左， 右 四个方向之一移动，你想要找到耗费 体力 最小的一条路径。&#xA;一条路径耗费的 体力值 是路径上相邻格子之间 高度差绝对值 的 最大值 决定的。&#xA;请你返回从左上角走到右下角的最小 体力消耗值 。&#xA;示例 1：&#xA;输入：heights = [[1,2,2],[3,8,2],[5,3,5]] 输出：2 解释：路径 [1,3,5,3,5] 连续格子的差值绝对值最大为 2 。 这条路径比路径 [1,2,2,2,5] 更优，因为另一条路径差值最大值为 3 。 示例 2：&#xA;输入：heights = [[1,2,3],[3,8,4],[5,3,5]] 输出：1 解释：路径 [1,2,3,4,5] 的相邻格子差值绝对值最大为 1 ，比路径 [1,3,5,3,5] 更优。 示例 3：</description>
+    </item>
+    <item>
+      <title>407.Trapping Rain Water II (Hard)</title>
+      <link>http://localhost:1313/posts/leet/407.trapping-rain-water-ii/</link>
+      <pubDate>Wed, 15 Mar 2023 15:01:43 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/407.trapping-rain-water-ii/</guid>
+      <description>Description 407. Trapping Rain Water II (Hard)&#xA;Given an m x n integer matrix heightMap representing the height of each unit cell in a 2D elevation map, return the volume of water it can trap after raining.&#xA;Example 1:&#xA;Input: heightMap = [[1,4,3,1,3,2],[3,2,1,3,2,4],[2,3,3,2,3,1]] Output: 4 Explanation: After the rain, water is trapped between the blocks. We have two small ponds 1 and 3 units trapped. The total volume of water trapped is 4.</description>
+    </item>
+    <item>
+      <title>407.接雨水 II (Hard)</title>
+      <link>http://localhost:1313/posts/leet/407.trapping-rain-water-ii.zh/</link>
+      <pubDate>Wed, 15 Mar 2023 15:01:34 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/407.trapping-rain-water-ii.zh/</guid>
+      <description>问题描述 407. 接雨水 II (Hard)&#xA;给你一个 m x n 的矩阵，其中的值均为非负整数，代表二维高度图每个单元的高度，请计算图中形状最多能接多少体积的雨水。&#xA;示例 1:&#xA;输入: heightMap = [[1,4,3,1,3,2],[3,2,1,3,2,4],[2,3,3,2,3,1]] 输出: 4 解释: 下雨后，雨水将会被上图蓝色的方块中。总的接雨水量为1+2+1=4。 示例 2:&#xA;输入: heightMap = [[3,3,3,3,3],[3,2,2,2,3],[3,2,1,2,3],[3,2,2,2,3],[3,3,3,3,3]] 输出: 10 提示:&#xA;m == heightMap.length n == heightMap[i].length 1 &amp;lt;= m, n &amp;lt;= 200 0 &amp;lt;= heightMap[i][j] &amp;lt;= 2 * 10⁴ 解题思路 设方格$(i, j)$到边界上的点$(x, y)$的路径的最大高度为$h_{x,y}$，那么方格$(i, j)$所能存放的雨水就是$h_xy$的最小值减去height[i][j]；&#xA;$h_{x,y}$也可以转化成边界上的点$(x, y)$到方格$(i, j)$的路径的上的方格的最大高度，那么就可以使用Dijkstra算法来解决，初始时将边界上所有的点都加入优先队列中，即可求边界上所有方格到$(i, j)$的最大高度的最小值，还是使用小顶堆。&#xA;代码 class Solution { public: int trapRainWater(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; &amp;amp;heightMap) { // 找边界上所有点，到x,y的路径上的最大高度的最小值（不包括x,y） // (x,y)处的存放的雨水即这个高度h-heightMap[x][y]; int m = heightMap.</description>
+    </item>
+    <item>
+      <title>1976.Number of Ways to Arrive at Destination (Medium)</title>
+      <link>http://localhost:1313/posts/leet/1976.number-of-ways-to-arrive-at-destination/</link>
+      <pubDate>Tue, 14 Mar 2023 14:39:59 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1976.number-of-ways-to-arrive-at-destination/</guid>
+      <description>Description 1976. Number of Ways to Arrive at Destination (Medium)&#xA;You are in a city that consists of n intersections numbered from 0 to n - 1 with bi-directional roads between some intersections. The inputs are generated such that you can reach any intersection from any other intersection and that there is at most one road between any two intersections.&#xA;You are given an integer n and a 2D integer array roads where roads[i] = [uᵢ, vᵢ, timeᵢ] means that there is a road between intersections uᵢ and vᵢ that takes timeᵢ minutes to travel.</description>
+    </item>
+    <item>
+      <title>1976.到达目的地的方案数 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/1976.number-of-ways-to-arrive-at-destination.zh/</link>
+      <pubDate>Tue, 14 Mar 2023 14:39:52 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1976.number-of-ways-to-arrive-at-destination.zh/</guid>
+      <description>问题描述 1976. 到达目的地的方案数 (Medium)&#xA;你在一个城市里，城市由 n 个路口组成，路口编号为 0 到 n - 1 ，某些路口之间有 双向 道路。输入保证你可以从任意路口出发到达其他任意路口，且任意两个路口之间最多有一条路。&#xA;给你一个整数 n 和二维整数数组 roads ，其中 roads[i] = [uᵢ, vᵢ, timeᵢ] 表示在路口 uᵢ 和 vᵢ 之间有一条需要花费 timeᵢ 时间才能通过的道路。你想知道花费 最少时间 从路口 0 出发到达路口 n - 1 的方案数。&#xA;请返回花费 最少时间 到达目的地的 路径数目 。由于答案可能很大，将结果对 10⁹ + 7 取余 后返回。&#xA;示例 1：&#xA;输入：n = 7, roads = [[0,6,7],[0,1,2],[1,2,3],[1,3,3],[6,3,3],[3,5,1],[6,5,1],[2,5,1],[0,4,5],[4,6,2]] 输出：4 解释：从路口 0 出发到路口 6 花费的最少时间是 7 分钟。 四条花费 7 分钟的路径分别为： - 0 ➝ 6 - 0 ➝ 4 ➝ 6 - 0 ➝ 1 ➝ 2 ➝ 5 ➝ 6 - 0 ➝ 1 ➝ 3 ➝ 5 ➝ 6 示例 2：</description>
+    </item>
+    <item>
+      <title>1786.Number of Restricted Paths From First to Last Node (Medium)</title>
+      <link>http://localhost:1313/posts/leet/1786.number-of-restricted-paths-from-first-to-last-node/</link>
+      <pubDate>Mon, 13 Mar 2023 13:28:01 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1786.number-of-restricted-paths-from-first-to-last-node/</guid>
+      <description>Description Number of Restricted Paths From First to Last Node (Medium) There is an undirected weighted connected graph. You are given a positive integer n which denotes that the graph has n nodes labeled from 1 to n, and an array edges where each edges[i] = [uᵢ, vᵢ, weightᵢ] denotes that there is an edge between nodes uᵢ and vᵢ with weight equal to weightᵢ.&#xA;A path from node start to node end is a sequence of nodes [z₀, z₁,z₂, .</description>
+    </item>
+    <item>
+      <title>1786. 从第一个节点出发到最后一个节点的受限路径数 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/1786.number-of-restricted-paths-from-first-to-last-node.zh/</link>
+      <pubDate>Mon, 13 Mar 2023 13:27:56 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1786.number-of-restricted-paths-from-first-to-last-node.zh/</guid>
+      <description>问题描述 1786. 从第一个节点出发到最后一个节点的受限路径数 (Medium)&#xA;现有一个加权无向连通图。给你一个正整数 n ，表示图中有 n 个节点，并按从 1 到 n 给节点编号；另给你一个数组 edges ，其中每个 edges[i] = [uᵢ, vᵢ, weightᵢ] 表示存在一条位于节点 uᵢ 和 vᵢ 之间的边，这条边的权重为 weightᵢ 。&#xA;从节点 start 出发到节点 end 的路径是一个形如 [z₀, z₁,z₂, ..., zₖ] 的节点序列，满足 z₀ = start 、 zₖ = end 且在所有符合 0 &amp;lt;= i &amp;lt;= k-1 的节点 zᵢ 和 zᵢ+₁ 之间存在一条边。&#xA;路径的距离定义为这条路径上所有边的权重总和。用 distanceToLastNode(x) 表示节点 n 和 x 之间路径的最短距离。 受限路径 为满足 distanceToLastNode(zᵢ) &amp;gt; distanceToLastNode(zᵢ+₁) 的一条路径，其中 0 &amp;lt;= i &amp;lt;= k-1 。</description>
+    </item>
+    <item>
+      <title>743. Network Delay Time (Medium)</title>
+      <link>http://localhost:1313/posts/leet/743.network-delay-time/</link>
+      <pubDate>Sun, 12 Mar 2023 14:23:59 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/743.network-delay-time/</guid>
+      <description>743. Network Delay Time (Medium)&#xA;You are given a network of n nodes, labeled from 1 to n. You are also given times, a list of travel times as directed edges times[i] = (uᵢ, vᵢ, wᵢ), where uᵢ is the source node, vᵢ is the target node, and wᵢ is the time it takes for a signal to travel from source to target.&#xA;We will send a signal from a given node k.</description>
+    </item>
+    <item>
+      <title>743. 网络延迟时间 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/743.network-delay-time.zh/</link>
+      <pubDate>Sun, 12 Mar 2023 14:23:54 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/743.network-delay-time.zh/</guid>
+      <description>问题描述 743. 网络延迟时间 (Medium)&#xA;有 n 个网络节点，标记为 1 到 n。&#xA;给你一个列表 times，表示信号经过 有向 边的传递时间。 times[i] = (uᵢ, vᵢ, wᵢ)，其中 uᵢ 是源节点， vᵢ 是目标节点， wᵢ 是一个信号从源节点传递到目标节点的时间。&#xA;现在，从某个节点 K 发出一个信号。需要多久才能使所有节点都收到信号？如果不能使所有节点收到信号，返回 -1 。&#xA;示例 1：&#xA;输入：times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, k = 2 输出：2 示例 2：&#xA;输入：times = [[1,2,1]], n = 2, k = 1 输出：1 示例 3：&#xA;输入：times = [[1,2,1]], n = 2, k = 2 输出：-1 提示：&#xA;1 &amp;lt;= k &amp;lt;= n &amp;lt;= 100 1 &amp;lt;= times.</description>
+    </item>
+  </channel>
+</rss>

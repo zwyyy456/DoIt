@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on My New Hugo Site</title>
+    <link>http://localhost:1313/categories/linux/</link>
+    <description>Recent content in Linux on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Aug 2024 23:22:48 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RHEL 7 个人开发环境部署</title>
+      <link>http://localhost:1313/posts/blog/rhel7-dev-env-deploy.zh/</link>
+      <pubDate>Wed, 21 Aug 2024 23:22:48 +0800</pubDate>
+      <guid>http://localhost:1313/posts/blog/rhel7-dev-env-deploy.zh/</guid>
+      <description>前言 入职了某公司，福利待遇不错，就是这开发环境属实一言难尽，开发机部署在内网，没有网络，只能通过内外网交换软件传文件，没有 root 权限（暂无，后面拿到 root 权限我也不敢用来安装什么软件），开发机的系统版本还特别旧，是 2014 年发布的 RHEL 7，上面的软件版本也是老掉牙了（除了没人用的 cmake），令人无语。故这里记录一下我克服困难，在这个 RHEL 7 上配置开发环境的步骤。&#xA;注，考虑到安全问题，以及权限受限，软件都安装在 $HOME/.local 目录下，然后设置对应的环境变量，其中 bash 不会去设置环境变量。&#xA;整体部署思路如下，利用自己的 VPS 开了一个 CentOS 7 的 docker 镜像，并创建一个与开发机上本人用户一致的用户，并使其 $HOME 目录与开发机的一致，在 CentOS 7 上，通过源码编译安装到 $HOME/.local 目录下，然后将 $HOME/.local 目录拷贝到开发机上，再配置好对应的环境变量，如果再不行，再考虑把源码以及依赖的源码拷贝到开发机上，再进行编译安装。&#xA;可以通过执行 ldd ${binary_name} 来查看运行该程序需要哪些动态链接库。&#xA;软件安装 GCC 执行以下命令即可安装 GCC：&#xA;mkdir src # 安装依赖库 GMP cd $HOME/src wget https://gmplib.org/download/gmp/gmp-6.2.1.tar.xz tar -xvf gmp-6.2.1.tar.xz cd gmp-6.2.1 ./configure --prefix=$HOME/.local make -j$(nproc) make install # 安装依赖库 MPFR cd $HOME/src wget https://www.</description>
+    </item>
+  </channel>
+</rss>

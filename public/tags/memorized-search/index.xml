@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Memorized Search on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/memorized-search/</link>
+    <description>Recent content in Memorized Search on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 14 Mar 2023 14:39:59 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/memorized-search/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1976.Number of Ways to Arrive at Destination (Medium)</title>
+      <link>http://localhost:1313/posts/leet/1976.number-of-ways-to-arrive-at-destination/</link>
+      <pubDate>Tue, 14 Mar 2023 14:39:59 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1976.number-of-ways-to-arrive-at-destination/</guid>
+      <description>Description 1976. Number of Ways to Arrive at Destination (Medium)&#xA;You are in a city that consists of n intersections numbered from 0 to n - 1 with bi-directional roads between some intersections. The inputs are generated such that you can reach any intersection from any other intersection and that there is at most one road between any two intersections.&#xA;You are given an integer n and a 2D integer array roads where roads[i] = [uᵢ, vᵢ, timeᵢ] means that there is a road between intersections uᵢ and vᵢ that takes timeᵢ minutes to travel.</description>
+    </item>
+    <item>
+      <title>1976.到达目的地的方案数 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/1976.number-of-ways-to-arrive-at-destination.zh/</link>
+      <pubDate>Tue, 14 Mar 2023 14:39:52 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1976.number-of-ways-to-arrive-at-destination.zh/</guid>
+      <description>问题描述 1976. 到达目的地的方案数 (Medium)&#xA;你在一个城市里，城市由 n 个路口组成，路口编号为 0 到 n - 1 ，某些路口之间有 双向 道路。输入保证你可以从任意路口出发到达其他任意路口，且任意两个路口之间最多有一条路。&#xA;给你一个整数 n 和二维整数数组 roads ，其中 roads[i] = [uᵢ, vᵢ, timeᵢ] 表示在路口 uᵢ 和 vᵢ 之间有一条需要花费 timeᵢ 时间才能通过的道路。你想知道花费 最少时间 从路口 0 出发到达路口 n - 1 的方案数。&#xA;请返回花费 最少时间 到达目的地的 路径数目 。由于答案可能很大，将结果对 10⁹ + 7 取余 后返回。&#xA;示例 1：&#xA;输入：n = 7, roads = [[0,6,7],[0,1,2],[1,2,3],[1,3,3],[6,3,3],[3,5,1],[6,5,1],[2,5,1],[0,4,5],[4,6,2]] 输出：4 解释：从路口 0 出发到路口 6 花费的最少时间是 7 分钟。 四条花费 7 分钟的路径分别为： - 0 ➝ 6 - 0 ➝ 4 ➝ 6 - 0 ➝ 1 ➝ 2 ➝ 5 ➝ 6 - 0 ➝ 1 ➝ 3 ➝ 5 ➝ 6 示例 2：</description>
+    </item>
+    <item>
+      <title>787.Cheapest Flights Within K Stops (Medium)</title>
+      <link>http://localhost:1313/posts/leet/787.cheapest-flights-within-k-stops/</link>
+      <pubDate>Mon, 13 Mar 2023 14:16:39 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/787.cheapest-flights-within-k-stops/</guid>
+      <description>Description 787. Cheapest Flights Within K Stops (Medium)&#xA;There are n cities connected by some number of flights. You are given an array flights where flights[i] = [fromᵢ, toᵢ, priceᵢ] indicates that there is a flight from city fromᵢ to city toᵢ with cost priceᵢ.&#xA;You are also given three integers src, dst, and k, return the cheapest price from src to dst with at most k stops. If there is no such route, return -1.</description>
+    </item>
+    <item>
+      <title>787.K 站中转内最便宜的航班 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/787.cheapest-flights-within-k-stops.zh/</link>
+      <pubDate>Mon, 13 Mar 2023 14:14:59 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/787.cheapest-flights-within-k-stops.zh/</guid>
+      <description>问题描述 787. K 站中转内最便宜的航班 (Medium)&#xA;有 n 个城市通过一些航班连接。给你一个数组 flights ，其中 flights[i] = [fromᵢ, toᵢ, priceᵢ] ，表示该航班都从城市 fromᵢ 开始，以价格 priceᵢ 抵达 toᵢ。&#xA;现在给定所有的城市和航班，以及出发城市 src 和目的地 dst，你的任务是找到出一条最多经过 k 站中转的路线，使得从 src 到 dst 的 价格最便宜 ，并返回该价格。 如果不存在这样的路线，则输出 -1。&#xA;示例 1：&#xA;输入: n = 3, edges = [[0,1,100],[1,2,100],[0,2,500]] src = 0, dst = 2, k = 1 输出: 200 解释: 城市航班图如下 从城市 0 到城市 2 在 1 站中转以内的最便宜价格是 200，如图中红色所示。 示例 2：&#xA;输入: n = 3, edges = [[0,1,100],[1,2,100],[0,2,500]] src = 0, dst = 2, k = 0 输出: 500 解释: 城市航班图如下 从城市 0 到城市 2 在 0 站中转以内的最便宜价格是 500，如图中蓝色所示。 提示：</description>
+    </item>
+    <item>
+      <title>1786.Number of Restricted Paths From First to Last Node (Medium)</title>
+      <link>http://localhost:1313/posts/leet/1786.number-of-restricted-paths-from-first-to-last-node/</link>
+      <pubDate>Mon, 13 Mar 2023 13:28:01 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1786.number-of-restricted-paths-from-first-to-last-node/</guid>
+      <description>Description Number of Restricted Paths From First to Last Node (Medium) There is an undirected weighted connected graph. You are given a positive integer n which denotes that the graph has n nodes labeled from 1 to n, and an array edges where each edges[i] = [uᵢ, vᵢ, weightᵢ] denotes that there is an edge between nodes uᵢ and vᵢ with weight equal to weightᵢ.&#xA;A path from node start to node end is a sequence of nodes [z₀, z₁,z₂, .</description>
+    </item>
+    <item>
+      <title>1786. 从第一个节点出发到最后一个节点的受限路径数 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/1786.number-of-restricted-paths-from-first-to-last-node.zh/</link>
+      <pubDate>Mon, 13 Mar 2023 13:27:56 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1786.number-of-restricted-paths-from-first-to-last-node.zh/</guid>
+      <description>问题描述 1786. 从第一个节点出发到最后一个节点的受限路径数 (Medium)&#xA;现有一个加权无向连通图。给你一个正整数 n ，表示图中有 n 个节点，并按从 1 到 n 给节点编号；另给你一个数组 edges ，其中每个 edges[i] = [uᵢ, vᵢ, weightᵢ] 表示存在一条位于节点 uᵢ 和 vᵢ 之间的边，这条边的权重为 weightᵢ 。&#xA;从节点 start 出发到节点 end 的路径是一个形如 [z₀, z₁,z₂, ..., zₖ] 的节点序列，满足 z₀ = start 、 zₖ = end 且在所有符合 0 &amp;lt;= i &amp;lt;= k-1 的节点 zᵢ 和 zᵢ+₁ 之间存在一条边。&#xA;路径的距离定义为这条路径上所有边的权重总和。用 distanceToLastNode(x) 表示节点 n 和 x 之间路径的最短距离。 受限路径 为满足 distanceToLastNode(zᵢ) &amp;gt; distanceToLastNode(zᵢ+₁) 的一条路径，其中 0 &amp;lt;= i &amp;lt;= k-1 。</description>
+    </item>
+    <item>
+      <title>1223.Dice Roll Simulation (Hard)</title>
+      <link>http://localhost:1313/posts/leet/1223.dice-roll-simulation/</link>
+      <pubDate>Fri, 03 Mar 2023 16:46:18 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1223.dice-roll-simulation/</guid>
+      <description>Description 1223. Dice Roll Simulation (Hard)&#xA;A die simulator generates a random number from 1 to 6 for each roll. You introduced a constraint to the generator such that it cannot roll the number i more than rollMax[i] ( 1-indexed) consecutive times.&#xA;Given an array of integers rollMax and an integer n, return the number of distinct sequences that can be obtained with exact n rolls. Since the answer may be too large, return it modulo 10⁹ + 7.</description>
+    </item>
+    <item>
+      <title>1223.掷骰子模拟 (Hard)</title>
+      <link>http://localhost:1313/posts/leet/1223.dice-roll-simulation.zh/</link>
+      <pubDate>Fri, 03 Mar 2023 16:46:15 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1223.dice-roll-simulation.zh/</guid>
+      <description>问题描述 1223. 掷骰子模拟 (Hard)&#xA;有一个骰子模拟器会每次投掷的时候生成一个 1 到 6 的随机数。&#xA;不过我们在使用它时有个约束，就是使得投掷骰子时， 连续 掷出数字 i 的次数不能超过 rollMax[i]（ i 从 1 开始编号）。&#xA;现在，给你一个整数数组 rollMax 和一个整数 n，请你来计算掷 n 次骰子可得到的不同点数序列的数量。&#xA;假如两个序列中至少存在一个元素不同，就认为这两个序列是不同的。由于答案可能很大，所以请返回 模 10^9 + 7 之后的结果。&#xA;示例 1：&#xA;输入：n = 2, rollMax = [1,1,2,2,2,3] 输出：34 解释：我们掷 2 次骰子，如果没有约束的话，共有 6 * 6 = 36 种可能的组合。但是根据 rollMax 数组，数字 1 和 2 最多连续出现一次，所以不会出现序列 (1,1) 和 (2,2)。因此，最终答案是 36-2 = 34。 示例 2：&#xA;输入：n = 2, rollMax = [1,1,1,1,1,1] 输出：30 示例 3：</description>
+    </item>
+    <item>
+      <title>464.Can I Win (Medium)</title>
+      <link>http://localhost:1313/posts/leet/464.can-i-win/</link>
+      <pubDate>Thu, 02 Mar 2023 17:55:10 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/464.can-i-win/</guid>
+      <description>Description 464. Can I Win (Medium)&#xA;In the &amp;ldquo;100 game&amp;rdquo; two players take turns adding, to a running total, any integer from 1 to 10. The player who first causes the running total to reach or exceed 100 wins.&#xA;What if we change the game so that players cannot re-use integers?&#xA;For example, two players might take turns drawing from a common pool of numbers from 1 to 15 without replacement until they reach a total &amp;gt;= 100.</description>
+    </item>
+    <item>
+      <title>464.我能赢吗 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/464.can-i-win.zh/</link>
+      <pubDate>Thu, 02 Mar 2023 16:56:06 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/464.can-i-win.zh/</guid>
+      <description>问题描述 464. 我能赢吗 (Medium)&#xA;在 &amp;ldquo;100 game&amp;rdquo; 这个游戏中，两名玩家轮流选择从 1 到 10 的任意整数，累计整数和，先使得累计整数和 达到或超过 100 的玩家，即为胜者。&#xA;如果我们将游戏规则改为 “玩家 不能 重复使用整数” 呢？&#xA;例如，两个玩家可以轮流从公共整数池中抽取从 1 到 15 的整数（不放回），直到累计整数和 &amp;gt;= 100。&#xA;给定两个整数 maxChoosableInteger （整数池中可选择的最大数）和 desiredTotal（累计和），若先出手的玩家能稳赢则返回 true ，否则返回 false 。假设两位玩家游戏时都表现 最佳 。&#xA;示例 1：&#xA;输入：maxChoosableInteger = 10, desiredTotal = 11 输出：false 解释： 无论第一个玩家选择哪个整数，他都会失败。 第一个玩家可以选择从 1 到 10 的整数。 如果第一个玩家选择 1，那么第二个玩家只能选择从 2 到 10 的整数。 第二个玩家可以通过选择整数 10（那么累积和为 11 &amp;gt;= desiredTotal），从而取得胜利. 同样地，第一个玩家选择任意其他整数，第二个玩家都会赢。 示例 2:&#xA;输入：maxChoosableInteger = 10, desiredTotal = 0 输出：true 示例 3:</description>
+    </item>
+    <item>
+      <title>403.frog jump</title>
+      <link>http://localhost:1313/posts/leet/403.frog-jump/</link>
+      <pubDate>Wed, 01 Mar 2023 15:08:18 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/403.frog-jump/</guid>
+      <description>Description 403. Frog Jump (Hard)&#xA;A frog is crossing a river. The river is divided into some number of units, and at each unit, there may or may not exist a stone. The frog can jump on a stone, but it must not jump into the water.&#xA;Given a list of stones&amp;rsquo; positions (in units) in sorted ascending order, determine if the frog can cross the river by landing on the last stone.</description>
+    </item>
+    <item>
+      <title>403.青蛙过河</title>
+      <link>http://localhost:1313/posts/leet/403.frog-jump.zh/</link>
+      <pubDate>Wed, 01 Mar 2023 15:08:15 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/403.frog-jump.zh/</guid>
+      <description>问题描述 403. 青蛙过河 (Hard)&#xA;一只青蛙想要过河。 假定河流被等分为若干个单元格，并且在每一个单元格内都有可能放有一块石子（也有可能没有）。 青蛙可以跳上石子，但是不可以跳入水中。&#xA;给你石子的位置列表 stones（用单元格序号 升序 表示）， 请判定青蛙能否成功过河（即能否在最后一步跳至最后一块石子上）。开始时， 青蛙默认已站在第一块石子上，并可以假定它第一步只能跳跃 1 个单位（即只能从单元格 1 跳至单元格 2 ）。&#xA;如果青蛙上一步跳跃了 k 个单位，那么它接下来的跳跃距离只能选择为 k - 1、 k 或 k + 1 个单位。 另请注意，青蛙只能向前方（终点的方向）跳跃。&#xA;示例 1：&#xA;输入：stones = [0,1,3,5,6,8,12,17] 输出：true 解释：青蛙可以成功过河，按照如下方案跳跃：跳 1 个单位到第 2 块石子, 然后跳 2 个单位到第 3 块石子, 接着 跳 2 个单位到第 4 块石子, 然后跳 3 个单位到第 6 块石子, 跳 4 个单位到第 7 块石子, 最后，跳 5 个单位到第 8 个石子（即最后一块石子）。 示例 2：</description>
+    </item>
+    <item>
+      <title>1140.stone game ii</title>
+      <link>http://localhost:1313/posts/leet/1140.stone-game-ii/</link>
+      <pubDate>Mon, 27 Feb 2023 16:02:01 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1140.stone-game-ii/</guid>
+      <description>Description 1140. Stone Game II (Medium)&#xA;Alice and Bob continue their games with piles of stones. There are a number of piles arranged in a row, and each pile has a positive integer number of stones piles[i]. The objective of the game is to end with the most stones.&#xA;Alice and Bob take turns, with Alice starting first. Initially, M = 1.&#xA;On each player&amp;rsquo;s turn, that player can take all the stones in the first X remaining piles, where 1 &amp;lt;= X &amp;lt;= 2M.</description>
+    </item>
+    <item>
+      <title>1140.石子游戏 II</title>
+      <link>http://localhost:1313/posts/leet/1140.stone-game-ii.zh/</link>
+      <pubDate>Mon, 27 Feb 2023 16:01:27 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1140.stone-game-ii.zh/</guid>
+      <description>问题描述 1140. 石子游戏 II (Medium)&#xA;爱丽丝和鲍勃继续他们的石子游戏。许多堆石子 排成一行，每堆都有正整数颗石子 piles[i]。游戏以谁手中的石子最多来决出胜负。&#xA;爱丽丝和鲍勃轮流进行，爱丽丝先开始。最初， M = 1。&#xA;在每个玩家的回合中，该玩家可以拿走剩下的 前 X 堆的所有石子，其中 1 &amp;lt;= X &amp;lt;= 2M。然后，令 M = max(M, X)。&#xA;游戏一直持续到所有石子都被拿走。&#xA;假设爱丽丝和鲍勃都发挥出最佳水平，返回爱丽丝可以得到的最大数量的石头。&#xA;示例 1：&#xA;输入：piles = [2,7,9,4,4] 输出：10 解释：如果一开始Alice取了一堆，Bob取了两堆，然后Alice再取两堆。爱丽丝可以得到2 + 4 + 4 = 10堆。如果Alice一开始拿走了两堆，那么Bob可以拿走剩下的三堆。在这种情况下，Alice得到2 + 7 = 9堆。返回10，因为它更大。 示例 2:&#xA;输入：piles = [1,2,3,4,5,100] 输出：104 提示：&#xA;1 &amp;lt;= piles.length &amp;lt;= 100 1 &amp;lt;= piles[i] &amp;lt;= 10⁴ 解题思路 首先这里要明确发挥最佳水平的含义： 如果自己拿了前x块石子之后，对方所能拿到的石子最少，这就是博弈中的发挥最佳水平，对应到dfs，明白了这一点就能写出递归和记忆化搜索，注意这里还需要用到后缀数组。&#xA;写出记忆化搜索之后可以改写成动态规划。&#xA;代码 记忆化搜索 class Solution { public: int dfs(int idx_start, int M, vector&amp;lt;int&amp;gt; &amp;amp;postfix, int n, vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; &amp;amp;cach) { if (idx_start &amp;gt;= n) return 0; int minnum = 100001; if (cach[idx_start][M] &amp;gt;= 0) { return cach[idx_start][M]; } for (int i = idx_start + 1; i &amp;lt;= idx_start + 2 * M &amp;amp;&amp;amp; i &amp;lt;= n; i++) { // i表示下一个人拿石子的开始位置，所以i至少为idx_start+1 int tmp = dfs(i, std::max(i - idx_start, M), postfix, n, cach); if (minnum &amp;gt; tmp) { minnum = tmp; } } cach[idx_start][M] = postfix[idx_start] - minnum; return cach[idx_start][M]; } int stoneGameII(vector&amp;lt;int&amp;gt;&amp;amp; piles) { int n = piles.</description>
+    </item>
+    <item>
+      <title>312.戳气球</title>
+      <link>http://localhost:1313/posts/leet/312.burst-balloons.zh/</link>
+      <pubDate>Fri, 24 Feb 2023 09:26:08 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/312.burst-balloons.zh/</guid>
+      <description>问题描述 312. 戳气球 (Hard)&#xA;有 n 个气球，编号为 0 到 n - 1，每个气球上都标有一个数字，这些数字存在数组 nums 中。&#xA;现在要求你戳破所有的气球。戳破第 i 个气球，你可以获得 nums[i - 1] * nums[i] * nums[i + 1] 枚硬币。 这里的 i - 1 和 i + 1 代表和 i 相邻的两个气球的序号。如果 i - 1 或 i + 1 超出了数组的边界，那么就当它是一个数字为 1 的气球。&#xA;求所能获得硬币的最大数量。&#xA;示例 1：&#xA;输入：nums = [3,1,5,8] 输出：167 解释： nums = [3,1,5,8] --&amp;gt; [3,5,8] --&amp;gt; [3,8] --&amp;gt; [8] --&amp;gt; [] coins = 3*1*5 + 3*5*8 + 1*3*8 + 1*8*1 = 167 示例 2：</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pt on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/pt/</link>
+    <description>Recent content in Pt on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 31 Dec 2023 15:38:45 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/pt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>简单的 GPW 发种教程</title>
+      <link>http://localhost:1313/posts/blog/gpw-upload-tutorial.zh/</link>
+      <pubDate>Sun, 31 Dec 2023 15:38:45 +0800</pubDate>
+      <guid>http://localhost:1313/posts/blog/gpw-upload-tutorial.zh/</guid>
+      <description>简介 主要使用基于 Debian 的 VPS 进行发种，流程上与纯粹的 Windows 平台发种略有不同，需要依赖命令行工具进行处理。&#xA;mediainfo 执行 sudo apt install mediainfo 即可安装 mediainfo，执行 mediainfo video_name 即可生成对应的 mediainfo。&#xA;可以利用 &amp;gt; 将输出重定向到指定文件。&#xA;视频截图 海豹要求三张原始分辨率的视频截图，我们可以利用 ffmpeg 来抓取截图。&#xA;执行 sudo apt install ffmpeg 即可安装 ffmpeg。&#xA;通过执行 ffmpeg -ss 00:08:06 -i $video_file -vframes 1 -f image2 -y test1.png 即可生成原始分辨率的 png 截图，其中 $video_file 要替换成对应的文件名。&#xA;生成种子 执行 sudo apt install mktorrent 安装 mktorrent，执行 mktorrent&#xA;脚本 将 mediainfo 和 视频截图整合成了一个简单的 bash 脚本：&#xA;#!/bin/bash video_file=&amp;#34;&amp;#34; # 遍历当前目录下所有 .</description>
+    </item>
+    <item>
+      <title>简单的 GPW 发种教程</title>
+      <link>http://localhost:1313/posts/blog/vscode-leetcode-cookie/</link>
+      <pubDate>Sun, 31 Dec 2023 15:38:45 +0800</pubDate>
+      <guid>http://localhost:1313/posts/blog/vscode-leetcode-cookie/</guid>
+      <description>简介 主要使用基于 Debian 的 VPS 进行发种，流程上与纯粹的 Windows 平台发种略有不同，需要依赖命令行工具进行处理。&#xA;mediainfo 执行 sudo apt install mediainfo 即可安装 mediainfo，执行 mediainfo video_name 即可生成对应的 mediainfo。&#xA;可以利用 &amp;gt; 将输出重定向到指定文件。&#xA;视频截图 海豹要求三张原始分辨率的视频截图，我们可以利用 ffmpeg 来抓取截图。&#xA;执行 sudo apt install ffmpeg 即可安装 ffmpeg。&#xA;通过执行 ffmpeg -ss 00:08:06 -i $video_file -vframes 1 -f image2 -y test1.png 即可生成原始分辨率的 png 截图，其中 $video_file 要替换成对应的文件名。&#xA;生成种子 执行 sudo apt install mktorrent 安装 mktorrent，执行 mktorrent&#xA;脚本 将 mediainfo 和 视频截图整合成了一个简单的 bash 脚本：&#xA;#!/bin/bash video_file=&amp;#34;&amp;#34; # 遍历当前目录下所有 .</description>
+    </item>
+  </channel>
+</rss>

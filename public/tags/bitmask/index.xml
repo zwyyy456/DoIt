@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bitmask on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/bitmask/</link>
+    <description>Recent content in Bitmask on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Jun 2023 11:43:16 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/bitmask/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1595. Minimum Cost to Connect Two Groups of Points] (Hard)</title>
+      <link>http://localhost:1313/posts/leet/1595.minimum-cost-to-connect-two-groups-of-points/</link>
+      <pubDate>Wed, 21 Jun 2023 11:43:16 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1595.minimum-cost-to-connect-two-groups-of-points/</guid>
+      <description>Description 1595. Minimum Cost to Connect Two Groups of Points (Hard)&#xA;Solution Dynamic Programming + State Compression&#xA;We use a binary number $j$ to represent the set of chosen elements from the second group. $dp[i][j]$ denotes the minimum cost of connecting the first $i$ elements from the first group and the set of elements $j$ from the second group.&#xA;To establish the recurrence relation, we consider the elements from the first group.</description>
+    </item>
+    <item>
+      <title>1595. 连通两组点的最小成本 (Hard)</title>
+      <link>http://localhost:1313/posts/leet/1595.minimum-cost-to-connect-two-groups-of-points.zh/</link>
+      <pubDate>Wed, 21 Jun 2023 11:43:10 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1595.minimum-cost-to-connect-two-groups-of-points.zh/</guid>
+      <description>问题描述 1595. 连通两组点的最小成本 (Hard)&#xA;给你两组点，其中第一组中有 size₁ 个点，第二组中有 size₂ 个点，且 size₁ &amp;gt;= size₂ 。&#xA;任意两点间的连接成本 cost 由大小为 size₁ x size₂ 矩阵给出，其中 cost[i][j] 是第一组中的点 i 和第二组中的点 j 的连接成本。 如果两个组中的每个点都与另一组中的一个或多个点连接，则称这两组点是 连通的。 换言之，第一组中的每个点必须至少与第二组中的一个点连接，且第二组中的每个点必须至少与第一 组中的一个点连接。&#xA;返回连通两组点所需的最小成本。&#xA;示例 1：&#xA;输入：cost = [[15, 96], [36, 2]] 输出：17 解释：连通两组点的最佳方法是： 1--A 2--B 总成本为 17 。 示例 2：&#xA;输入：cost = [[1, 3, 5], [4, 1, 1], [1, 5, 3]] 输出：4 解释：连通两组点的最佳方法是： 1--A 2--B 2--C 3--A 最小成本为 4 。 请注意，虽然有多个点连接到第一组中的点 2 和第二组中的点 A ，但由于题目并不限制连接点的数目，所以只需 要关心最低总成本。 示例 3：</description>
+    </item>
+    <item>
+      <title>1494. Parallel Courses II (Hard)</title>
+      <link>http://localhost:1313/posts/leet/1494.parallel-courses-ii/</link>
+      <pubDate>Fri, 16 Jun 2023 23:54:29 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1494.parallel-courses-ii/</guid>
+      <description>Description 1494. Parallel Courses II (Hard)&#xA;Solution This problem readily brings to mind the concept of topological sorting, followed by a greedy approach. However, this approach is erroneous! In essence, this problem is NP-Hard and can only be solved through brute force.&#xA;Let&amp;rsquo;s consider the application of state-compressed dynamic programming (DP). The subproblems are relatively straightforward to identify. We start by choosing $1, 2$, followed by selecting $3, 4, 5 $(meeting the prerequisites).</description>
+    </item>
+    <item>
+      <title>1494. 并行课程 II (Hard)</title>
+      <link>http://localhost:1313/posts/leet/1494.parallel-courses-ii.zh/</link>
+      <pubDate>Fri, 16 Jun 2023 23:54:23 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1494.parallel-courses-ii.zh/</guid>
+      <description>问题描述 1494. 并行课程 II (Hard)&#xA;给你一个整数 n 表示某所大学里课程的数目，编号为 1 到 n ，数组 relations 中， relations[i] = [xᵢ, yᵢ] 表示一个先修课的关系，也就是课程 xᵢ 必须在课程 yᵢ 之前上。同时你还有一个整数 k 。&#xA;在一个学期中，你 最多 可以同时上 k 门课，前提是这些课的先修课在之前的学期里已经上过了。&#xA;请你返回上完所有课最少需要多少个学期。题目保证一定存在一种上完所有课的方式。&#xA;示例 1：&#xA;输入：n = 4, relations = [[2,1],[3,1],[1,4]], k = 2 输出：3 解释：上图展示了题目输入的图。在第一个学期中，我们可以上课程 2 和课程 3 。然后第二个学期上课程 1 ， 第三个学期上课程 4 。 示例 2：&#xA;输入：n = 5, relations = [[2,1],[3,1],[4,1],[1,5]], k = 2 输出：4 解释：上图展示了题目输入的图。一个最优方案是：第一学期上课程 2 和 3，第二学期上课程 4 ，第三学期上课 程 1 ，第四学期上课程 5 。 示例 3：</description>
+    </item>
+    <item>
+      <title>464.Can I Win (Medium)</title>
+      <link>http://localhost:1313/posts/leet/464.can-i-win/</link>
+      <pubDate>Thu, 02 Mar 2023 17:55:10 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/464.can-i-win/</guid>
+      <description>Description 464. Can I Win (Medium)&#xA;In the &amp;ldquo;100 game&amp;rdquo; two players take turns adding, to a running total, any integer from 1 to 10. The player who first causes the running total to reach or exceed 100 wins.&#xA;What if we change the game so that players cannot re-use integers?&#xA;For example, two players might take turns drawing from a common pool of numbers from 1 to 15 without replacement until they reach a total &amp;gt;= 100.</description>
+    </item>
+    <item>
+      <title>464.我能赢吗 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/464.can-i-win.zh/</link>
+      <pubDate>Thu, 02 Mar 2023 16:56:06 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/464.can-i-win.zh/</guid>
+      <description>问题描述 464. 我能赢吗 (Medium)&#xA;在 &amp;ldquo;100 game&amp;rdquo; 这个游戏中，两名玩家轮流选择从 1 到 10 的任意整数，累计整数和，先使得累计整数和 达到或超过 100 的玩家，即为胜者。&#xA;如果我们将游戏规则改为 “玩家 不能 重复使用整数” 呢？&#xA;例如，两个玩家可以轮流从公共整数池中抽取从 1 到 15 的整数（不放回），直到累计整数和 &amp;gt;= 100。&#xA;给定两个整数 maxChoosableInteger （整数池中可选择的最大数）和 desiredTotal（累计和），若先出手的玩家能稳赢则返回 true ，否则返回 false 。假设两位玩家游戏时都表现 最佳 。&#xA;示例 1：&#xA;输入：maxChoosableInteger = 10, desiredTotal = 11 输出：false 解释： 无论第一个玩家选择哪个整数，他都会失败。 第一个玩家可以选择从 1 到 10 的整数。 如果第一个玩家选择 1，那么第二个玩家只能选择从 2 到 10 的整数。 第二个玩家可以通过选择整数 10（那么累积和为 11 &amp;gt;= desiredTotal），从而取得胜利. 同样地，第一个玩家选择任意其他整数，第二个玩家都会赢。 示例 2:&#xA;输入：maxChoosableInteger = 10, desiredTotal = 0 输出：true 示例 3:</description>
+    </item>
+    <item>
+      <title>847.shortest path visiting all nodes</title>
+      <link>http://localhost:1313/posts/leet/847.shortest-path-visiting-all-nodes/</link>
+      <pubDate>Mon, 02 Jan 2023 20:38:49 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/847.shortest-path-visiting-all-nodes/</guid>
+      <description>Description 847.shortest-path-visiting-all-nodes&#xA;Solution solution 1: bitmask + bfs For example, $(0101)_2$ means the nodes numbered 0 and 2 have been accessed, while nodes nubmered 1 and 3 have not been accessed.&#xA;bfs;&#xA;Array seen[x][mask_x] means whether node x and path mask_x have been accessed.&#xA;Code class Solution { public: int shortestPathLength(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; &amp;amp;graph) { int n = graph.size(); queue&amp;lt;tuple&amp;lt;int, int, int&amp;gt;&amp;gt; q; vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; seen(n, vector&amp;lt;int&amp;gt;(1 &amp;lt;&amp;lt; n)); for (int i = 0; i &amp;lt; n; i++) { q.</description>
+    </item>
+    <item>
+      <title>847.访问所有节点的最短路径</title>
+      <link>http://localhost:1313/posts/leet/847.shortest-path-visiting-all-nodes.zh/</link>
+      <pubDate>Mon, 02 Jan 2023 20:38:45 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/847.shortest-path-visiting-all-nodes.zh/</guid>
+      <description>问题描述 847.访问所有节点的最短路径&#xA;解题思路 方法一:状态压缩+bfs 状态压缩 由于本题中，n只有12，且状态只有访问和未访问两种，因此可以使用二进制表示法，利用int的低12位来代指点是否被访问过;&#xA;例如$(000&amp;hellip;0101)_2$表示编号为0和编号为2的节点已经被访问过，而编号为1和3的节点还没有被访问过;&#xA;假设mask存放了当前一系列点的访问状态，假如要检查编号为x的点是否被访问过，可以使用位运算a = (mask &amp;gt;&amp;gt; x) &amp;amp; 1来检查，如果a为1，那么访问过，为0表示未访问;&#xA;假设如果表示在x未被访问的情况下，要去访问x，那么mask_v = mask | (1 &amp;lt;&amp;lt; x)，其中mask_v表示更新后的状态二进制数。&#xA;代码 class Solution { public: int shortestPathLength(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; &amp;amp;graph) { int n = graph.size(); queue&amp;lt;tuple&amp;lt;int, int, int&amp;gt;&amp;gt; q; vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; seen(n, vector&amp;lt;int&amp;gt;(1 &amp;lt;&amp;lt; n)); for (int i = 0; i &amp;lt; n; i++) { q.emplace(i, 1 &amp;lt;&amp;lt; i, 0); // 索引、二进制掩码、距离 seen[i][1 &amp;lt;&amp;lt; i] = 1; } int ans = 0; while (!</description>
+    </item>
+  </channel>
+</rss>

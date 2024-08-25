@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Math on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/math/</link>
+    <description>Recent content in Math on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 17 Oct 2023 11:10:48 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/math/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1201. Ugly Number III (Medium)</title>
+      <link>http://localhost:1313/posts/leet/1201.ugly-number-iii/</link>
+      <pubDate>Tue, 17 Oct 2023 11:10:48 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1201.ugly-number-iii/</guid>
+      <description>Description 1201. Ugly Number III (Medium)&#xA;An ugly number is a positive integer that is divisible by a, b, or c.&#xA;Given four integers n, a, b, and c, return the nᵗʰ ugly number.&#xA;Example 1:&#xA;Input: n = 3, a = 2, b = 3, c = 5 Output: 4 Explanation: The ugly numbers are 2, 3, 4, 5, 6, 8, 9, 10... The 3ʳᵈ is 4. Example 2:</description>
+    </item>
+    <item>
+      <title>1201. 丑数 III (Medium)</title>
+      <link>http://localhost:1313/posts/leet/1201.ugly-number-iii.zh/</link>
+      <pubDate>Tue, 17 Oct 2023 11:10:46 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1201.ugly-number-iii.zh/</guid>
+      <description>问题描述 1201. 丑数 III (Medium)&#xA;给你四个整数： n 、 a 、 b 、 c ，请你设计一个算法来找出第 n 个丑数。&#xA;丑数是可以被 a 或 b 或 c 整除的 正整数 。&#xA;示例 1：&#xA;输入：n = 3, a = 2, b = 3, c = 5 输出：4 解释：丑数序列为 2, 3, 4, 5, 6, 8, 9, 10... 其中第 3 个是 4。 示例 2：&#xA;输入：n = 4, a = 2, b = 3, c = 4 输出：6 解释：丑数序列为 2, 3, 4, 6, 8, 9, 10, 12.</description>
+    </item>
+    <item>
+      <title>2652. Sum Multiples (Easy)</title>
+      <link>http://localhost:1313/posts/leet/2652.sum-multiples/</link>
+      <pubDate>Tue, 17 Oct 2023 10:59:32 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2652.sum-multiples/</guid>
+      <description>Description 2652. Sum Multiples (Easy)&#xA;Given a positive integer n, find the sum of all integers in the range [1, n] inclusive that are divisible by 3, 5, or 7.&#xA;Return an integer denoting the sum of all numbers in the given range satisfying the constraint.&#xA;Example 1:&#xA;Input: n = 7 Output: 21 Explanation: Numbers in the range [1, 7] that are divisible by 3, 5, or 7 are 3, 5, 6, 7.</description>
+    </item>
+    <item>
+      <title>2652. 倍数求和 (Easy)</title>
+      <link>http://localhost:1313/posts/leet/2652.sum-multiples.zh/</link>
+      <pubDate>Tue, 17 Oct 2023 10:59:30 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2652.sum-multiples.zh/</guid>
+      <description>问题描述 2652. 倍数求和 (Easy) 给你一个正整数 n ，请你计算在 [1，n] 范围内能被 3、 5、 7 整除的所有整数之和。&#xA;返回一个整数，用于表示给定范围内所有满足约束条件的数字之和。&#xA;示例 1：&#xA;输入：n = 7 输出：21 解释：在 [1, 7] 范围内能被 3、5、7 整除的所有整数分别是 3、5、6、7 。数字之和为 21 。 示例 2：&#xA;输入：n = 10 输出：40 解释：在 [1, 10] 范围内能被 3、5、7 整除的所有整数分别是 3、5、6、7、9、10 。数字之和为 40 。 示例 3：&#xA;输入：n = 9 输出：30 解释：在 [1, 9] 范围内能被 3、5、7 整除的所有整数分别是 3、5、6、7、9 。数字之和为 30 。 提示：&#xA;1 &amp;lt;= n &amp;lt;= 10³ 解题思路 这题由于数据范围给的小，暴力就能过，但是也有非暴力的方法。</description>
+    </item>
+    <item>
+      <title>2718. Sum of Matrix After Queries (Medium)</title>
+      <link>http://localhost:1313/posts/leet/2718.sum-of-matrix-after-queries/</link>
+      <pubDate>Tue, 06 Jun 2023 13:44:30 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2718.sum-of-matrix-after-queries/</guid>
+      <description>Description 2718. Sum of Matrix After Queries (Medium) You are given an integer n and a 0-indexed 2D array queries where queries[i] = [typeᵢ, indexᵢ, valᵢ].&#xA;Initially, there is a 0-indexed n x n matrix filled with 0&amp;rsquo;s. For each query, you must apply one of the following changes:&#xA;if typeᵢ == 0, set the values in the row with indexᵢ to valᵢ, overwriting any previous values. if typeᵢ == 1, set the values in the column with indexᵢ to valᵢ, overwriting any previous values.</description>
+    </item>
+    <item>
+      <title>2718. 查询后矩阵的和 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/2718.sum-of-matrix-after-queries.zh/</link>
+      <pubDate>Tue, 06 Jun 2023 13:44:09 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2718.sum-of-matrix-after-queries.zh/</guid>
+      <description>问题描述 2718. 查询后矩阵的和 (Medium) 给你一个整数 n 和一个下标从 0 开始的 二维数组 que ries ，其中 queries[i] = [typeᵢ, indexᵢ, valᵢ] 。&#xA;一开始，给你一个下标从 0 开始的 n x n 矩阵，所有元素均 为 0 。每一个查询，你需要执行以下操作之一：&#xA;如果 typeᵢ == 0 ，将第 indexᵢ 行的元素全部修改为 valᵢ ，覆盖任何之前的值。 如果 typeᵢ == 1 ，将第 indexᵢ 列的元素全部修改为 valᵢ ，覆盖任何之前的值。 请你执行完所有查询以后，返回矩阵中所有整数的和。&#xA;示例 1：&#xA;输入：n = 3, queries = [[0,0,1],[1,2,2],[0,2,3],[1,0,4]] 输出：23 解释：上图展示了每个查询以后矩阵的值。所有操作执行完以后，矩 阵元素之和为 23 。 示例 2：&#xA;输入：n = 3, queries = [[0,0,4],[0,1,2],[1,0,1],[0,2,3],[1,2 ,1]] 输出：17 解释：上图展示了每一个查询操作之后的矩阵。所有操作执行完以后 ，矩阵元素之和为 17 。 提示：</description>
+    </item>
+    <item>
+      <title>2681.power of Heroes</title>
+      <link>http://localhost:1313/posts/leet/2681.power-of-heroes/</link>
+      <pubDate>Mon, 29 May 2023 13:23:47 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2681.power-of-heroes/</guid>
+      <description>Description 2681. Power of Heroes (Hard) You are given a 0-indexed integer array nums representing the strength of some heroes. The power of a group of heroes is defined as follows:&#xA;Let i₀, i₁, &amp;hellip; , iₖ be the indices of the heroes in a group. Then, the power of this group is max(nums[i₀], nums[i₁], ... ,nums[iₖ])² * min(nums[i₀], nums[i₁], ... ,nums[iₖ]). Return the sum of the power of all non-empty groups of heroes possible.</description>
+    </item>
+    <item>
+      <title>2681. 英雄的力量 (Hard)</title>
+      <link>http://localhost:1313/posts/leet/2681.power-of-heroes.zh/</link>
+      <pubDate>Mon, 29 May 2023 13:23:43 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2681.power-of-heroes.zh/</guid>
+      <description>问题描述 2681. 英雄的力量 (Hard) 给你一个下标从 0 开始的整数数组 nums ，它表示英雄的能 力值。如果我们选出一部分英雄，这组英雄的 力量 定义为：&#xA;i₀ ， i₁ ，&amp;hellip; iₖ 表示这组英雄在数组中的下标。那么这组英雄的力量为 max(nums[i₀],nums[i₁] ... nums[iₖ])² * min(nums[i₀],nums[i₁] ... nums[iₖ]) 。 请你返回所有可能的 非空 英雄组的 力量 之和。由于答案 可能非常大，请你将结果对 10⁹ + 7 取余。&#xA;示例 1：&#xA;输入：nums = [2,1,4] 输出：141 解释： 第 1 组：[2] 的力量为 2² * 2 = 8 。 第 2 组：[1] 的力量为 1² * 1 = 1 。 第 3 组：[4] 的力量为 4² * 4 = 64 。 第 4 组：[2,1] 的力量为 2² * 1 = 4 。 第 5 组：[2,4] 的力量为 4² * 2 = 32 。 第 6 组：[1,4] 的力量为 4² * 1 = 16 。 第 7 组：[2,1,4] 的力量为 4² * 1 = 16 。 所有英雄组的力量之和为 8 + 1 + 64 + 4 + 32 + 16 + 16 = 141 。 示例 2：</description>
+    </item>
+    <item>
+      <title>2584.分割数组使乘积互质 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/2584.split-the-array-to-make-coprime-products.zh/</link>
+      <pubDate>Mon, 06 Mar 2023 18:56:18 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2584.split-the-array-to-make-coprime-products.zh/</guid>
+      <description>问题描述 2584. 分割数组使乘积互质 (Medium)&#xA;给你一个长度为 n 的整数数组 nums ，下标从 0 开始。&#xA;如果在下标 i 处 分割 数组，其中 0 &amp;lt;= i &amp;lt;= n - 2 ，使前 i + 1 个元素的乘积和剩余元素的乘积互质，则认为该分割 有效 。&#xA;例如，如果 nums = [2, 3, 3] ，那么在下标 i = 0 处的分割有效，因为 2 和 9 互质，而在下标 i = 1 处的分割无效，因为 6 和 3 不互质。在下标 i = 2 处的分割也无效，因为 i == n - 1 。 返回可以有效分割数组的最小下标 i ，如果不存在有效分割，则返回 -1 。&#xA;当且仅当 gcd(val1, val2) == 1 成立时， val1 和 val2 这两个值才是互质的，其中 gcd(val1, val2) 表示 val1 和 val2 的最大公约数。</description>
+    </item>
+    <item>
+      <title>质因数分解</title>
+      <link>http://localhost:1313/posts/tech/prime_factorization.zh/</link>
+      <pubDate>Mon, 06 Mar 2023 14:32:15 +0800</pubDate>
+      <guid>http://localhost:1313/posts/tech/prime_factorization.zh/</guid>
+      <description>朴素算法 从$[2, \sqrt(N)]$进行遍历&#xA;vector&amp;lt;int&amp;gt; GetFactor(int N) { vector&amp;lt;int&amp;gt; res; for (int i = 2; i * i &amp;lt;= N; ++i) { if (N % i == 0) { while (N % i == 0) { N /= i; } res.push_back(i); } } if (N != 1) { res.push_back(N); } return res; } 朴素算法的证明 首先证明元素均为 $N$ 的素因数：因为当且仅当 N % i == 0 满足时，result 发生变化：储存 $i$，说明此时 $i$ 能整除 $\frac{N}{A}$，说明了存在一个数 $p$ 使得 $pi=\frac{N}{A}$，即 $piA = N$（其中，$A$ 为 $N$ 自身发生变化后遇到 $i$ 时所除的数。我们注意到 result 若在 push $i$ 之前就已经有数了，为 $R_1,,R_2,,\ldots,,R_n$，那么有 N $=\frac{N}{R_1^{q_1}\cdot R_2^{q_2}\cdot \cdots \cdot R_n^{q_n}}$，被除的乘积即为 $A$）。所以 $i$ 为 $N$ 的因子。</description>
+    </item>
+    <item>
+      <title>1238.circular permutation in binary representation</title>
+      <link>http://localhost:1313/posts/leet/1238.circular-permutation-in-binary-representation/</link>
+      <pubDate>Thu, 23 Feb 2023 15:56:04 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1238.circular-permutation-in-binary-representation/</guid>
+      <description>Description 1238. Circular Permutation in Binary Representation (Medium)&#xA;Given 2 integers n and start. Your task is return any permutation p of (0,1,2.....,2^n -1) such that :&#xA;p[0] = start p[i] and p[i+1] differ by only one bit in their binary representation. p[0] and p[2^n -1] must also differ by only one bit in their binary representation. Example 1:&#xA;Input: n = 2, start = 3 Output: [3,2,0,1] Explanation: The binary representation of the permutation is (11,10,00,01).</description>
+    </item>
+    <item>
+      <title>1238.循环码排列</title>
+      <link>http://localhost:1313/posts/leet/1238.circular-permutation-in-binary-representation.zh/</link>
+      <pubDate>Thu, 23 Feb 2023 15:56:01 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1238.circular-permutation-in-binary-representation.zh/</guid>
+      <description>问题描述 1238. 循环码排列 (Medium)&#xA;给你两个整数 n 和 start。你的任务是返回任意 (0,1,2,,...,2^n-1) 的排列 p，并且满足：&#xA;p[0] = start p[i] 和 p[i+1] 的二进制表示形式只有一位不同 p[0] 和 p[2^n -1] 的二进制表示形式也只有一位不同 示例 1：&#xA;输入：n = 2, start = 3 输出：[3,2,0,1] 解释：这个排列的二进制表示是 (11,10,00,01) 所有的相邻元素都有一位是不同的，另一个有效的排列是 [3,1,0,2] 示例 2：&#xA;输出：n = 3, start = 2 输出：[2,6,7,5,4,0,1,3] 解释：这个排列的二进制表示是 (010,110,111,101,100,000,001,011) 提示：&#xA;1 &amp;lt;= n &amp;lt;= 16 0 &amp;lt;= start &amp;lt; 2^n 解题思路 参照89.格雷编码，只需要将得到的结果再与start按位异或就好了，因为x ^ 0 = x对任意x恒成立。&#xA;Code class Solution { public: vector&amp;lt;int&amp;gt; circularPermutation(int n, int start) { vector&amp;lt;int&amp;gt; res(1 &amp;lt;&amp;lt; n, 0); for (int i = 0; i &amp;lt; res.</description>
+    </item>
+    <item>
+      <title>89.gray code</title>
+      <link>http://localhost:1313/posts/leet/89.gray-code/</link>
+      <pubDate>Thu, 23 Feb 2023 15:53:42 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/89.gray-code/</guid>
+      <description>Description 89. Gray Code (Medium)&#xA;An n-bit gray code sequence is a sequence of 2ⁿ integers where:&#xA;Every integer is in the inclusive range [0, 2ⁿ - 1], The first integer is 0, An integer appears no more than once in the sequence, The binary representation of every pair of adjacent integers differs by exactly one bit, and The binary representation of the first and last integers differs by exactly one bit.</description>
+    </item>
+    <item>
+      <title>89.格雷编码</title>
+      <link>http://localhost:1313/posts/leet/89.gray-code.zh/</link>
+      <pubDate>Thu, 23 Feb 2023 15:51:27 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/89.gray-code.zh/</guid>
+      <description>问题描述 89. 格雷编码 (Medium)&#xA;n 位格雷码序列 是一个由 2ⁿ 个整数组成的序列，其中：&#xA;每个整数都在范围 [0, 2ⁿ - 1] 内（含 0 和 2ⁿ - 1） 第一个整数是 0 一个整数在序列中出现 不超过一次 每对 相邻 整数的二进制表示 恰好一位不同 ，且 第一个 和 最后一个 整数的二进制表示 恰好一位不同 给你一个整数 n ，返回任一有效的 n 位格雷码序列 。&#xA;示例 1：&#xA;输入：n = 2 输出：[0,1,3,2] 解释： [0,1,3,2] 的二进制表示是 [00,01,11,10] 。 - 00 和 01 有一位不同 - 01 和 11 有一位不同 - 11 和 10 有一位不同 - 10 和 00 有一位不同 [0,2,3,1] 也是一个有效的格雷码序列，其二进制表示是 [00,10,11,01] 。 - 00 和 10 有一位不同 - 10 和 11 有一位不同 - 11 和 01 有一位不同 - 01 和 00 有一位不同 示例 2：</description>
+    </item>
+    <item>
+      <title>1250.check if it is a good array</title>
+      <link>http://localhost:1313/posts/leet/1250.check-if-it-is-a-good-array/</link>
+      <pubDate>Wed, 15 Feb 2023 14:46:52 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1250.check-if-it-is-a-good-array/</guid>
+      <description>Description 1250.check-if-it-is-a-good-array&#xA;Solution Actually, what we need to determine is whether the maximum common divisor of all elements in the array is 1.&#xA;We can use rolling division to get the maximum common divisor gcd of nums[0] and nums[1], then get the new maximum common divisor gcd of gcd and nums[2]&amp;hellip;&#xA;Code #include &amp;lt;vector&amp;gt; using std::vector; class Solution { public: int gcd(int a, int b) { // b^=a,a^=b,b^=a the same as swap(a, b) while (b ^= (a ^= (b ^= (a %= b)))) ; return a; } bool isGoodArray(vector&amp;lt;int&amp;gt; &amp;amp;nums) { if (nums.</description>
+    </item>
+    <item>
+      <title>1250.检查“好数组”</title>
+      <link>http://localhost:1313/posts/leet/1250.check-if-it-is-a-good-array.zh/</link>
+      <pubDate>Wed, 15 Feb 2023 14:46:39 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1250.check-if-it-is-a-good-array.zh/</guid>
+      <description>问题描述 1250.检查“好数组”&#xA;解题思路 首先，要注意到，本题的要求，其实可以转化为数组中所有元素的最大公因数为1；&#xA;利用辗转相除法，将nums[0]和nums[1]求得的最大公因数num再与nums[2]求最大公因数作为新的num，如果到最后num == 1，返回true，否则返回false。&#xA;代码 class Solution { public: bool isGoodArray(vector&amp;lt;int&amp;gt; &amp;amp;nums) { std::sort(nums.begin(), nums.end()); // 利用哈希表储存不为1的因子，然后遍历，如果最后哈希表为空，return true if (nums[0] == 1) return true; std::unordered_set&amp;lt;int&amp;gt; factor; int root = sqrt(nums[0]); for (int i = 2; i &amp;lt;= root; i++) { if (nums[0] % i == 0) { if (factor.empty()) { factor.insert(i); factor.insert(nums[0] / i); } else { int flag = 0; // 为0说明factor里面没有它的因子 for (auto &amp;amp;num : factor) { if (i % num == 0) { flag = 1; break; } } if (flag == 0) { factor.</description>
+    </item>
+    <item>
+      <title>396.rotate function</title>
+      <link>http://localhost:1313/posts/leet/396.rotate-function/</link>
+      <pubDate>Tue, 06 Dec 2022 19:52:17 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/396.rotate-function/</guid>
+      <description>Description 396. rotate-function&#xA;Solution The key is to find the mathematical laws&#xA;Code class Solution { public: int maxRotateFunction(vector&amp;lt;int&amp;gt;&amp;amp; nums) { vector&amp;lt;int&amp;gt; tmp(2 * nums.size(), 0); vector&amp;lt;int&amp;gt; res(nums.size(), 0); int sum = 0; for (int i = 0; i &amp;lt; nums.size(); i++) { tmp[i] = nums[i]; tmp[i + nums.size()] = nums[i]; res[0] += i * nums[i]; sum += nums[i]; } int max_Fk = res[0]; for (int i = 1; i &amp;lt; nums.</description>
+    </item>
+    <item>
+      <title>396.旋转函数</title>
+      <link>http://localhost:1313/posts/leet/396.rotate-function.zh/</link>
+      <pubDate>Tue, 06 Dec 2022 19:52:12 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/396.rotate-function.zh/</guid>
+      <description>问题描述 396.旋转函数&#xA;解题思路 关键在于找到数学规律&#xA;代码 class Solution { public: int maxRotateFunction(vector&amp;lt;int&amp;gt;&amp;amp; nums) { vector&amp;lt;int&amp;gt; tmp(2 * nums.size(), 0); vector&amp;lt;int&amp;gt; res(nums.size(), 0); int sum = 0; for (int i = 0; i &amp;lt; nums.size(); i++) { tmp[i] = nums[i]; tmp[i + nums.size()] = nums[i]; res[0] += i * nums[i]; sum += nums[i]; } int max_Fk = res[0]; for (int i = 1; i &amp;lt; nums.size(); i++) { res[i] = res[i - 1] + sum - (nums.</description>
+    </item>
+  </channel>
+</rss>

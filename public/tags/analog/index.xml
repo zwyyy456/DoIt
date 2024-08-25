@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Analog on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/analog/</link>
+    <description>Recent content in Analog on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 28 Jul 2023 14:16:04 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/analog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>335. Self Crossing (Hard)</title>
+      <link>http://localhost:1313/posts/leet/335.self-crossing/</link>
+      <pubDate>Fri, 28 Jul 2023 14:16:04 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/335.self-crossing/</guid>
+      <description>Description 335. Self Crossing (Hard)&#xA;Solution We can simulate the movement of the robot and consider the possible collisions with other tracks. For example, when moving north, the robot may intersect with tracks moving west, east, or north. Similarly, when moving west, the robot may collide with tracks moving north, south, or west. We can continue this process for other directions as well.&#xA;For instance, when moving west, we can consider the conditions for collisions with tracks moving north, south, or west.</description>
+    </item>
+    <item>
+      <title>335. 路径交叉 (Hard)</title>
+      <link>http://localhost:1313/posts/leet/335.self-crossing.zh/</link>
+      <pubDate>Fri, 28 Jul 2023 14:15:52 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/335.self-crossing.zh/</guid>
+      <description>问题描述 335. 路径交叉 (Hard)&#xA;给你一个整数数组 distance。&#xA;从 X-Y 平面上的点 (0,0) 开始，先向北移动 distance[0] 米，然后向西移动 distance[1] 米，向南 移动 distance[2] 米，向东移动 distance[3] 米，持续移动。也就是说，每次移动后你的方位会发生逆时针 变化。&#xA;判断你所经过的路径是否相交。如果相交，返回 true ；否则，返回 false 。&#xA;示例 1：&#xA;输入：distance = [2,1,1,2] 输出：true 示例 2：&#xA;输入：distance = [1,2,3,4] 输出：false 示例 3：&#xA;输入：distance = [1,1,1,1] 输出：true 提示：&#xA;1 &amp;lt;= distance.length &amp;lt;= 10⁵ 1 &amp;lt;= distance[i] &amp;lt;= 10⁵ 解题思路 模拟，以向北为例，可能与向西、向东、或者向北的轨迹发生交叉；向西，则可能会与向北、向南、向西的方向发生碰撞；依次类推。&#xA;再以向西为例，分别考虑与向北、向南、向西轨迹发生碰撞时的条件。&#xA;代码 class Solution { public: bool isSelfCrossing(vector&amp;lt;int&amp;gt; &amp;amp;distance) { int n = distance.</description>
+    </item>
+    <item>
+      <title>950. Reveal Cards In Increasing Order (Medium)</title>
+      <link>http://localhost:1313/posts/leet/950.reveal-cards-in-increasing-order/</link>
+      <pubDate>Thu, 20 Jul 2023 10:25:38 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/950.reveal-cards-in-increasing-order/</guid>
+      <description>Description 950. Reveal Cards In Increasing Order (Medium)&#xA;Solution This problem can be solved through direct simulation according to the given instructions. The use of recursion is not necessary. Since the problem involves popping the first element, a double-ended queue (deque) is a suitable data structure to use. The deque will store the indices of elements, and we can proceed with the simulation accordingly.&#xA;Code class Solution { public: vector&amp;lt;int&amp;gt; deckRevealedIncreasing(vector&amp;lt;int&amp;gt;&amp;amp; deck) { sort(deck.</description>
+    </item>
+    <item>
+      <title>950. 按递增顺序显示卡牌 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/950.reveal-cards-in-increasing-order.zh/</link>
+      <pubDate>Thu, 20 Jul 2023 10:25:36 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/950.reveal-cards-in-increasing-order.zh/</guid>
+      <description>问题描述 950. 按递增顺序显示卡牌 (Medium)&#xA;牌组中的每张卡牌都对应有一个唯一的整数。你可以按你想要的顺序对这套卡片进行排序。&#xA;最初，这些卡牌在牌组里是正面朝下的（即，未显示状态）。&#xA;现在，重复执行以下步骤，直到显示所有卡牌为止：&#xA;从牌组顶部抽一张牌，显示它，然后将其从牌组中移出。 如果牌组中仍有牌，则将下一张处于牌组顶部的牌放在牌组的底部。 如果仍有未显示的牌，那么返回步骤 1。否则，停止行动。 返回能以 递增顺序 显示卡牌的牌组顺序。&#xA;答案中的第一张牌被认为处于牌堆顶部。&#xA;示例：&#xA;输入：[17,13,11,2,3,5,7] 输出：[2,13,3,11,5,17,7] 解释： 我们得到的牌组顺序为 [17,13,11,2,3,5,7]（这个顺序不重要），然后将其重新排序。 重新排序后，牌组以 [2,13,3,11,5,17,7] 开始，其中 2 位于牌组的顶部。 我们显示 2，然后将 13 移到底部。牌组现在是 [3,11,5,17,7,13]。 我们显示 3，并将 11 移到底部。牌组现在是 [5,17,7,13,11]。 我们显示 5，然后将 17 移到底部。牌组现在是 [7,13,11,17]。 我们显示 7，并将 13 移到底部。牌组现在是 [11,17,13]。 我们显示 11，然后将 17 移到底部。牌组现在是 [13,17]。 我们展示 13，然后将 17 移到底部。牌组现在是 [17]。 我们显示 17。 由于所有卡片都是按递增顺序排列显示的，所以答案是正确的。 提示：&#xA;1 &amp;lt;= A.length &amp;lt;= 1000 1 &amp;lt;= A[i] &amp;lt;= 10^6 对于所有的 i !</description>
+    </item>
+    <item>
+      <title>2069. Walking Robot Simulation II (Medium)</title>
+      <link>http://localhost:1313/posts/leet/2069.walking-robot-simulation-ii/</link>
+      <pubDate>Wed, 19 Jul 2023 09:57:59 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2069.walking-robot-simulation-ii/</guid>
+      <description>Description 2069. Walking Robot Simulation II (Medium)&#xA;Explanation Robot robot = new Robot(6, 3); // Initialize the grid and the robot at (0, 0) facing East. robot.step(2); // It moves two steps East to (2, 0), and faces East. robot.step(2); // It moves two steps East to (4, 0), and faces East. robot.getPos(); // return [4, 0] robot.getDir(); // return &amp;quot;East&amp;quot; robot.step(2); // It moves one step East to (5, 0), and faces East.</description>
+    </item>
+    <item>
+      <title>2069. 模拟行走机器人 II (Medium)</title>
+      <link>http://localhost:1313/posts/leet/2069.walking-robot-simulation-ii.zh/</link>
+      <pubDate>Wed, 19 Jul 2023 09:57:51 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2069.walking-robot-simulation-ii.zh/</guid>
+      <description>问题描述 2069. 模拟行走机器人 II (Medium)&#xA;给你一个在 XY 平面上的 width x height 的网格图， 左下角 的格子为 (0, 0) ， 右上角 的格子 为 (width - 1, height - 1) 。网格图中相邻格子为四个基本方向之一（ &amp;quot;North&amp;quot;， &amp;quot;East&amp;quot;， &amp;quot;South&amp;quot; 和 &amp;quot;West&amp;quot;）。一个机器人 初始 在格子 (0, 0) ，方向为 &amp;quot;East&amp;quot; 。&#xA;机器人可以根据指令移动指定的 步数 。每一步，它可以执行以下操作。&#xA;沿着当前方向尝试 往前一步 。 如果机器人下一步将到达的格子 超出了边界 ，机器人会 逆时针 转 90 度，然后再尝试往前一步。 如果机器人完成了指令要求的移动步数，它将停止移动并等待下一个指令。&#xA;请你实现 Robot 类：&#xA;Robot(int width, int height) 初始化一个 width x height 的网格图，机器人初始在 (0, 0) ，方向 朝 &amp;quot;East&amp;quot; 。 void step(int num) 给机器人下达前进 num 步的指令。 int[] getPos() 返回机器人当前所处的格子位置，用一个长度为 2 的数组 [x, y] 表示。 String getDir() 返回当前机器人的朝向，为 &amp;quot;North&amp;quot; ， &amp;quot;East&amp;quot; ， &amp;quot;South&amp;quot; 或者 &amp;quot;West&amp;quot; 。 示例 1：</description>
+    </item>
+    <item>
+      <title>2383. Minimum Hours of Training to Win a Competition (Easy)</title>
+      <link>http://localhost:1313/posts/leet/2383.minimum-hours-of-training-to-win-a-competition/</link>
+      <pubDate>Mon, 13 Mar 2023 09:34:42 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2383.minimum-hours-of-training-to-win-a-competition/</guid>
+      <description>Description Minimum Hours of Training to Win a Competition (Easy) You are entering a competition, and are given two positive integers initialEnergy and initialExperience denoting your initial energy and initial experience respectively.&#xA;You are also given two 0-indexed integer arrays energy and experience, both of length n.&#xA;You will face n opponents in order. The energy and experience of the ith opponent is denoted by energy[i] and experience[i] respectively. When you face an opponent, you need to have both strictly greater experience and energy to defeat them and move to the next opponent if available.</description>
+    </item>
+    <item>
+      <title>2383.赢得比赛需要的最少训练时长 (Easy)</title>
+      <link>http://localhost:1313/posts/leet/2383.minimum-hours-of-training-to-win-a-competition.zh/</link>
+      <pubDate>Mon, 13 Mar 2023 09:34:38 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2383.minimum-hours-of-training-to-win-a-competition.zh/</guid>
+      <description>问题描述 2383. 赢得比赛需要的最少训练时长 (Easy)&#xA;你正在参加一场比赛，给你两个 正 整数 initialEnergy 和 initialExperience 分别表示你的初始精力和初始经验。&#xA;另给你两个下标从 0 开始的整数数组 energy 和 experience，长度均为 n 。&#xA;你将会 依次 对上 n 个对手。第 i 个对手的精力和经验分别用 energy[i] 和 experience[i] 表示。当你对上对手时，需要在经验和精力上都 严格 超过对手才能击败他们，然后在可能的情况下继续对上下一个对手。&#xA;击败第 i 个对手会使你的经验 增加 experience[i]，但会将你的精力 减少 energy[i] 。&#xA;在开始比赛前，你可以训练几个小时。每训练一个小时，你可以选择将增加经验增加 1 或者 将精力增加 1 。&#xA;返回击败全部 n 个对手需要训练的 最少 小时数目。&#xA;示例 1：&#xA;输入：initialEnergy = 5, initialExperience = 3, energy = [1,4,3,2], experience = [2,6,3,1] 输出：8 解释：在 6 小时训练后，你可以将精力提高到 11 ，并且再训练 2 个小时将经验提高到 5 。 按以下顺序与对手比赛： - 你的精力与经验都超过第 0 个对手，所以获胜。 精力变为：11 - 1 = 10 ，经验变为：5 + 2 = 7 。 - 你的精力与经验都超过第 1 个对手，所以获胜。 精力变为：10 - 4 = 6 ，经验变为：7 + 6 = 13 。 - 你的精力与经验都超过第 2 个对手，所以获胜。 精力变为：6 - 3 = 3 ，经验变为：13 + 3 = 16 。 - 你的精力与经验都超过第 3 个对手，所以获胜。 精力变为：3 - 2 = 1 ，经验变为：16 + 1 = 17 。 在比赛前进行了 8 小时训练，所以返回 8 。 可以证明不存在更小的答案。 示例 2：</description>
+    </item>
+    <item>
+      <title>1599.Maximum Profit of Operating a Centennial Wheel (Medium)</title>
+      <link>http://localhost:1313/posts/leet/1599.maximum-profit-of-operating-a-centennial-wheel/</link>
+      <pubDate>Mon, 06 Mar 2023 19:35:05 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1599.maximum-profit-of-operating-a-centennial-wheel/</guid>
+      <description>Description 1599. Maximum Profit of Operating a Centennial Wheel (Medium)&#xA;You are the operator of a Centennial Wheel that has four gondolas, and each gondola has room for up to four people. You have the ability to rotate the gondolas counterclockwise, which costs you runningCost dollars.&#xA;You are given an array customers of length n where customers[i] is the number of new customers arriving just before the ith rotation (0-indexed). This means you must rotate the wheel i times before the customers[i] customers arrive.</description>
+    </item>
+    <item>
+      <title>1599.经营摩天轮的最大利润 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/1599.maximum-profit-of-operating-a-centennial-wheel.zh/</link>
+      <pubDate>Mon, 06 Mar 2023 19:33:44 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1599.maximum-profit-of-operating-a-centennial-wheel.zh/</guid>
+      <description>问题描述 1599. 经营摩天轮的最大利润 (Medium)&#xA;你正在经营一座摩天轮，该摩天轮共有 4 个座舱 ，每个座舱 最多可以容纳 4 位游客 。你可以 逆时针 轮转座舱，但每次轮转都需要支付一定的运行成本 runningCost 。摩天轮每次轮转都恰好转动 1 / 4 周。&#xA;给你一个长度为 n 的数组 customers ， customers[i] 是在第 i 次轮转（下标从 0 开始）之前到达的新游客的数量。这也意味着你必须在新游客到来前轮转 i 次。每位游客在登上离地面最近的座舱前都会支付登舱成本 boardingCost ，一旦该座舱再次抵达地面，他们就会离开座舱结束游玩。&#xA;你可以随时停下摩天轮，即便是 在服务所有游客之前 。如果你决定停止运营摩天轮，为了保证所有游客安全着陆， 将免费进行 所有后续轮转 。注意，如果有超过 4 位游客在等摩天轮，那么只有 4 位游客可以登上摩天轮，其余的需要等待 下一次轮转 。&#xA;返回最大化利润所需执行的 最小轮转次数 。 如果不存在利润为正的方案，则返回 -1 。&#xA;示例 1：&#xA;输入：customers = [8,3], boardingCost = 5, runningCost = 6 输出：3 解释：座舱上标注的数字是该座舱的当前游客数。 1. 8 位游客抵达，4 位登舱，4 位等待下一舱，摩天轮轮转。当前利润为 4 * $5 - 1 * $6 = $14 。 2.</description>
+    </item>
+    <item>
+      <title>1744.can You Eat Your Favorite Candy on Your Favorite Day</title>
+      <link>http://localhost:1313/posts/leet/1744.can-you-eat-your-favorite-candy-on-your-favorite-day/</link>
+      <pubDate>Mon, 06 Mar 2023 14:10:27 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1744.can-you-eat-your-favorite-candy-on-your-favorite-day/</guid>
+      <description>Description 1744. Can You Eat Your Favorite Candy on Your Favorite Day? (Medium)&#xA;You are given a (0-indexed) array of positive integers candiesCount where candiesCount[i] represents the number of candies of the ith type you have. You are also given a 2D array queries where queries[i] = [favoriteTypeᵢ, favoriteDayᵢ, dailyCapᵢ].&#xA;You play a game with the following rules:&#xA;You start eating candies on day 0. You cannot eat any candy of type i unless you have eaten all candies of type i - 1.</description>
+    </item>
+    <item>
+      <title>1744.你能在你最喜欢的那天吃到你最喜欢的糖果吗？ (Medium)</title>
+      <link>http://localhost:1313/posts/leet/1744.can-you-eat-your-favorite-candy-on-your-favorite-day.zh/</link>
+      <pubDate>Mon, 06 Mar 2023 14:10:24 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1744.can-you-eat-your-favorite-candy-on-your-favorite-day.zh/</guid>
+      <description>问题描述 1744. 你能在你最喜欢的那天吃到你最喜欢的糖果吗？ (Medium)&#xA;给你一个下标从 0 开始的正整数数组 candiesCount ，其中 candiesCount[i] 表示你拥有的第 i 类糖果的数目。同时给你一个二维数组 queries ，其中 queries[i] = [favoriteTypeᵢ, favoriteDayᵢ, dailyCapᵢ] 。&#xA;你按照如下规则进行一场游戏：&#xA;你从第 0 天开始吃糖果。 你在吃完 所有 第 i - 1 类糖果之前， 不能 吃任何一颗第 i 类糖果。 在吃完所有糖果之前，你必须每天 至少 吃 一颗 糖果。 请你构建一个布尔型数组 answer ，用以给出 queries 中每一项的对应答案。此数组满足：&#xA;answer.length == queries.length 。 answer[i] 是 queries[i] 的答案。 answer[i] 为 true 的条件是：在每天吃 不超过 dailyCapᵢ 颗糖果的前提下，你可以在第 favoriteDayᵢ 天吃到第 favoriteTypeᵢ 类糖果；否则 answer[i] 为 false 。 注意，只要满足上面 3 条规则中的第二条规则，你就可以在同一天吃不同类型的糖果。</description>
+    </item>
+    <item>
+      <title>2373.largest local values in a matrix</title>
+      <link>http://localhost:1313/posts/leet/2373.largest-local-values-in-a-matrix/</link>
+      <pubDate>Wed, 01 Mar 2023 19:44:05 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2373.largest-local-values-in-a-matrix/</guid>
+      <description>Description Largest Local Values in a Matrix (Easy) You are given an n x n integer matrix grid.&#xA;Generate an integer matrix maxLocal of size (n - 2) x (n - 2) such that:&#xA;maxLocal[i][j] is equal to the largest value of the 3 x 3 matrix in grid centered around row i + 1 and column j + 1. In other words, we want to find the largest value in every contiguous 3 x 3 matrix in grid.</description>
+    </item>
+    <item>
+      <title>2373.矩阵中的局部最大值</title>
+      <link>http://localhost:1313/posts/leet/2373.largest-local-values-in-a-matrix.zh/</link>
+      <pubDate>Wed, 01 Mar 2023 19:44:03 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2373.largest-local-values-in-a-matrix.zh/</guid>
+      <description>问题描述 2373. 矩阵中的局部最大值 (Easy)&#xA;给你一个大小为 n x n 的整数矩阵 grid 。&#xA;生成一个大小为 (n - 2) x (n - 2) 的整数矩阵 maxLocal ，并满足：&#xA;maxLocal[i][j] 等于 grid 中以 i + 1 行和 j + 1 列为中心的 3 x 3 矩阵中的 最大值 。 换句话说，我们希望找出 grid 中每个 3 x 3 矩阵中的最大值。&#xA;返回生成的矩阵。&#xA;示例 1：&#xA;输入：grid = [[9,9,8,1],[5,6,2,6],[8,2,6,4],[6,2,2,2]] 输出：[[9,9],[8,6]] 解释：原矩阵和生成的矩阵如上图所示。 注意，生成的矩阵中，每个值都对应 grid 中一个相接的 3 x 3 矩阵的最大值。 示例 2：&#xA;输入：grid = [[1,1,1,1,1],[1,1,1,1,1],[1,1,2,1,1],[1,1,1,1,1],[1,1,1,1,1]] 输出：[[2,2,2],[2,2,2],[2,2,2]] 解释：注意，2 包含在 grid 中每个 3 x 3 的矩阵中。 提示：</description>
+    </item>
+    <item>
+      <title>2363.merge similar items</title>
+      <link>http://localhost:1313/posts/leet/2363.merge-similar-items/</link>
+      <pubDate>Tue, 28 Feb 2023 09:22:05 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2363.merge-similar-items/</guid>
+      <description>Description 2363. Merge Similar Items (Easy)&#xA;You are given two 2D integer arrays, items1 and items2, representing two sets of items. Each array items has the following properties:&#xA;items[i] = [valueᵢ, weightᵢ] where valueᵢ represents the value and weightᵢ represents the weight of the ith item. The value of each item in items is unique. Return a 2D integer array retwhere ret[i] = [valueᵢ, weightᵢ],with weightᵢbeing the sum of weights of all items with value valueᵢ.</description>
+    </item>
+    <item>
+      <title>2363.合并相似的物品</title>
+      <link>http://localhost:1313/posts/leet/2363.merge-similar-items.zh/</link>
+      <pubDate>Tue, 28 Feb 2023 09:22:02 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2363.merge-similar-items.zh/</guid>
+      <description>问题描述 2363. 合并相似的物品 (Easy)&#xA;给你两个二维整数数组 items1 和 items2 ，表示两个物品集合。每个数组 items 有以下特质：&#xA;items[i] = [valueᵢ, weightᵢ] 其中 valueᵢ 表示第 i 件物品的 价值 ， weightᵢ 表示第 i 件物品的 重量 。 items 中每件物品的价值都是 唯一的 。 请你返回一个二维数组 ret，其中 ret[i] = [valueᵢ, weightᵢ]， weightᵢ 是所有价值为 valueᵢ 物品的 重量之和 。&#xA;注意： ret 应该按价值 升序 排序后返回。&#xA;示例 1：&#xA;输入：items1 = [[1,1],[4,5],[3,8]], items2 = [[3,1],[1,5]] 输出：[[1,6],[3,9],[4,5]] 解释： value = 1 的物品在 items1 中 weight = 1 ，在 items2 中 weight = 5 ，总重量为 1 + 5 = 6 。 value = 3 的物品再 items1 中 weight = 8 ，在 items2 中 weight = 1 ，总重量为 8 + 1 = 9 。 value = 4 的物品在 items1 中 weight = 5 ，总重量为 5 。 所以，我们返回 [[1,6],[3,9],[4,5]] 。 示例 2：</description>
+    </item>
+    <item>
+      <title>1710.maximum units on a truck</title>
+      <link>http://localhost:1313/posts/leet/1710.maximum-units-on-a-truck/</link>
+      <pubDate>Sun, 05 Feb 2023 17:23:42 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1710.maximum-units-on-a-truck/</guid>
+      <description>Description 1710.maximum-units-on-a-truck&#xA;Solution Sort boxTypes by the units that the box can load, then put the box of which the units are maximum on the truck one by one.&#xA;The time complexity can be decreased to $O(n)$ by using quick select.&#xA;Code class Solution { public: int maximumUnits(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; &amp;amp;boxTypes, int truckSize) { std::sort(boxTypes.begin(), boxTypes.end(), [&amp;amp;](vector&amp;lt;int&amp;gt; vec1, vector&amp;lt;int&amp;gt; vec2) { return vec1[1] &amp;gt;= vec2[1]; }); int cnt = 0, sum = 0; for (int i = 0; i &amp;lt; boxTypes.</description>
+    </item>
+    <item>
+      <title>1710.卡车上的最大单元数</title>
+      <link>http://localhost:1313/posts/leet/1710.maximum-units-on-a-truck.zh/</link>
+      <pubDate>Sun, 05 Feb 2023 17:23:13 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1710.maximum-units-on-a-truck.zh/</guid>
+      <description>问题描述 1710.卡车上的最大单元数&#xA;解题思路 根据每个箱子可以装载的单元数量从大到小对boxTypes排序，然后每次将单元数量最大的箱子填入卡车。&#xA;使用快速选择算法可以将时间复杂度降低到$O(n)$。&#xA;代码 class Solution { public: int maximumUnits(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; &amp;amp;boxTypes, int truckSize) { std::sort(boxTypes.begin(), boxTypes.end(), [&amp;amp;](vector&amp;lt;int&amp;gt; vec1, vector&amp;lt;int&amp;gt; vec2) { return vec1[1] &amp;gt;= vec2[1]; }); int cnt = 0, sum = 0; for (int i = 0; i &amp;lt; boxTypes.size(); i++) { if (cnt + boxTypes[i][0] &amp;lt;= truckSize) { sum += boxTypes[i][0] * boxTypes[i][1]; cnt += boxTypes[i][0]; } else { sum += (truckSize - cnt) * boxTypes[i][1]; break; } } return sum; } }; </description>
+    </item>
+    <item>
+      <title>1736.latest time by replacing hidden digits</title>
+      <link>http://localhost:1313/posts/leet/1736.latest-time-by-replacing-hidden-digits/</link>
+      <pubDate>Sun, 05 Feb 2023 17:17:59 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1736.latest-time-by-replacing-hidden-digits/</guid>
+      <description>Description 1736.latest-time-by-replacing-hidden-digits&#xA;Solution Analog + greedy algorithm&#xA;Code class Solution { public: string maximumTime(string time) { string res; // 先考虑小时 if (time[0] == &amp;#39;?&amp;#39;) { if (time[1] == &amp;#39;?&amp;#39;) res += &amp;#34;23&amp;#34;; else { if (time[1] &amp;gt;= &amp;#39;4&amp;#39;) { res.push_back(&amp;#39;1&amp;#39;); res.push_back(time[1]); } else { res.push_back(&amp;#39;2&amp;#39;); res.push_back(time[1]); } } } else { if (time[1] == &amp;#39;?&amp;#39;) { if (time[0] == &amp;#39;2&amp;#39;) { res.push_back(time[0]); res.push_back(&amp;#39;3&amp;#39;); } else { res.push_back(time[0]); res.push_back(&amp;#39;9&amp;#39;); } } else { res.</description>
+    </item>
+    <item>
+      <title>1736.替换隐藏数字得到的最晚时间</title>
+      <link>http://localhost:1313/posts/leet/1736.latest-time-by-replacing-hidden-digits.zh/</link>
+      <pubDate>Sun, 05 Feb 2023 17:17:55 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1736.latest-time-by-replacing-hidden-digits.zh/</guid>
+      <description>问题描述 1736.替换隐藏数字得到的最晚时间&#xA;解题思路 模拟+贪心&#xA;代码 class Solution { public: string maximumTime(string time) { string res; // 先考虑小时 if (time[0] == &amp;#39;?&amp;#39;) { if (time[1] == &amp;#39;?&amp;#39;) res += &amp;#34;23&amp;#34;; else { if (time[1] &amp;gt;= &amp;#39;4&amp;#39;) { res.push_back(&amp;#39;1&amp;#39;); res.push_back(time[1]); } else { res.push_back(&amp;#39;2&amp;#39;); res.push_back(time[1]); } } } else { if (time[1] == &amp;#39;?&amp;#39;) { if (time[0] == &amp;#39;2&amp;#39;) { res.push_back(time[0]); res.push_back(&amp;#39;3&amp;#39;); } else { res.push_back(time[0]); res.push_back(&amp;#39;9&amp;#39;); } } else { res.push_back(time[0]); res.</description>
+    </item>
+    <item>
+      <title>2319.check if matrix is X matrix</title>
+      <link>http://localhost:1313/posts/leet/2319.check-if-matrix-is-x-matrix/</link>
+      <pubDate>Tue, 31 Jan 2023 09:50:21 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2319.check-if-matrix-is-x-matrix/</guid>
+      <description>Description 2319.check-if-matrix-is-X-matrix&#xA;Solution Analog&#xA;Code class Solution { public: bool checkXMatrix(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; &amp;amp;grid) { bool res = true; for (int i = 0; i &amp;lt; grid.size(); i++) { for (int j = 0; j &amp;lt; grid[0].size(); j++) { if (i == j || i + j == grid.size() - 1) { if (grid[i][j] == 0) return false; } else { if (grid[i][j] != 0) return false; } } } return true; } }; </description>
+    </item>
+    <item>
+      <title>2319.判断矩阵是否是一个X矩阵</title>
+      <link>http://localhost:1313/posts/leet/2319.check-if-matrix-is-x-matrix.zh/</link>
+      <pubDate>Tue, 31 Jan 2023 09:50:17 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2319.check-if-matrix-is-x-matrix.zh/</guid>
+      <description>问题描述 2319.判断矩阵是否是一个X矩阵&#xA;解题思路 模拟&#xA;代码 class Solution { public: bool checkXMatrix(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; &amp;amp;grid) { bool res = true; for (int i = 0; i &amp;lt; grid.size(); i++) { for (int j = 0; j &amp;lt; grid[0].size(); j++) { if (i == j || i + j == grid.size() - 1) { if (grid[i][j] == 0) return false; } else { if (grid[i][j] != 0) return false; } } } return true; } }; </description>
+    </item>
+    <item>
+      <title>1669.merge in between linked list</title>
+      <link>http://localhost:1313/posts/leet/1669.merge-in-between-linked-list/</link>
+      <pubDate>Mon, 30 Jan 2023 12:22:25 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1669.merge-in-between-linked-list/</guid>
+      <description>Description 1669.merge-in-between-linked-list&#xA;Solution Analog&#xA;Code class Solution { public: ListNode *mergeInBetween(ListNode *list1, int a, int b, ListNode *list2) { ListNode *head = list1; ListNode *tail2 = list2; ListNode *head2 = list1; for (int i = 0; i &amp;lt; a - 1; i++) { head = head-&amp;gt;next; } for (int i = 0; i &amp;lt; b; i++) { head2 = head2-&amp;gt;next; } while (tail2-&amp;gt;next != nullptr) tail2 = tail2-&amp;gt;next; tail2-&amp;gt;next = head2-&amp;gt;next; head2-&amp;gt;next = nullptr; head-&amp;gt;next = list2; return list1; } }; </description>
+    </item>
+    <item>
+      <title>1669.合并两个链表</title>
+      <link>http://localhost:1313/posts/leet/1669.merge-in-between-linked-list.zh/</link>
+      <pubDate>Mon, 30 Jan 2023 12:22:21 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1669.merge-in-between-linked-list.zh/</guid>
+      <description>问题描述 1669.合并两个链表&#xA;解题思路 模拟&#xA;代码 class Solution { public: ListNode *mergeInBetween(ListNode *list1, int a, int b, ListNode *list2) { ListNode *head = list1; ListNode *tail2 = list2; ListNode *head2 = list1; for (int i = 0; i &amp;lt; a - 1; i++) { head = head-&amp;gt;next; } for (int i = 0; i &amp;lt; b; i++) { head2 = head2-&amp;gt;next; } while (tail2-&amp;gt;next != nullptr) tail2 = tail2-&amp;gt;next; tail2-&amp;gt;next = head2-&amp;gt;next; head2-&amp;gt;next = nullptr; head-&amp;gt;next = list2; return list1; } }; </description>
+    </item>
+    <item>
+      <title>2042.check if numbers are ascending in a sentence</title>
+      <link>http://localhost:1313/posts/leet/2042.check-if-numbers-are-ascending-in-a-sentence/</link>
+      <pubDate>Tue, 03 Jan 2023 16:34:11 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2042.check-if-numbers-are-ascending-in-a-sentence/</guid>
+      <description>Description 2042.check-if-numbers-are-ascending-in-a-sentence&#xA;Solution analog1 I change string s to &amp;quot; &amp;quot; + s + &amp;quot; &amp;quot;, then traverse the new string, check whether substr between two blanks is numbers;&#xA;analog2 We just check whether current char is a number, if that, num = num * 10 + s[i] - &#39;0&#39;, loop until current char is not a number.&#xA;Code code1 class Solution { public: int mpow(int e, int x) { while (x--) e *= 10; return e; } int str2num(int l, int r, string &amp;amp;s) { int ans = 0; for (int i = l + 1; i &amp;lt; r; i++) { if (s[i] - &amp;#39;0&amp;#39; &amp;lt;= 9 &amp;amp;&amp;amp; s[i] - &amp;#39;0&amp;#39; &amp;gt;= 0) { ans += mpow(s[i] - &amp;#39;0&amp;#39;, r - i - 1); } else { return 0; } } return ans; } bool areNumbersAscending(string s) { int blank_l = 0; int blank_r = 0, tmp = 0; vector&amp;lt;int&amp;gt; numbers; s = &amp;#34; &amp;#34; + s + &amp;#34; &amp;#34;; for (int i = 0; i &amp;lt; s.</description>
+    </item>
+    <item>
+      <title>2042.检查句子中的数字是否递增</title>
+      <link>http://localhost:1313/posts/leet/2042.check-if-numbers-are-ascending-in-a-sentence.zh/</link>
+      <pubDate>Tue, 03 Jan 2023 16:34:07 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2042.check-if-numbers-are-ascending-in-a-sentence.zh/</guid>
+      <description>问题描述 2042.检查句子中的数字是否递增&#xA;解题思路 模拟一 首先将字符串的首尾都加上空格，然后遍历即可，检查两次空格之间的字符串是否是数字，如果是就转化为数字;&#xA;模拟二 直接判断字符是否是数字，如果是数字，num = num * 10 + s[i] - &#39;0&#39;，循环直到碰到空格&#xA;代码 代码一 class Solution { public: int mpow(int e, int x) { while (x--) e *= 10; return e; } int str2num(int l, int r, string &amp;amp;s) { int ans = 0; for (int i = l + 1; i &amp;lt; r; i++) { if (s[i] - &amp;#39;0&amp;#39; &amp;lt;= 9 &amp;amp;&amp;amp; s[i] - &amp;#39;0&amp;#39; &amp;gt;= 0) { ans += mpow(s[i] - &amp;#39;0&amp;#39;, r - i - 1); } else { return 0; } } return ans; } bool areNumbersAscending(string s) { int blank_l = 0; int blank_r = 0, tmp = 0; vector&amp;lt;int&amp;gt; numbers; s = &amp;#34; &amp;#34; + s + &amp;#34; &amp;#34;; for (int i = 0; i &amp;lt; s.</description>
+    </item>
+  </channel>
+</rss>

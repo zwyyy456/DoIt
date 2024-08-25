@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Topo Sort on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/topo-sort/</link>
+    <description>Recent content in Topo Sort on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 12 Sep 2023 20:14:24 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/topo-sort/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1462.course Schedule Iv</title>
+      <link>http://localhost:1313/posts/leet/1462.course-schedule-iv/</link>
+      <pubDate>Tue, 12 Sep 2023 20:14:24 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1462.course-schedule-iv/</guid>
+      <description>Description 1462. Course Schedule IV (Medium)&#xA;There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1. You are given an array prerequisites where prerequisites[i] = [aᵢ, bᵢ] indicates that you must take course aᵢ first if you want to take course bᵢ.&#xA;For example, the pair [0, 1] indicates that you have to take course 0 before you can take course 1. Prerequisites can also be indirect.</description>
+    </item>
+    <item>
+      <title>1462. 课程表 IV (Medium)</title>
+      <link>http://localhost:1313/posts/leet/1462.course-schedule-iv.zh/</link>
+      <pubDate>Tue, 12 Sep 2023 20:14:22 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/1462.course-schedule-iv.zh/</guid>
+      <description>问题描述 1462. 课程表 IV (Medium)&#xA;你总共需要上 numCourses 门课，课程编号依次为 0 到 numCourses-1 。你会得到一个数组 prerequisit e ，其中 prerequisites[i] = [aᵢ, bᵢ] 表示如果你想选 bᵢ 课程，你 必须 先选 aᵢ 课程。&#xA;有的课会有直接的先修课程，比如如果想上课程 1 ，你必须先上课程 0 ，那么会以 [0,1] 数对的形式 给出先修课程数对。 先决条件也可以是 间接 的。如果课程 a 是课程 b 的先决条件，课程 b 是课程 c 的先决条件，那 么课程 a 就是课程 c 的先决条件。&#xA;你也得到一个数组 queries ，其中 queries[j] = [uⱼ, vⱼ]。对于第 j 个查询，您应该回答课程 uⱼ 是 否是课程 vⱼ 的先决条件。&#xA;返回一个布尔数组 answer ，其中 answer[j] 是第 j 个查询的答案。</description>
+    </item>
+    <item>
+      <title>2050. Parallel Courses III (Hard)</title>
+      <link>http://localhost:1313/posts/leet/2050.parallel-courses-iii/</link>
+      <pubDate>Fri, 28 Jul 2023 15:59:33 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2050.parallel-courses-iii/</guid>
+      <description>Description 2050. Parallel Courses III (Hard)&#xA;Solution The approach to this problem is quite evident, and it requires the utilization of topological sorting. During the process oftopological sorting, the longest required time should be calculated.&#xA;Code class Solution { public: int minimumTime(int n, vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; &amp;amp;relations, vector&amp;lt;int&amp;gt; &amp;amp;time) { vector&amp;lt;int&amp;gt; cnt(n + 1); vector&amp;lt;unordered_set&amp;lt;int&amp;gt;&amp;gt; next(n + 1); for (auto &amp;amp;vec : relations) { ++cnt[vec[1]]; next[vec[0]].insert(vec[1]); } queue&amp;lt;int&amp;gt; zero; // vector&amp;lt;int&amp;gt; res; vector&amp;lt;int&amp;gt; ans(n + 1); for (int i = 1; i &amp;lt;= n; ++i) { if (cnt[i] == 0) { zero.</description>
+    </item>
+    <item>
+      <title>2050. 并行课程 III (Hard)</title>
+      <link>http://localhost:1313/posts/leet/2050.parallel-courses-iii.zh/</link>
+      <pubDate>Fri, 28 Jul 2023 15:59:23 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/2050.parallel-courses-iii.zh/</guid>
+      <description>问题描述 2050. 并行课程 III (Hard)&#xA;给你一个整数 n ，表示有 n 节课，课程编号从 1 到 n 。同时给你一个二维整数数组 relations ， 其中 relations[j] = [prevCourseⱼ, nextCourseⱼ] ，表示课程 prevCourseⱼ 必须在课程 nextCourseⱼ * 之前* 完成（先修课的关系）。同时给你一个下标从 0 开始的整数数组 time ，其中 time[i] 表示完 成第 (i+1) 门课程需要花费的 月份 数。&#xA;请你根据以下规则算出完成所有课程所需要的 最少 月份数：&#xA;如果一门课的所有先修课都已经完成，你可以在 任意 时间开始这门课程。 你可以 同时 上 任意门课程 。 请你返回完成所有课程所需要的 最少 月份数。&#xA;注意： 测试数据保证一定可以完成所有课程（也就是先修课的关系构成一个有向无环图）。&#xA;示例 1:&#xA;输入：n = 3, relations = [[1,3],[2,3]], time = [3,2,5] 输出：8 解释：上图展示了输入数据所表示的先修关系图，以及完成每门课程需要花费的时间。 你可以在月份 0 同时开始课程 1 和 2 。 课程 1 花费 3 个月，课程 2 花费 2 个月。 所以，最早开始课程 3 的时间是月份 3 ，完成所有课程所需时间为 3 + 5 = 8 个月。 示例 2：</description>
+    </item>
+    <item>
+      <title>851.喧闹和富有 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/851.loud-and-rich/</link>
+      <pubDate>Mon, 10 Apr 2023 15:07:01 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/851.loud-and-rich/</guid>
+      <description>Description 851. Loud and Rich (Medium)&#xA;There is a group of n people labeled from 0 to n - 1 where each person has a different amount of money and a different level of quietness.&#xA;You are given an array richer where richer[i] = [aᵢ, bᵢ] indicates that aᵢ has more money than bᵢ and an integer array quiet where quiet[i] is the quietness of the ith person. All the given data in richer are logically correct (i.</description>
+    </item>
+    <item>
+      <title>851.喧闹和富有 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/851.loud-and-rich.zh/</link>
+      <pubDate>Mon, 10 Apr 2023 15:06:46 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/851.loud-and-rich.zh/</guid>
+      <description>问题描述 851. 喧闹和富有 (Medium)&#xA;有一组 n 个人作为实验对象，从 0 到 n - 1 编号，其中每个人都有不同数目的钱，以及不同程度的安静值（quietness）。为了方便起见，我们将编号为 x 的人简称为 &amp;ldquo;person x &amp;ldquo;。&#xA;给你一个数组 richer ，其中 richer[i] = [aᵢ, bᵢ] 表示 person aᵢ 比 person bᵢ 更有钱。另给你一个整数数组 quiet ，其中 quiet[i] 是 person i 的安静值。 richer 中所给出的数据 逻辑自洽（也就是说，在 person x 比 person y 更有钱的同时，不会出现 person y 比 person x 更有钱的情况 ）。&#xA;现在，返回一个整数数组 answer 作为答案，其中 answer[x] = y 的前提是，在所有拥有的钱肯定不少于 person x 的人中，person y 是最安静的人（也就是安静值 quiet[y] 最小的人）。&#xA;示例 1：</description>
+    </item>
+    <item>
+      <title>802.Find Eventual Safe States (Medium)</title>
+      <link>http://localhost:1313/posts/leet/802.find-eventual-safe-states/</link>
+      <pubDate>Mon, 10 Apr 2023 14:49:15 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/802.find-eventual-safe-states/</guid>
+      <description>Description 802. Find Eventual Safe States (Medium)&#xA;There is a directed graph of n nodes with each node labeled from 0 to n - 1. The graph is represented by a 0-indexed 2D integer array graph where graph[i] is an integer array of nodes adjacent to node i, meaning there is an edge from node i to each node in graph[i].&#xA;A node is a terminal node if there are no outgoing edges.</description>
+    </item>
+    <item>
+      <title>802.找到最终的安全状态 (Medium)</title>
+      <link>http://localhost:1313/posts/leet/802.find-eventual-safe-states.zh/</link>
+      <pubDate>Mon, 10 Apr 2023 14:46:27 +0800</pubDate>
+      <guid>http://localhost:1313/posts/leet/802.find-eventual-safe-states.zh/</guid>
+      <description>问题描述 802. 找到最终的安全状态 (Medium)&#xA;有一个有 n 个节点的有向图，节点按 0 到 n - 1 编号。图由一个 索引从 0 开始 的 2D 整数数组 graph 表示， graph[i] 是与节点 i 相邻的节点的整数数组，这意味着从节点 i 到 graph[i] 中的每个节点都有一条边。&#xA;如果一个节点没有连出的有向边，则它是 终端节点 。如果没有出边，则节点为终端节点。如果从该节点开始的所有可能路径都通向 终端节点 ，则该节点为 安全节点 。&#xA;返回一个由图中所有 安全节点 组成的数组作为答案。答案数组中的元素应当按 升序 排列。&#xA;示例 1：&#xA;输入：graph = [[1,2],[2,3],[5],[0],[5],[],[]] 输出：[2,4,5,6] 解释：示意图如上。 节点 5 和节点 6 是终端节点，因为它们都没有出边。 从节点 2、4、5 和 6 开始的所有路径都指向节点 5 或 6 。 示例 2：&#xA;输入：graph = [[1,2,3,4],[1,2],[3,4],[0,4],[]] 输出：[4] 解释: 只有节点 4 是终端节点，从节点 4 开始的所有路径都通向节点 4 。 提示：</description>
+    </item>
+    <item>
+      <title>拓扑排序</title>
+      <link>http://localhost:1313/posts/tech/topo-sort.zh/</link>
+      <pubDate>Mon, 10 Apr 2023 14:13:16 +0800</pubDate>
+      <guid>http://localhost:1313/posts/tech/topo-sort.zh/</guid>
+      <description>定义 拓扑排序（Topological sorting）要解决的问题是给一个有向图的所有节点排序。&#xA;这里直接使用OI-Wiki中举的例子来说明：&#xA;我们可以拿大学选课的例子来描述这个过程，比如学习大学课程中有：单变量微积分，线性代数，离散数学概述，概率论与统计学概述，语言基础，算法导论，机器学习。当我们想要学习 算法导论 的时候，就必须先学会 离散数学概述 和 概率论与统计学概述，不然在课堂就会听的一脸懵逼。当然还有一个更加前的课程 单变量微积分。&#xA;这些课程就相当于几个顶点$u$, 顶点之间的有向边$(u,v)$就相当于学习课程的顺序。显然拓扑排序不是那么的麻烦，不然你是如何选出合适的学习顺序。下面将介绍如何将这个过程抽象出来，用算法来实现。&#xA;但是如果某一天排课的老师打瞌睡了，说想要学习 算法导论，还得先学 机器学习，而 机器学习 的前置课程又是 算法导论，然后你就一万脸懵逼了，我到底应该先学哪一个？当然我们在这里不考虑什么同时学几个课程的情况。在这里，算法导论 和 机器学习 间就出现了一个环，显然你现在没办法弄清楚你需要学什么了，于是你也没办法进行拓扑排序了。因而如果有向图中存在环路，那么我们就没办法进行拓扑排序了。&#xA;因此我们可以说在一个[[DAG（有向无环图）]]中，我们将图中顶点以线性方式排序，使得对于任意顶点$u$到$v$的有向边$(u, v)$，都有$u$在$v$的前面。&#xA;或者说给定一个DAG，如果$i$到$j$有边，则认为$j$依赖于$i$，如果$i$到$j$有路径，则称$j$间接依赖于$i$； 拓扑排序的目标是将所有节点排序，使得在前面的节点不能依赖于排在后面的节点。&#xA;bfs 拓扑排序有广度优先搜索（bfs）和深度优先搜索（dfs）两种实现方式，这里我们先讨论bfs。&#xA;利用bfs实现拓扑排序需要根据节点的入度：&#xA;入度：有多少条边直接指向该节点&#xA;思路 起始时，将所有入度为$0$的点放入队列q_in0； 将队首元素出队，出队序列就是我们要求的拓扑序，对当前弹出的节点u，res.push_back(u)，遍历u的所有出度，即遍历所有由u直接指向的节点v，递减节点v的入度； 如果节点v的入度变为0，将节点v入队； 循环2、3流程直到队列为空； 如果res最后恰好有$n$个节点，说明原图为DAG，res中的节点序列即要求的拓扑序；否则说明图中存在环。&#xA;代码实现 vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; graph; int n = graph.size(); int in[n]; // 存储每个节点的入度 bool toposrot() { vector&amp;lt;int&amp;gt; res; queue&amp;lt;int&amp;gt; q_in0; for (int i = 0; i &amp;lt; n; ++i) { if (in[i] == 0) { q_in0.push(i); } } while (!</description>
+    </item>
+  </channel>
+</rss>

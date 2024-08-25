@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/python/</link>
+    <description>Recent content in Python on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 11 Nov 2022 15:55:04 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>miniconda 基础教程</title>
+      <link>http://localhost:1313/posts/tech/miniconda.zh/</link>
+      <pubDate>Fri, 11 Nov 2022 15:55:04 +0800</pubDate>
+      <guid>http://localhost:1313/posts/tech/miniconda.zh/</guid>
+      <description>创建python虚拟环境 安装python指定环境 conda create -n zwyb python=3.9&#xA;安装python指定环境的时候安装相应的包 conda create -n zwyb python=3.9 pandas&#xA;进入指定的环境 conda activate zwyb&#xA;退出当前环境 conda deactive zwyb&#xA;显示所有环境 conda env list&#xA;删除指定的环境 conda env remove -n zwyb&#xA;更换清华源 vim 编辑~/.condarc，将其中内容修改为&#xA;channels: - defaults show_channel_urls: true default_channels: - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2 custom_channels: conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud pytorch-lts: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud 更换pip源，执行 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple&#xA;关闭启动终端后自动进入conda环境 conda config --set auto_activate_base false</description>
+    </item>
+  </channel>
+</rss>

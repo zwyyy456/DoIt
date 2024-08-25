@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Aug 2024 23:22:48 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Geek</title>
+      <link>http://localhost:1313/tags/geek/</link>
+      <pubDate>Wed, 21 Aug 2024 23:22:48 +0800</pubDate>
+      <guid>http://localhost:1313/tags/geek/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>http://localhost:1313/tags/linux/</link>
+      <pubDate>Wed, 21 Aug 2024 23:22:48 +0800</pubDate>
+      <guid>http://localhost:1313/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hugo</title>
+      <link>http://localhost:1313/tags/hugo/</link>
+      <pubDate>Sun, 11 Aug 2024 09:51:38 +0800</pubDate>
+      <guid>http://localhost:1313/tags/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tips</title>
+      <link>http://localhost:1313/tags/tips/</link>
+      <pubDate>Sun, 11 Aug 2024 09:51:38 +0800</pubDate>
+      <guid>http://localhost:1313/tags/tips/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Git</title>
+      <link>http://localhost:1313/tags/git/</link>
+      <pubDate>Sun, 16 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/git/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mit</title>
+      <link>http://localhost:1313/tags/mit/</link>
+      <pubDate>Sun, 16 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/mit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cs</title>
+      <link>http://localhost:1313/tags/cs/</link>
+      <pubDate>Sat, 15 Jun 2024 16:19:53 +0800</pubDate>
+      <guid>http://localhost:1313/tags/cs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vim</title>
+      <link>http://localhost:1313/tags/vim/</link>
+      <pubDate>Fri, 14 Jun 2024 16:55:19 +0800</pubDate>
+      <guid>http://localhost:1313/tags/vim/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Atv</title>
+      <link>http://localhost:1313/tags/atv/</link>
+      <pubDate>Tue, 11 Jun 2024 22:39:23 +0800</pubDate>
+      <guid>http://localhost:1313/tags/atv/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fun</title>
+      <link>http://localhost:1313/tags/fun/</link>
+      <pubDate>Tue, 11 Jun 2024 22:39:23 +0800</pubDate>
+      <guid>http://localhost:1313/tags/fun/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vscode</title>
+      <link>http://localhost:1313/tags/vscode/</link>
+      <pubDate>Sat, 25 May 2024 10:33:04 +0800</pubDate>
+      <guid>http://localhost:1313/tags/vscode/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blog</title>
+      <link>http://localhost:1313/tags/blog/</link>
+      <pubDate>Wed, 15 May 2024 15:44:28 +0800</pubDate>
+      <guid>http://localhost:1313/tags/blog/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Json</title>
+      <link>http://localhost:1313/tags/json/</link>
+      <pubDate>Sat, 04 May 2024 10:10:30 +0800</pubDate>
+      <guid>http://localhost:1313/tags/json/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dev</title>
+      <link>http://localhost:1313/tags/dev/</link>
+      <pubDate>Sun, 03 Mar 2024 11:45:50 +0800</pubDate>
+      <guid>http://localhost:1313/tags/dev/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Win11</title>
+      <link>http://localhost:1313/tags/win11/</link>
+      <pubDate>Sun, 03 Mar 2024 11:45:50 +0800</pubDate>
+      <guid>http://localhost:1313/tags/win11/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Latex</title>
+      <link>http://localhost:1313/tags/latex/</link>
+      <pubDate>Thu, 22 Feb 2024 20:18:43 +0800</pubDate>
+      <guid>http://localhost:1313/tags/latex/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pt</title>
+      <link>http://localhost:1313/tags/pt/</link>
+      <pubDate>Sun, 31 Dec 2023 15:38:45 +0800</pubDate>
+      <guid>http://localhost:1313/tags/pt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Image</title>
+      <link>http://localhost:1313/tags/image/</link>
+      <pubDate>Tue, 26 Dec 2023 16:25:29 +0800</pubDate>
+      <guid>http://localhost:1313/tags/image/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Trick</title>
+      <link>http://localhost:1313/tags/trick/</link>
+      <pubDate>Mon, 18 Dec 2023 22:02:46 +0800</pubDate>
+      <guid>http://localhost:1313/tags/trick/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Netlify</title>
+      <link>http://localhost:1313/tags/netlify/</link>
+      <pubDate>Mon, 18 Dec 2023 12:46:49 +0800</pubDate>
+      <guid>http://localhost:1313/tags/netlify/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fish</title>
+      <link>http://localhost:1313/tags/fish/</link>
+      <pubDate>Mon, 18 Dec 2023 11:14:37 +0800</pubDate>
+      <guid>http://localhost:1313/tags/fish/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Remnote</title>
+      <link>http://localhost:1313/tags/remnote/</link>
+      <pubDate>Thu, 14 Dec 2023 14:57:19 +0800</pubDate>
+      <guid>http://localhost:1313/tags/remnote/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nas</title>
+      <link>http://localhost:1313/tags/nas/</link>
+      <pubDate>Mon, 04 Dec 2023 23:22:04 +0800</pubDate>
+      <guid>http://localhost:1313/tags/nas/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Trick&#34;</title>
+      <link>http://localhost:1313/tags/trick/</link>
+      <pubDate>Mon, 04 Dec 2023 23:22:04 +0800</pubDate>
+      <guid>http://localhost:1313/tags/trick/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cpp</title>
+      <link>http://localhost:1313/tags/cpp/</link>
+      <pubDate>Sun, 19 Nov 2023 13:00:39 +0800</pubDate>
+      <guid>http://localhost:1313/tags/cpp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web Server</title>
+      <link>http://localhost:1313/tags/web-server/</link>
+      <pubDate>Sun, 19 Nov 2023 13:00:39 +0800</pubDate>
+      <guid>http://localhost:1313/tags/web-server/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mac</title>
+      <link>http://localhost:1313/tags/mac/</link>
+      <pubDate>Fri, 17 Nov 2023 17:00:43 +0800</pubDate>
+      <guid>http://localhost:1313/tags/mac/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Debian</title>
+      <link>http://localhost:1313/tags/debian/</link>
+      <pubDate>Fri, 17 Nov 2023 16:16:27 +0800</pubDate>
+      <guid>http://localhost:1313/tags/debian/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nvim</title>
+      <link>http://localhost:1313/tags/nvim/</link>
+      <pubDate>Wed, 08 Nov 2023 19:08:56 +0800</pubDate>
+      <guid>http://localhost:1313/tags/nvim/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Neovim</title>
+      <link>http://localhost:1313/tags/neovim/</link>
+      <pubDate>Sun, 05 Nov 2023 17:05:51 +0800</pubDate>
+      <guid>http://localhost:1313/tags/neovim/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Difference Array</title>
+      <link>http://localhost:1313/tags/difference-array/</link>
+      <pubDate>Mon, 23 Oct 2023 11:17:08 +0800</pubDate>
+      <guid>http://localhost:1313/tags/difference-array/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Math</title>
+      <link>http://localhost:1313/tags/math/</link>
+      <pubDate>Tue, 17 Oct 2023 11:10:48 +0800</pubDate>
+      <guid>http://localhost:1313/tags/math/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Binary Search</title>
+      <link>http://localhost:1313/tags/binary-search/</link>
+      <pubDate>Tue, 17 Oct 2023 11:10:46 +0800</pubDate>
+      <guid>http://localhost:1313/tags/binary-search/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dynamic Programming</title>
+      <link>http://localhost:1313/tags/dynamic-programming/</link>
+      <pubDate>Tue, 17 Oct 2023 10:27:41 +0800</pubDate>
+      <guid>http://localhost:1313/tags/dynamic-programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bit Ops</title>
+      <link>http://localhost:1313/tags/bit-ops/</link>
+      <pubDate>Mon, 16 Oct 2023 10:53:58 +0800</pubDate>
+      <guid>http://localhost:1313/tags/bit-ops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Prefix Sum</title>
+      <link>http://localhost:1313/tags/prefix-sum/</link>
+      <pubDate>Mon, 16 Oct 2023 10:37:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/prefix-sum/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data Structure and Algorithms</title>
+      <link>http://localhost:1313/tags/data-structure-and-algorithms/</link>
+      <pubDate>Fri, 06 Oct 2023 17:50:12 +0800</pubDate>
+      <guid>http://localhost:1313/tags/data-structure-and-algorithms/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Greedy Algorithm</title>
+      <link>http://localhost:1313/tags/greedy-algorithm/</link>
+      <pubDate>Thu, 05 Oct 2023 18:28:15 +0800</pubDate>
+      <guid>http://localhost:1313/tags/greedy-algorithm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bfs</title>
+      <link>http://localhost:1313/tags/bfs/</link>
+      <pubDate>Tue, 19 Sep 2023 14:15:52 +0800</pubDate>
+      <guid>http://localhost:1313/tags/bfs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dfs</title>
+      <link>http://localhost:1313/tags/dfs/</link>
+      <pubDate>Tue, 19 Sep 2023 14:15:52 +0800</pubDate>
+      <guid>http://localhost:1313/tags/dfs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tree</title>
+      <link>http://localhost:1313/tags/tree/</link>
+      <pubDate>Tue, 19 Sep 2023 14:15:52 +0800</pubDate>
+      <guid>http://localhost:1313/tags/tree/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Stack</title>
+      <link>http://localhost:1313/tags/stack/</link>
+      <pubDate>Wed, 13 Sep 2023 11:10:27 +0800</pubDate>
+      <guid>http://localhost:1313/tags/stack/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Topo Sort</title>
+      <link>http://localhost:1313/tags/topo-sort/</link>
+      <pubDate>Tue, 12 Sep 2023 20:14:24 +0800</pubDate>
+      <guid>http://localhost:1313/tags/topo-sort/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Two Pointers</title>
+      <link>http://localhost:1313/tags/two-pointers/</link>
+      <pubDate>Fri, 04 Aug 2023 10:59:11 +0800</pubDate>
+      <guid>http://localhost:1313/tags/two-pointers/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lab</title>
+      <link>http://localhost:1313/tags/lab/</link>
+      <pubDate>Thu, 03 Aug 2023 13:53:24 +0800</pubDate>
+      <guid>http://localhost:1313/tags/lab/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Os</title>
+      <link>http://localhost:1313/tags/os/</link>
+      <pubDate>Thu, 03 Aug 2023 13:53:24 +0800</pubDate>
+      <guid>http://localhost:1313/tags/os/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Xv6</title>
+      <link>http://localhost:1313/tags/xv6/</link>
+      <pubDate>Thu, 03 Aug 2023 13:53:24 +0800</pubDate>
+      <guid>http://localhost:1313/tags/xv6/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Csapp</title>
+      <link>http://localhost:1313/tags/csapp/</link>
+      <pubDate>Fri, 28 Jul 2023 19:55:47 +0800</pubDate>
+      <guid>http://localhost:1313/tags/csapp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Analog</title>
+      <link>http://localhost:1313/tags/analog/</link>
+      <pubDate>Fri, 28 Jul 2023 14:16:04 +0800</pubDate>
+      <guid>http://localhost:1313/tags/analog/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Priority Queue</title>
+      <link>http://localhost:1313/tags/priority-queue/</link>
+      <pubDate>Tue, 18 Jul 2023 22:19:24 +0800</pubDate>
+      <guid>http://localhost:1313/tags/priority-queue/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Graph</title>
+      <link>http://localhost:1313/tags/graph/</link>
+      <pubDate>Tue, 18 Jul 2023 10:09:35 +0800</pubDate>
+      <guid>http://localhost:1313/tags/graph/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Java</title>
+      <link>http://localhost:1313/tags/java/</link>
+      <pubDate>Thu, 22 Jun 2023 17:36:50 +0800</pubDate>
+      <guid>http://localhost:1313/tags/java/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bitmask</title>
+      <link>http://localhost:1313/tags/bitmask/</link>
+      <pubDate>Wed, 21 Jun 2023 11:43:16 +0800</pubDate>
+      <guid>http://localhost:1313/tags/bitmask/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hash Table</title>
+      <link>http://localhost:1313/tags/hash-table/</link>
+      <pubDate>Wed, 31 May 2023 16:36:04 +0800</pubDate>
+      <guid>http://localhost:1313/tags/hash-table/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Trie</title>
+      <link>http://localhost:1313/tags/trie/</link>
+      <pubDate>Tue, 30 May 2023 14:22:11 +0800</pubDate>
+      <guid>http://localhost:1313/tags/trie/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Monotone Stack</title>
+      <link>http://localhost:1313/tags/monotone-stack/</link>
+      <pubDate>Tue, 23 May 2023 15:24:16 +0800</pubDate>
+      <guid>http://localhost:1313/tags/monotone-stack/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>String</title>
+      <link>http://localhost:1313/tags/string/</link>
+      <pubDate>Mon, 15 May 2023 11:52:54 +0800</pubDate>
+      <guid>http://localhost:1313/tags/string/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tutorial</title>
+      <link>http://localhost:1313/tags/tutorial/</link>
+      <pubDate>Thu, 13 Apr 2023 13:42:31 +0800</pubDate>
+      <guid>http://localhost:1313/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dsu</title>
+      <link>http://localhost:1313/tags/dsu/</link>
+      <pubDate>Thu, 13 Apr 2023 10:17:27 +0800</pubDate>
+      <guid>http://localhost:1313/tags/dsu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ssh</title>
+      <link>http://localhost:1313/tags/ssh/</link>
+      <pubDate>Sun, 02 Apr 2023 17:41:53 +0800</pubDate>
+      <guid>http://localhost:1313/tags/ssh/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kmp</title>
+      <link>http://localhost:1313/tags/kmp/</link>
+      <pubDate>Mon, 27 Mar 2023 21:22:38 +0800</pubDate>
+      <guid>http://localhost:1313/tags/kmp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Clangd</title>
+      <link>http://localhost:1313/tags/clangd/</link>
+      <pubDate>Thu, 23 Mar 2023 15:56:21 +0800</pubDate>
+      <guid>http://localhost:1313/tags/clangd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Zsh</title>
+      <link>http://localhost:1313/tags/zsh/</link>
+      <pubDate>Thu, 23 Mar 2023 10:55:08 +0800</pubDate>
+      <guid>http://localhost:1313/tags/zsh/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Map</title>
+      <link>http://localhost:1313/tags/map/</link>
+      <pubDate>Wed, 22 Mar 2023 19:49:26 +0800</pubDate>
+      <guid>http://localhost:1313/tags/map/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Utility</title>
+      <link>http://localhost:1313/tags/utility/</link>
+      <pubDate>Wed, 22 Mar 2023 09:56:48 +0800</pubDate>
+      <guid>http://localhost:1313/tags/utility/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dijkstra</title>
+      <link>http://localhost:1313/tags/dijkstra/</link>
+      <pubDate>Fri, 17 Mar 2023 15:29:27 +0800</pubDate>
+      <guid>http://localhost:1313/tags/dijkstra/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Memorized Search</title>
+      <link>http://localhost:1313/tags/memorized-search/</link>
+      <pubDate>Tue, 14 Mar 2023 14:39:59 +0800</pubDate>
+      <guid>http://localhost:1313/tags/memorized-search/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Daily</title>
+      <link>http://localhost:1313/tags/daily/</link>
+      <pubDate>Sat, 11 Mar 2023 15:31:57 +0800</pubDate>
+      <guid>http://localhost:1313/tags/daily/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sliding Window</title>
+      <link>http://localhost:1313/tags/sliding-window/</link>
+      <pubDate>Mon, 06 Mar 2023 19:11:58 +0800</pubDate>
+      <guid>http://localhost:1313/tags/sliding-window/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Attention</title>
+      <link>http://localhost:1313/tags/attention/</link>
+      <pubDate>Wed, 01 Mar 2023 19:02:35 +0800</pubDate>
+      <guid>http://localhost:1313/tags/attention/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Divide and Conquer</title>
+      <link>http://localhost:1313/tags/divide-and-conquer/</link>
+      <pubDate>Fri, 24 Feb 2023 09:26:08 +0800</pubDate>
+      <guid>http://localhost:1313/tags/divide-and-conquer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LSP</title>
+      <link>http://localhost:1313/tags/lsp/</link>
+      <pubDate>Mon, 06 Feb 2023 09:06:25 +0800</pubDate>
+      <guid>http://localhost:1313/tags/lsp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sublime</title>
+      <link>http://localhost:1313/tags/sublime/</link>
+      <pubDate>Mon, 06 Feb 2023 09:06:25 +0800</pubDate>
+      <guid>http://localhost:1313/tags/sublime/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Armbian</title>
+      <link>http://localhost:1313/tags/armbian/</link>
+      <pubDate>Fri, 09 Dec 2022 12:33:40 +0800</pubDate>
+      <guid>http://localhost:1313/tags/armbian/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Backtracking</title>
+      <link>http://localhost:1313/tags/backtracking/</link>
+      <pubDate>Thu, 08 Dec 2022 15:47:38 +0800</pubDate>
+      <guid>http://localhost:1313/tags/backtracking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>三叶</title>
+      <link>http://localhost:1313/tags/%E4%B8%89%E5%8F%B6/</link>
+      <pubDate>Mon, 05 Dec 2022 20:20:35 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E4%B8%89%E5%8F%B6/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linked List</title>
+      <link>http://localhost:1313/tags/linked-list/</link>
+      <pubDate>Mon, 28 Nov 2022 13:46:27 +0800</pubDate>
+      <guid>http://localhost:1313/tags/linked-list/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>http://localhost:1313/tags/python/</link>
+      <pubDate>Fri, 11 Nov 2022 15:55:04 +0800</pubDate>
+      <guid>http://localhost:1313/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Backtracking Algorithm</title>
+      <link>http://localhost:1313/tags/backtracking-algorithm/</link>
+      <pubDate>Mon, 26 Sep 2022 15:03:27 +0800</pubDate>
+      <guid>http://localhost:1313/tags/backtracking-algorithm/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

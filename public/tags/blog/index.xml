@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/blog/</link>
+    <description>Recent content in Blog on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 15 May 2024 15:44:28 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使博客被搜索引擎收录</title>
+      <link>http://localhost:1313/posts/blog/blog-google-bing.zh/</link>
+      <pubDate>Wed, 15 May 2024 15:44:28 +0800</pubDate>
+      <guid>http://localhost:1313/posts/blog/blog-google-bing.zh/</guid>
+      <description>前言 在网站没有被搜索引擎收录之前，网站内容是无法通过搜索引擎搜索到的，因此我们手动让网站被 Google 和 Bing 收录。&#xA;Google 进入 Google Search Console，点击 添加资源，资源类型选择 网址前缀，这里我的网址前缀为 https://blog.zwyyy456.tech/，验证方法选择通过 HTML 文件，按照提示，下载一个 google 开头的 html 文件，将这个文件放在 Hugo 博客文件目录的 static 目录下，这是因为 static 目录中的文件与目录在编译时，会被复制到 public 目录，即网站的根目录。&#xA;完成验证之后，下一步则是添加网站地图，如下图所示：&#xA;Hugo 会自动为我们生成 sitemap.xml 文件，即站点地图，由于我的网站支持中英双语，因此站点地图的位置为 https://blog.zwyyy456.tech/zh/sitemap.xml 和 https://blog.zwyyy456.tech/en/sitemap.xml，如果是单语言的 Hugo 博客网站，则是 https://HugoExample.com/sitemap.xml。添加好站点地图之后等待谷歌处理数据即可。&#xA;Bing 进入 Bing Webmaster Tools，可以直接从 Google Search Console 导入网站，提交站点地图的方法是类似的。&#xA;为博客添加搜索功能 我使用的博客主题是秉承简洁纯粹理念的 hugo_coder 主题，该主题不支持搜索功能，而我比较需要这个搜索功能，因此通过 Google 或者 Bing 的自定义搜索功能来为博客添加搜索功能是一个比较简单的做法，这里我使用的是 Bing 的自定义搜索功能。</description>
+    </item>
+    <item>
+      <title>将博客的图床从 SM.MS 迁移到又拍云</title>
+      <link>http://localhost:1313/posts/blog/change-image-src-from-smms-to-upyun.zh/</link>
+      <pubDate>Tue, 26 Dec 2023 16:25:29 +0800</pubDate>
+      <guid>http://localhost:1313/posts/blog/change-image-src-from-smms-to-upyun.zh/</guid>
+      <description>前言 为了存储博客的图片，我需要一个图床，一开始本来是想用七牛云或者又拍云提供的免费存储服务和流量来做图床的，奈何它们都需要一个通过了备案的域名才能实现，于是退而求其次选择了 SM.MS，在 picgo 或者 upic 中配置 SM.MS 图床非常方便，填一个 token 即可，在科学加持的情况下，图片显示也是很快速的。&#xA;但是，由于我的博客很多内容是我自己的学习笔记，因此其中的图片内容也是很重要的，考虑到 SM.MS 的图床稳定性与国内的可直接访问性，当我的 zwyyy456.tech 域名通过备案之后，我就着手将图床从 SM.MS 迁移到了又拍云。&#xA;又拍云设置 又拍云联盟的用户每月可获得 10GB 免费存储空间与 15GB 免费 CDN 流量，要加入又拍云联盟也很简单，只需要在网站地步添加又拍云 LOGO 与又拍云网站的对应链接即可。&#xA;在博客所属根目录下，将 layouts/partials/foot.html 的内容修改为如下：&#xA;&amp;lt;footer class=&amp;#34;footer&amp;#34;&amp;gt; &amp;lt;section class=&amp;#34;container&amp;#34;&amp;gt; © {{ if (and .Site.Params.since (lt .Site.Params.since now.Year)) }} {{ .Site.Params.since }} - {{ end }} {{ now.Year }} {{ with .Site.Params.author }} {{ . }} {{ end }} · {{ if (and .Site.Params.license) }} {{ i18n &amp;#34;licensed_under&amp;#34; }} {{ .</description>
+    </item>
+  </channel>
+</rss>
